@@ -1822,6 +1822,12 @@ html[data-theme="light"] .web-dots circle {
     linear-gradient(135deg, #1b2a3e, #138d88);
 }
 
+.celebrant-preview {
+  background:
+    radial-gradient(circle at 78% 22%, rgba(255, 196, 218, 0.5), transparent 10rem),
+    linear-gradient(135deg, #142238, #b85b7d);
+}
+
 .label {
   margin-bottom: 8px;
   color: var(--teal);
