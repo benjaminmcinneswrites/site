@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en-NZ" data-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Page Not Found | Better Site</title>
+    <meta name="description" content="The page you were looking for could not be found. Return to the Better Site homepage.">
+    <meta name="robots" content="noindex">
+    <script>
+      (function () {
+        document.documentElement.classList.add("motion-prep");
+        try { document.documentElement.setAttribute("data-theme", localStorage.getItem("theme") || "dark"); }
+        catch (error) { document.documentElement.setAttribute("data-theme", "dark"); }
+
+        const depth = window.location.protocol === "file:"
+          ? 0
+          : Math.min(window.location.pathname.split("/").filter(Boolean).length, 6);
+        const stylesheetLinks = [];
+        for (let index = 0; index <= depth; index += 1) {
+          stylesheetLinks.push(`<link rel="stylesheet" href="${"../".repeat(index)}styles.css" data-site-styles>`);
+        }
+        document.write(stylesheetLinks.join(""));
+      })();
+    </script>
+    <link rel="icon" type="image/png" href="assets/images/logo.png" data-site-favicon>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" data-header><div class="container nav-shell"><a class="brand" href="index.html" data-site-link="index.html"><span class="brand-mark"><img src="assets/images/logo.png" data-site-src="assets/images/logo.png" alt="" width="1254" height="1254"></span><span><strong>Better Site</strong><small>by Benjamin McInnes</small></span></a><nav class="primary-nav" id="primary-nav" data-nav><a href="work.html" data-site-link="work.html">Work</a><a href="services.html" data-site-link="services.html">Services</a><a href="why-choose-us.html" data-site-link="why-choose-us.html">Why Us</a><a href="pricing.html" data-site-link="pricing.html">Pricing</a><a href="process.html" data-site-link="process.html">How it Works</a><a href="about.html" data-site-link="about.html">About</a><a href="faq.html" data-site-link="faq.html">FAQ</a><a href="contact.html" data-site-link="contact.html">Contact</a></nav><div class="nav-actions"><button class="theme-toggle" type="button" aria-label="Switch to light theme" data-theme-toggle><span class="theme-icon" aria-hidden="true"></span></button><a class="nav-cta" href="request.html" data-site-link="request.html">Free Mockup</a><button class="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" data-menu-toggle><span></span><span></span><span></span><span class="sr-only">Menu</span></button></div></div></header>
+    <main id="main">
+      <section class="page-hero not-found-hero">
+        <div class="container not-found-grid">
+          <div class="not-found-copy reveal">
+            <p class="eyebrow">404 page not found</p>
+            <h1>This page is not here.</h1>
+            <p class="page-subhead">The link might be old, mistyped, or moved. The easiest way back is the homepage.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="index.html" data-site-link="index.html">Back to homepage</a>
+              <a class="btn btn-secondary" href="request.html" data-site-link="request.html">Request a free mockup</a>
+            </div>
+          </div>
+          <aside class="not-found-panel reveal" aria-label="Helpful links">
+            <span class="not-found-code">404</span>
+            <h2>Try one of these instead.</h2>
+            <nav class="not-found-links" aria-label="Suggested pages">
+              <a href="work.html" data-site-link="work.html">View example websites</a>
+              <a href="pricing.html" data-site-link="pricing.html">See pricing</a>
+              <a href="process.html" data-site-link="process.html">How the mockup works</a>
+              <a href="faq.html" data-site-link="faq.html">Read common questions</a>
+              <a href="contact.html" data-site-link="contact.html">Contact Better Site</a>
+            </nav>
+          </aside>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer"><div class="container footer-grid"><div><a class="brand footer-brand" href="index.html" data-site-link="index.html"><span class="brand-mark"><img src="assets/images/logo.png" data-site-src="assets/images/logo.png" alt="" width="1254" height="1254"></span><span><strong>Better Site</strong><small>by Benjamin McInnes</small></span></a><p>Affordable websites for New Zealand small businesses that need to look credible online and get more enquiries.</p></div><nav aria-label="Footer navigation"><a href="work.html" data-site-link="work.html">Work</a><a href="services.html" data-site-link="services.html">Services</a><a href="why-choose-us.html" data-site-link="why-choose-us.html">Why Choose Us</a><a href="pricing.html" data-site-link="pricing.html">Pricing</a><a href="care-plans.html" data-site-link="care-plans.html">Care Plans</a><a href="process.html" data-site-link="process.html">How it Works</a><a href="about.html" data-site-link="about.html">About</a><a href="faq.html" data-site-link="faq.html">FAQ</a><a href="contact.html" data-site-link="contact.html">Contact</a></nav><div><p><strong>Email</strong><br><a href="mailto:hello@benjaminmcinnes.co.nz">hello@benjaminmcinnes.co.nz</a></p><p>New Zealand-based. Available for calls with small businesses nationwide.</p></div></div><div class="container footer-bottom"><span class="copyright-notice"><span class="copyright-mark" aria-hidden="true">&copy;</span><span>Copyright <span data-year></span> Better Site by Benjamin McInnes. All rights reserved.</span></span></div></footer>
+    <script>
+      (function () {
+        const hasLoadedRules = (link) => {
+          try {
+            return Boolean(link.sheet && link.sheet.cssRules && link.sheet.cssRules.length);
+          } catch (error) {
+            return false;
+          }
+        };
+
+        const getSiteBase = () => {
+          const loadedStyles = Array.from(document.querySelectorAll("[data-site-styles]")).find(hasLoadedRules);
+          return loadedStyles ? new URL(".", loadedStyles.href).href : new URL(".", window.location.href).href;
+        };
+
+        const loadSiteScript = (base) => {
+          const script = document.createElement("script");
+          script.src = new URL("script.js", base).href;
+          document.body.append(script);
+        };
+
+        const applySiteBase = () => {
+          const base = getSiteBase();
+          document.querySelectorAll("[data-site-link]").forEach((link) => {
+            link.href = new URL(link.dataset.siteLink, base).href;
+          });
+          document.querySelectorAll("[data-site-src]").forEach((image) => {
+            image.src = new URL(image.dataset.siteSrc, base).href;
+          });
+
+          const favicon = document.querySelector("[data-site-favicon]");
+          if (favicon) favicon.href = new URL("assets/images/logo.png", base).href;
+          loadSiteScript(base);
+        };
+
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", applySiteBase);
+        } else {
+          applySiteBase();
+        }
+      })();
+    </script>
+  </body>
+</html>
