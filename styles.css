@@ -2187,6 +2187,13 @@ html[data-theme="light"] .process-step span::after {
   display: block;
 }
 
+.form-honey {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+  pointer-events: none;
+}
+
 .form-row {
   margin-bottom: 18px;
 }

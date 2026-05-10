@@ -801,9 +801,15 @@ const isValidOptionalUrl = (input) => {
   }
 };
 
+const prepareFormSubmission = (submittedForm) => {
+  const nextInput = submittedForm.querySelector("[data-form-next]");
+  if (nextInput && window.location.protocol !== "file:") {
+    nextInput.value = new URL("/thanks", window.location.origin).href;
+  }
+};
+
 if (form && formStatus) {
   form.addEventListener("submit", (event) => {
-    event.preventDefault();
     clearErrors();
 
     const requiredFields = ["name", "email", "business", "business-type"];
@@ -848,25 +854,24 @@ if (form && formStatus) {
     }
 
     if (!isValid) {
+      event.preventDefault();
       const firstError = form.querySelector(".field-error:not(:empty)");
       if (firstError) firstError.scrollIntoView({ behavior: scrollBehavior(), block: "center" });
       return;
     }
 
-    formStatus.textContent =
-      "Thanks - I will review your business and send back a free homepage mockup within 5 business days. No pressure, no obligation.";
+    prepareFormSubmission(form);
+    formStatus.textContent = "Sending your mockup request...";
     formStatus.classList.add("is-visible");
-    form.reset();
     formStatus.scrollIntoView({ behavior: scrollBehavior(), block: "center" });
   });
 }
 
 if (contactForm && contactFormStatus) {
-  contactForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-    contactFormStatus.textContent = "Thanks - the contact form front end is ready to connect to an inbox or form service.";
+  contactForm.addEventListener("submit", () => {
+    prepareFormSubmission(contactForm);
+    contactFormStatus.textContent = "Sending your message...";
     contactFormStatus.classList.add("is-visible");
-    contactForm.reset();
     contactFormStatus.scrollIntoView({ behavior: scrollBehavior(), block: "center" });
   });
 }

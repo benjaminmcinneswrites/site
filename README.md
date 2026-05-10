@@ -13,8 +13,9 @@ Personal multi-page static website for Better Site by Benjamin McInnes.
 - `process.html` - four-step free homepage mockup process.
 - `about.html` - Benjamin McInnes personal about page.
 - `faq.html` - common questions and answers.
-- `contact.html` - simple contact page with a frontend-only contact form.
+- `contact.html` - simple contact page with a working FormSubmit contact form.
 - `request.html` - free homepage mockup request form.
+- `thanks.html` - post-submit thank-you page for the contact and mockup forms.
 - `404.html` - page not found screen for missing URLs.
 - `demo/tradie/index.html` - tradie concept page.
 - `demo/workshop/index.html` - mechanic/workshop concept page.
@@ -22,12 +23,25 @@ Personal multi-page static website for Better Site by Benjamin McInnes.
 - `demo/retail/index.html` - retail/brand concept page.
 - `demo/cafe/index.html` - cafe/hospitality concept page.
 
+## Clean URLs
+
+Primary pages use clean public paths such as `/work`, `/services`, `/pricing`, and `/request`.
+The `.html` files remain in the project root, while `_redirects` and `local-server.py` map clean
+URLs to those files and redirect old `.html` URLs to the clean versions.
+
+## Form Submissions
+
+The contact and free mockup forms submit through FormSubmit to `contact@bettersite.co.nz`.
+On the first live submission, FormSubmit sends a confirmation email to that inbox. Confirm it once
+and future submissions will be emailed through automatically.
+
 ## Shared Files
 
 - `styles.css` - dark/light theme, responsive layouts, cards, forms, and demo styling.
 - `script.js` - theme switcher, mobile menu, sticky header, reveal animations, footer year, and form validation.
 - `assets/images/logo.png` - logo used for the site brand mark and favicon.
-- `.htaccess` and `_redirects` - common static-host fallbacks for sending missing URLs to `404.html`.
+- `_redirects` - static-host clean URL rules and fallback for sending missing URLs to `404.html`.
+- `local-server.py` - local preview server with clean URL and 404 support.
 
 ## 404 Behaviour
 
@@ -39,7 +53,7 @@ To test the designed 404 locally, use the included server instead of `python -m 
 python local-server.py
 ```
 
-Then visit a missing URL such as `http://127.0.0.1:8000/dfgdg.html`.
+Then visit clean URLs such as `http://127.0.0.1:8000/work` or a missing URL such as `http://127.0.0.1:8000/not-found`.
 
 If port `8000` is already being used, choose another port:
 
@@ -50,9 +64,9 @@ python local-server.py 8001
 ## Customisation
 
 - Name/brand: search for `Better Site` and `Benjamin McInnes`.
-- Email: search for `hello@benjaminmcinnes.co.nz`.
+- Email: search for `contact@bettersite.co.nz`.
 - Pricing: search for `From $599`, `From $999`, and `From $19/month`.
 - Portfolio placeholders: search for `Portfolio Project 1` and `Portfolio Project 2`.
-- Form success message: edit `script.js`.
+- Form recipient and subjects: edit the FormSubmit hidden fields in `contact.html` and `request.html`.
 
-Open `index.html` directly in a browser, or run a simple local server from this folder.
+Run `python local-server.py` from this folder to preview the site with clean URLs.

@@ -1,1 +1,26 @@
+/index.html / 301
+/work.html /work 301
+/services.html /services 301
+/why-choose-us.html /why-choose-us 301
+/pricing.html /pricing 301
+/care-plans.html /care-plans 301
+/process.html /process 301
+/about.html /about 301
+/faq.html /faq 301
+/contact.html /contact 301
+/request.html /request 301
+/thanks.html /thanks 301
+
+/work /work.html 200
+/services /services.html 200
+/why-choose-us /why-choose-us.html 200
+/pricing /pricing.html 200
+/care-plans /care-plans.html 200
+/process /process.html 200
+/about /about.html 200
+/faq /faq.html 200
+/contact /contact.html 200
+/request /request.html 200
+/thanks /thanks.html 200
+
 /* /404.html 404
