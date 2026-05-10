@@ -1,110 +1,364 @@
 <!doctype html>
-<html lang="en-NZ" data-theme="dark">
+<html lang="en-NZ">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tradie Website Demo | Better Site</title>
-    <meta name="description" content="Demo concept website style for New Zealand tradies and contractors.">
-    <script>
-      document.documentElement.classList.add("motion-prep");
-      try { document.documentElement.setAttribute("data-theme", localStorage.getItem("theme") || "dark"); }
-      catch (error) { document.documentElement.setAttribute("data-theme", "dark"); }
-    </script>
-    <link rel="icon" type="image/png" href="../../assets/images/logo.png">
-    <link rel="stylesheet" href="../../styles.css">
+    <title>Kauri Trade Co. | Auckland Repairs, Maintenance &amp; Upgrades</title>
+    <meta
+      name="description"
+      content="Kauri Trade Co. provides repairs, maintenance, renovations, outdoor projects, and commercial trade services across Auckland and surrounding regions."
+    >
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231f3b34'/%3E%3Cpath d='M15 43h34v7H15zM19 14h26v8H19zM23 22h18v19H23z' fill='%23f3c766'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="styles.css">
   </head>
-  <body class="demo-page tradie-theme">
-    <header class="site-header is-scrolled" data-header>
-      <div class="container nav-shell">
-        <a class="brand" href="/">
-          <span class="brand-mark"><img src="../../assets/images/logo.png" alt="" width="1254" height="1254"></span>
-          <span>
-            <strong>Better Site</strong>
-            <small>Demo concept site</small>
-          </span>
-        </a>
-        <nav class="primary-nav" id="primary-nav" data-nav>
-          <a href="/work">All Demos</a>
-          <a href="/services">Services</a>
-          <a href="/why-choose-us">Why Us</a>
-          <a href="/pricing">Pricing</a>
-          <a href="/about">About</a>
-          <a href="/faq">FAQ</a>
-          <a href="/contact">Contact</a>
-        </nav>
-        <div class="nav-actions">
-          <button class="theme-toggle" type="button" aria-label="Switch to light theme" data-theme-toggle><span class="theme-icon" aria-hidden="true"></span></button>
-          <a class="nav-cta" href="/request">Free Mockup</a>
-          <button class="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" data-menu-toggle><span></span><span></span><span></span><span class="sr-only">Menu</span></button>
+  <body>
+    <a class="back-link" href="../../index.html" aria-label="Back to main page">
+      <span aria-hidden="true">&#8592;</span>
+      Back
+    </a>
+
+    <header class="site-top" id="top">
+      <div class="service-strip">
+        <div class="wrap service-strip-inner">
+          <span>Auckland-wide repairs, maintenance, and project work</span>
+          <a href="tel:0800555018">Call 0800 555 018</a>
+        </div>
+      </div>
+
+      <div class="nav-row">
+        <div class="wrap nav-inner">
+          <a class="brand" href="#top" aria-label="Kauri Trade Co. home">
+            <span class="brand-mark" aria-hidden="true">
+              <span></span>
+            </span>
+            <span class="brand-copy">
+              <strong>Kauri Trade Co.</strong>
+              <small>Licensed trade services</small>
+            </span>
+          </a>
+
+          <nav class="site-nav" aria-label="Primary navigation">
+            <a href="#services">Services</a>
+            <a href="#projects">Projects</a>
+            <a href="#about">About</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#contact">Contact</a>
+          </nav>
+
+          <a class="nav-quote" href="#contact">Get a Free Quote</a>
         </div>
       </div>
     </header>
 
     <main>
-      <section class="page-hero">
-        <div class="container page-hero-grid">
-          <div>
-            <p class="eyebrow">Demo concept site</p>
-            <h1>Tradie website built to turn local searches into calls.</h1>
-            <p class="hero-subhead">A bold, practical layout for plumbers, builders, electricians, painters, roofers, and local service providers.</p>
+      <section class="hero">
+        <div class="wrap hero-grid">
+          <div class="hero-copy animate-in">
+            <p class="eyebrow">Built for NZ properties</p>
+            <h1>Trade work that is quoted clearly, done properly, and left tidy.</h1>
+            <p class="hero-lead">
+              Kauri Trade Co. helps homeowners, landlords, property managers, and small businesses get repairs, upgrades, and maintenance sorted without chasing people up.
+            </p>
+
             <div class="hero-actions">
-              <a class="btn btn-primary" href="/request">Request your free homepage mockup</a>
-              <a class="btn btn-secondary" href="/work">View more demos</a>
+              <a class="primary-action" href="#contact">Request a Quote</a>
+              <a class="secondary-action" href="#projects">View Our Work</a>
             </div>
+
+            <dl class="trust-board" aria-label="Trust indicators">
+              <div>
+                <dt>Licensed</dt>
+                <dd>&amp; insured</dd>
+              </div>
+              <div>
+                <dt>Local</dt>
+                <dd>Auckland team</dd>
+              </div>
+              <div>
+                <dt>Fast</dt>
+                <dd>turnaround</dd>
+              </div>
+            </dl>
           </div>
-          <div class="demo-browser" aria-label="Tradie demo website preview">
-            <div class="demo-browser-top"><span></span><span></span><span></span></div>
-            <div class="demo-browser-art">
-              <h2>Need a reliable local tradie?</h2>
-              <p>Fast quotes, tidy work, clear service areas, and reviews front and centre.</p>
-              <span class="demo-art-button">Call for a quote</span>
-              <div class="demo-art-cards"><span></span><span></span><span></span><span></span></div>
+
+          <aside class="job-card animate-in delay-1" aria-label="Current job summary">
+            <div class="job-card-top">
+              <span>Job board</span>
+              <strong>Week 24</strong>
             </div>
+
+            <div class="site-scene" role="img" aria-label="A trade worksite with timber boards, a van, tools, and a residential repair area">
+              <div class="scene-house"></div>
+              <div class="scene-roof"></div>
+              <div class="scene-van">
+                <span></span>
+                <span></span>
+              </div>
+              <div class="scene-fence">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="scene-tool drill"></div>
+              <div class="scene-tool ruler"></div>
+            </div>
+
+            <div class="job-list">
+              <article>
+                <span>08:30</span>
+                <p>Deck repair handover, Mt Eden</p>
+              </article>
+              <article>
+                <span>11:00</span>
+                <p>Rental maintenance check, Glenfield</p>
+              </article>
+              <article>
+                <span>14:30</span>
+                <p>Shop fit-out repairs, Ponsonby</p>
+              </article>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="quick-contact" aria-label="Quick contact details">
+        <div class="wrap quick-contact-grid">
+          <a href="tel:0800555018">
+            <span>Phone</span>
+            0800 555 018
+          </a>
+          <a href="mailto:hello@kauritrade.co.nz">
+            <span>Email</span>
+            hello@kauritrade.co.nz
+          </a>
+          <p>
+            <span>Service Area</span>
+            Auckland-wide and surrounding regions
+          </p>
+        </div>
+      </section>
+
+      <section class="services section-space" id="services">
+        <div class="wrap">
+          <div class="section-intro animate-in">
+            <p class="eyebrow">Services</p>
+            <h2>One reliable crew for the practical jobs properties always need.</h2>
+            <p>
+              Whether it is a small fix, a planned upgrade, or a job that needs to happen quickly, we keep the work scoped, scheduled, and easy to understand.
+            </p>
+          </div>
+
+          <div class="service-list">
+            <article class="service-item animate-in">
+              <span>Repair</span>
+              <div>
+                <h3>Residential Repairs</h3>
+                <p>Doors, walls, fittings, fixtures, leaks, damage repairs, and general jobs that keep homes safe and usable.</p>
+              </div>
+            </article>
+            <article class="service-item animate-in delay-1">
+              <span>Upgrade</span>
+              <div>
+                <h3>Renovations &amp; Upgrades</h3>
+                <p>Practical improvements for kitchens, bathrooms, laundries, living areas, and tired spaces that need a better finish.</p>
+              </div>
+            </article>
+            <article class="service-item animate-in delay-2">
+              <span>Maintain</span>
+              <div>
+                <h3>Maintenance Work</h3>
+                <p>Regular property maintenance for landlords, property managers, body corporates, and business owners.</p>
+              </div>
+            </article>
+            <article class="service-item animate-in">
+              <span>Outdoor</span>
+              <div>
+                <h3>Outdoor Projects</h3>
+                <p>Decking, fencing, gates, steps, garden structures, paths, and weather-ready exterior fixes.</p>
+              </div>
+            </article>
+            <article class="service-item animate-in delay-1">
+              <span>Business</span>
+              <div>
+                <h3>Commercial Jobs</h3>
+                <p>After-hours repairs, minor fit-out work, shop maintenance, office fixes, and workshop improvements.</p>
+              </div>
+            </article>
+            <article class="service-item animate-in delay-2">
+              <span>Urgent</span>
+              <div>
+                <h3>Emergency Callouts</h3>
+                <p>Make-safes, storm damage response, urgent repairs, and temporary fixes when the issue cannot wait.</p>
+              </div>
+            </article>
           </div>
         </div>
       </section>
 
-      <section class="demo-features">
-        <div class="container demo-mini-grid">
-          <article class="demo-mini-card">
-            <h3>Call-now CTA</h3>
-            <p>Designed for mobile visitors who want a quote or urgent help quickly.</p>
-          </article>
-          <article class="demo-mini-card">
-            <h3>Service areas</h3>
-            <p>Show suburbs, regions, and job types so customers know you cover their area.</p>
-          </article>
-          <article class="demo-mini-card">
-            <h3>Reviews and proof</h3>
-            <p>Place testimonials, photos, and guarantees where they build trust fastest.</p>
-          </article>
+      <section class="standards section-space" id="about">
+        <div class="wrap standards-grid">
+          <div class="standards-panel animate-in">
+            <p class="eyebrow">Why choose us</p>
+            <h2>We treat every job like someone has to live or work around it tomorrow.</h2>
+            <p>
+              Our work is practical, tidy, and documented. You get straight answers, a realistic timeframe, and no disappearing act halfway through the job.
+            </p>
+          </div>
+
+          <div class="standard-checks">
+            <article class="animate-in delay-1">
+              <strong>Reliable scheduling</strong>
+              <p>We confirm dates, arrival windows, and any weather or supply changes early.</p>
+            </article>
+            <article class="animate-in delay-2">
+              <strong>Clear communication</strong>
+              <p>You know what is included, what is not, and what needs approval before extra work happens.</p>
+            </article>
+            <article class="animate-in delay-3">
+              <strong>Tidy workmanship</strong>
+              <p>We protect surfaces, manage dust and waste, and leave the space ready to use.</p>
+            </article>
+            <article class="animate-in delay-4">
+              <strong>Fair pricing</strong>
+              <p>Quotes are written in plain English with sensible options where the scope can vary.</p>
+            </article>
+            <article class="animate-in delay-1">
+              <strong>NZ-local experience</strong>
+              <p>We understand Auckland weather, rental expectations, older villas, coastal wear, and newer builds.</p>
+            </article>
+          </div>
         </div>
       </section>
 
-      <section class="demo-proof">
-        <div class="container demo-proof-grid">
+      <section class="projects section-space" id="projects">
+        <div class="wrap">
+          <div class="section-intro animate-in">
+            <p class="eyebrow">Recent jobs</p>
+            <h2>Featured projects with clean scopes and practical outcomes.</h2>
+          </div>
+
+          <div class="project-log">
+            <article class="project-ticket animate-in">
+              <div class="ticket-meta">
+                <span>Residential repair</span>
+                <strong>Mt Eden, Auckland</strong>
+              </div>
+              <div class="ticket-body">
+                <h3>Weathered deck rebuild</h3>
+                <p>Unsafe boards were replaced, the frame was strengthened, and the deck was finished with a durable oil suited to Auckland conditions.</p>
+              </div>
+              <span class="ticket-tag">Outdoor upgrade</span>
+            </article>
+
+            <article class="project-ticket animate-in delay-1">
+              <div class="ticket-meta">
+                <span>Commercial job</span>
+                <strong>Hamilton Central</strong>
+              </div>
+              <div class="ticket-body">
+                <h3>Retail refresh before reopening</h3>
+                <p>Wall repairs, shelving fixes, door adjustments, and after-hours tidy-up were completed so the store could reopen on schedule.</p>
+              </div>
+              <span class="ticket-tag">Shop maintenance</span>
+            </article>
+
+            <article class="project-ticket animate-in delay-2">
+              <div class="ticket-meta">
+                <span>Property management</span>
+                <strong>Papamoa, Tauranga</strong>
+              </div>
+              <div class="ticket-body">
+                <h3>Between-tenancy maintenance</h3>
+                <p>Minor repairs, exterior touch-ups, and safety improvements were completed before the new tenants moved in.</p>
+              </div>
+              <span class="ticket-tag">Rental ready</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="reviews section-space" id="reviews">
+        <div class="wrap reviews-grid">
+          <div class="reviews-heading animate-in">
+            <p class="eyebrow">Reviews</p>
+            <h2>Trusted by people who need jobs done without fuss.</h2>
+          </div>
+
+          <div class="review-stack">
+            <figure class="review-card animate-in">
+              <blockquote>
+                "The team explained the repair clearly, arrived when they said they would, and left the place spotless. It was a relief to deal with someone this organised."
+              </blockquote>
+              <figcaption>Sarah McKenzie <span>Homeowner, North Shore</span></figcaption>
+            </figure>
+
+            <figure class="review-card animate-in delay-1">
+              <blockquote>
+                "We use Kauri Trade Co. for rental maintenance because they communicate well with tenants and send clear updates after each job."
+              </blockquote>
+              <figcaption>James Ropata <span>Property manager, Auckland Central</span></figcaption>
+            </figure>
+
+            <figure class="review-card animate-in delay-2">
+              <blockquote>
+                "Fair pricing, tidy workmanship, and no drama. They sorted our shop repairs outside opening hours and kept everything moving."
+              </blockquote>
+              <figcaption>Emily Chen <span>Business owner, Hamilton</span></figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="quote-section" id="contact">
+        <div class="wrap quote-grid animate-in">
           <div>
-            <p class="eyebrow">Homepage structure</p>
-            <h2>Built around quotes, trust, and clear services.</h2>
-            <p>This concept keeps the page direct: what you do, where you work, why customers trust you, and how to get in touch.</p>
+            <p class="eyebrow">Get it sorted</p>
+            <h2>Send the job details and we will come back with the next clear step.</h2>
+            <p>
+              Tell us what needs doing, where the property is, and your preferred timeframe. We will confirm whether we can quote from details or need a site visit first.
+            </p>
           </div>
-          <div class="demo-proof-list">
-            <article><strong>Hero:</strong> service promise, phone CTA, and review highlight.</article>
-            <article><strong>Services:</strong> simple cards for common jobs and specialties.</article>
-            <article><strong>Conversion:</strong> sticky mobile call path and quote form.</article>
-          </div>
-        </div>
-      </section>
 
-      <section class="demo-cta-band">
-        <div class="container">
-          <p class="eyebrow">Like this direction?</p>
-          <h2>Get a free homepage mockup for your own business.</h2>
-          <p>Delivered within 5 business days. No pressure, no obligation.</p>
-          <a class="btn btn-light" href="/request">Request your free homepage mockup</a>
+          <address class="quote-details">
+            <a href="tel:0800555018"><span>Phone</span>0800 555 018</a>
+            <a href="mailto:hello@kauritrade.co.nz"><span>Email</span>hello@kauritrade.co.nz</a>
+            <p><span>Service Area</span>Auckland-wide and surrounding regions</p>
+            <a class="primary-action" href="mailto:hello@kauritrade.co.nz">Get a Free Quote</a>
+          </address>
         </div>
       </section>
     </main>
-    <script src="../../script.js"></script>
+
+    <footer class="footer">
+      <div class="wrap footer-grid">
+        <div>
+          <a class="brand footer-brand" href="#top" aria-label="Kauri Trade Co. home">
+            <span class="brand-mark" aria-hidden="true"><span></span></span>
+            <span class="brand-copy">
+              <strong>Kauri Trade Co.</strong>
+              <small>Auckland trade services</small>
+            </span>
+          </a>
+          <p>Reliable repairs, maintenance, and practical project support for Auckland homes, rentals, and small businesses.</p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="#services">Services</a>
+          <a href="#projects">Projects</a>
+          <a href="#about">About</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="footer-contact">
+          <p><strong>Phone</strong><br><a href="tel:0800555018">0800 555 018</a></p>
+          <p><strong>Email</strong><br><a href="mailto:hello@kauritrade.co.nz">hello@kauritrade.co.nz</a></p>
+        </div>
+      </div>
+      <div class="wrap footer-bottom">
+        <span>&copy; 2026 Kauri Trade Co. All rights reserved.</span>
+      </div>
+    </footer>
   </body>
 </html>

@@ -1,110 +1,97 @@
 <!doctype html>
-<html lang="en-NZ" data-theme="dark">
+<html lang="en-NZ">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Mechanic Workshop Website Demo | Better Site</title>
-    <meta name="description" content="Demo concept website style for New Zealand mechanics, bike repair shops, and workshops.">
-    <script>
-      document.documentElement.classList.add("motion-prep");
-      try { document.documentElement.setAttribute("data-theme", localStorage.getItem("theme") || "dark"); }
-      catch (error) { document.documentElement.setAttribute("data-theme", "dark"); }
-    </script>
-    <link rel="icon" type="image/png" href="../../assets/images/logo.png">
-    <link rel="stylesheet" href="../../styles.css">
+    <title>Workshop Demo In Development | Better Site</title>
+    <meta name="description" content="This Better Site demo is still in development.">
+    <style>
+      :root {
+        --bg: #07111d;
+        --panel: #0e1b2b;
+        --line: rgba(255, 255, 255, 0.12);
+        --text: #f6f8fb;
+        --muted: #aeb8c7;
+        --accent: #54d6cf;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100vh;
+        margin: 0;
+        display: grid;
+        place-items: center;
+        padding: 24px;
+        color: var(--text);
+        background:
+          radial-gradient(circle at 20% 18%, rgba(84, 214, 207, 0.16), transparent 28rem),
+          linear-gradient(135deg, var(--bg), #03070d);
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.6;
+      }
+
+      .back-link {
+        position: fixed;
+        top: 16px;
+        left: 16px;
+        padding: 8px 13px;
+        color: var(--text);
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        font-size: 0.9rem;
+        font-weight: 800;
+        text-decoration: none;
+        transition: transform 180ms ease, background-color 180ms ease;
+      }
+
+      .back-link:hover,
+      .back-link:focus-visible {
+        transform: scale(1.06);
+        background: rgba(84, 214, 207, 0.14);
+      }
+
+      main {
+        width: min(100%, 620px);
+        padding: clamp(28px, 7vw, 52px);
+        background: color-mix(in srgb, var(--panel) 88%, transparent);
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        box-shadow: 0 24px 70px rgba(0, 0, 0, 0.32);
+      }
+
+      p:first-child {
+        margin: 0 0 12px;
+        color: var(--accent);
+        font-size: 0.78rem;
+        font-weight: 900;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 0 0 14px;
+        font-size: clamp(2.2rem, 9vw, 4.2rem);
+        line-height: 1;
+        letter-spacing: 0;
+      }
+
+      p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 1.05rem;
+      }
+    </style>
   </head>
-  <body class="demo-page workshop-theme">
-    <header class="site-header is-scrolled" data-header>
-      <div class="container nav-shell">
-        <a class="brand" href="/">
-          <span class="brand-mark"><img src="../../assets/images/logo.png" alt="" width="1254" height="1254"></span>
-          <span>
-            <strong>Better Site</strong>
-            <small>Demo concept site</small>
-          </span>
-        </a>
-        <nav class="primary-nav" id="primary-nav" data-nav>
-          <a href="/work">All Demos</a>
-          <a href="/services">Services</a>
-          <a href="/why-choose-us">Why Us</a>
-          <a href="/pricing">Pricing</a>
-          <a href="/about">About</a>
-          <a href="/faq">FAQ</a>
-          <a href="/contact">Contact</a>
-        </nav>
-        <div class="nav-actions">
-          <button class="theme-toggle" type="button" aria-label="Switch to light theme" data-theme-toggle><span class="theme-icon" aria-hidden="true"></span></button>
-          <a class="nav-cta" href="/request">Free Mockup</a>
-          <button class="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" data-menu-toggle><span></span><span></span><span></span><span class="sr-only">Menu</span></button>
-        </div>
-      </div>
-    </header>
-
+  <body>
+    <a class="back-link" href="../../work.html">&larr; Back</a>
     <main>
-      <section class="page-hero">
-        <div class="container page-hero-grid">
-          <div>
-            <p class="eyebrow">Demo concept site</p>
-            <h1>Workshop website that makes bookings feel easy.</h1>
-            <p class="hero-subhead">A trust-building concept for mechanics, bike repair shops, automotive services, and busy local workshops.</p>
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="/request">Request your free homepage mockup</a>
-              <a class="btn btn-secondary" href="/work">View more demos</a>
-            </div>
-          </div>
-          <div class="demo-browser" aria-label="Workshop demo website preview">
-            <div class="demo-browser-top"><span></span><span></span><span></span></div>
-            <div class="demo-browser-art">
-              <h2>Servicing, repairs, and honest advice.</h2>
-              <p>Show your services, opening hours, team, workshop gallery, and booking path.</p>
-              <span class="demo-art-button">Book a service</span>
-              <div class="demo-art-cards"><span></span><span></span><span></span><span></span></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="demo-features">
-        <div class="container demo-mini-grid">
-          <article class="demo-mini-card">
-            <h3>Bookings</h3>
-            <p>Give customers a quick way to request a service, WOF, repair, or inspection.</p>
-          </article>
-          <article class="demo-mini-card">
-            <h3>Repair services</h3>
-            <p>Group your most requested services into clear sections with simple descriptions.</p>
-          </article>
-          <article class="demo-mini-card">
-            <h3>Gallery and trust</h3>
-            <p>Show your workshop, team, tools, and reviews to make the business feel credible.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="demo-proof">
-        <div class="container demo-proof-grid">
-          <div>
-            <p class="eyebrow">Homepage structure</p>
-            <h2>Practical, clear, and built for repeat customers.</h2>
-            <p>This concept helps visitors understand your services fast and take action without hunting for details.</p>
-          </div>
-          <div class="demo-proof-list">
-            <article><strong>Hero:</strong> booking CTA, review cue, and core workshop promise.</article>
-            <article><strong>Services:</strong> WOF, servicing, repairs, diagnostics, and specialty work.</article>
-            <article><strong>Conversion:</strong> booking form, phone number, and location details.</article>
-          </div>
-        </div>
-      </section>
-
-      <section class="demo-cta-band">
-        <div class="container">
-          <p class="eyebrow">Like this direction?</p>
-          <h2>Get a free homepage mockup for your own business.</h2>
-          <p>Delivered within 5 business days. No pressure, no obligation.</p>
-          <a class="btn btn-light" href="/request">Request your free homepage mockup</a>
-        </div>
-      </section>
+      <p>Workshop demo</p>
+      <h1>This demo is still in development.</h1>
+      <p>This page will be updated once the workshop direction is ready to show properly.</p>
     </main>
-    <script src="../../script.js"></script>
   </body>
 </html>
