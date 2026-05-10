@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en-NZ">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wedding Celebrant Demo In Development | Better Site</title>
+    <meta name="description" content="This Better Site demo is still in development.">
+    <style>
+      :root {
+        --bg: #07111d;
+        --panel: #0e1b2b;
+        --line: rgba(255, 255, 255, 0.12);
+        --text: #f6f8fb;
+        --muted: #aeb8c7;
+        --accent: #54d6cf;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100vh;
+        margin: 0;
+        display: grid;
+        place-items: center;
+        padding: 24px;
+        color: var(--text);
+        background:
+          radial-gradient(circle at 20% 18%, rgba(84, 214, 207, 0.16), transparent 28rem),
+          linear-gradient(135deg, var(--bg), #03070d);
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.6;
+      }
+
+      .back-link {
+        position: fixed;
+        top: 16px;
+        left: 16px;
+        padding: 8px 13px;
+        color: var(--text);
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        font-size: 0.9rem;
+        font-weight: 800;
+        text-decoration: none;
+        transition: transform 180ms ease, background-color 180ms ease;
+      }
+
+      .back-link:hover,
+      .back-link:focus-visible {
+        transform: scale(1.06);
+        background: rgba(84, 214, 207, 0.14);
+      }
+
+      main {
+        width: min(100%, 620px);
+        padding: clamp(28px, 7vw, 52px);
+        background: color-mix(in srgb, var(--panel) 88%, transparent);
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        box-shadow: 0 24px 70px rgba(0, 0, 0, 0.32);
+      }
+
+      p:first-child {
+        margin: 0 0 12px;
+        color: var(--accent);
+        font-size: 0.78rem;
+        font-weight: 900;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 0 0 14px;
+        font-size: clamp(2.2rem, 9vw, 4.2rem);
+        line-height: 1;
+        letter-spacing: 0;
+      }
+
+      p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 1.05rem;
+      }
+    </style>
+  </head>
+  <body>
+    <a class="back-link" href="../../work.html">&larr; Back</a>
+    <main>
+      <p>Wedding celebrant demo</p>
+      <h1>This demo is still in development.</h1>
+      <p>This page will be updated once the wedding celebrant direction is ready to show properly.</p>
+    </main>
+  </body>
+</html>
