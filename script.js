@@ -212,7 +212,7 @@ const setupPageIntro = () => {
 
 const setupRevealStagger = () => {
   const staggerGroups = document.querySelectorAll(
-    ".three-grid, .pricing-grid, .process-grid, .demo-grid, .portfolio-grid, .audience-grid, .why-benefit-grid, .why-stack, .demo-mini-grid, .faq-list, .bio-stack"
+    ".three-grid, .pricing-grid, .process-grid, .demo-grid, .portfolio-grid, .audience-grid, .why-benefit-grid, .why-stack, .demo-mini-grid, .review-list, .faq-list, .bio-stack"
   );
 
   staggerGroups.forEach((group) => {
