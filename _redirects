@@ -10,6 +10,10 @@
 /contact.html /contact 301
 /request.html /request 301
 /thanks.html /thanks 301
+/small-business-website-design-nz.html /small-business-website-design-nz 301
+/affordable-web-design-nz.html /affordable-web-design-nz 301
+/website-design-pricing-nz.html /website-design-pricing-nz 301
+/website-redesign-nz.html /website-redesign-nz 301
 
 /work /work.html 200
 /services /services.html 200
@@ -22,5 +26,9 @@
 /contact /contact.html 200
 /request /request.html 200
 /thanks /thanks.html 200
+/small-business-website-design-nz /small-business-website-design-nz.html 200
+/affordable-web-design-nz /affordable-web-design-nz.html 200
+/website-design-pricing-nz /website-design-pricing-nz.html 200
+/website-redesign-nz /website-redesign-nz.html 200
 
 /* /404.html 404

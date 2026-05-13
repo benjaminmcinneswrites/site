@@ -20,6 +20,10 @@ class SiteHandler(SimpleHTTPRequestHandler):
             "/contact.html": "/contact",
             "/request.html": "/request",
             "/thanks.html": "/thanks",
+            "/small-business-website-design-nz.html": "/small-business-website-design-nz",
+            "/affordable-web-design-nz.html": "/affordable-web-design-nz",
+            "/website-design-pricing-nz.html": "/website-design-pricing-nz",
+            "/website-redesign-nz.html": "/website-redesign-nz",
         }
         target = redirects.get(url.path)
         if not target:
