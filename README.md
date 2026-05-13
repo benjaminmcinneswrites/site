@@ -1,6 +1,6 @@
 # Better Site
 
-Static website for Better Site by Benjamin McInnes.
+Static website for Better Site by Benjamin.
 
 ## Main files
 

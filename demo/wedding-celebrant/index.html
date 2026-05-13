@@ -3,96 +3,306 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Wedding Celebrant Demo In Development | Better Site</title>
-    <meta name="description" content="This Better Site demo is still in development.">
+    <title>Harbour &amp; Vow Celebrancy | New Zealand Wedding Celebrant</title>
+    <meta
+      name="description"
+      content="Harbour & Vow Celebrancy creates warm, modern wedding ceremonies across New Zealand. Personal vows, elopements, registry-style ceremonies, and relaxed full weddings."
+    >
     <meta name="robots" content="noindex, follow">
-    <style>
-      :root {
-        --bg: #07111d;
-        --panel: #0e1b2b;
-        --line: rgba(255, 255, 255, 0.12);
-        --text: #f6f8fb;
-        --muted: #aeb8c7;
-        --accent: #54d6cf;
+    <meta property="og:title" content="Harbour &amp; Vow Celebrancy | New Zealand Wedding Celebrant">
+    <meta property="og:description" content="Warm, modern New Zealand wedding celebrant services for couples who want a ceremony that feels relaxed, personal, and beautifully held.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&amp;fit=crop&amp;w=1400&amp;q=82">
+    <link rel="icon" type="image/png" href="../../assets/images/h%26v%20logo.png">
+    <link rel="apple-touch-icon" href="../../assets/images/h%26v%20logo.png">
+    <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Harbour & Vow Celebrancy",
+        "description": "Warm, modern New Zealand wedding celebrant services for personal ceremonies, elopements, and relaxed full weddings.",
+        "image": "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1400&q=82",
+        "telephone": "+64-800-000-000",
+        "email": "hello@harbourandvow.co.nz",
+        "areaServed": ["Auckland", "Waiheke Island", "Bay of Plenty", "Coromandel", "Queenstown", "New Zealand"],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ"
+        },
+        "priceRange": "$$"
       }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        min-height: 100vh;
-        margin: 0;
-        display: grid;
-        place-items: center;
-        padding: 24px;
-        color: var(--text);
-        background:
-          radial-gradient(circle at 20% 18%, rgba(84, 214, 207, 0.16), transparent 28rem),
-          linear-gradient(135deg, var(--bg), #03070d);
-        font-family: Arial, Helvetica, sans-serif;
-        line-height: 1.6;
-      }
-
-      .back-link {
-        position: fixed;
-        top: 16px;
-        left: 16px;
-        padding: 8px 13px;
-        color: var(--text);
-        background: rgba(255, 255, 255, 0.08);
-        border: 1px solid var(--line);
-        border-radius: 999px;
-        font-size: 0.9rem;
-        font-weight: 800;
-        text-decoration: none;
-        transition: transform 180ms ease, background-color 180ms ease;
-      }
-
-      .back-link:hover,
-      .back-link:focus-visible {
-        transform: scale(1.06);
-        background: rgba(84, 214, 207, 0.14);
-      }
-
-      main {
-        width: min(100%, 620px);
-        padding: clamp(28px, 7vw, 52px);
-        background: color-mix(in srgb, var(--panel) 88%, transparent);
-        border: 1px solid var(--line);
-        border-radius: 10px;
-        box-shadow: 0 24px 70px rgba(0, 0, 0, 0.32);
-      }
-
-      p:first-child {
-        margin: 0 0 12px;
-        color: var(--accent);
-        font-size: 0.78rem;
-        font-weight: 900;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-      }
-
-      h1 {
-        margin: 0 0 14px;
-        font-size: clamp(2.2rem, 9vw, 4.2rem);
-        line-height: 1;
-        letter-spacing: 0;
-      }
-
-      p {
-        margin: 0;
-        color: var(--muted);
-        font-size: 1.05rem;
-      }
-    </style>
+    </script>
   </head>
   <body>
-    <a class="back-link" href="../../work.html">&larr; Back</a>
+    <a class="back-link" href="../../index.html" aria-label="Back to main page">
+      <span aria-hidden="true">&#8592;</span>
+      Back
+    </a>
+
+    <header class="site-header">
+      <div class="wrap nav-shell">
+        <div class="brand" aria-label="Harbour and Vow Celebrancy">
+          <span class="brand-mark" aria-hidden="true">
+            <img src="../../assets/images/h%26v%20logo.png" alt="">
+          </span>
+          <span>
+            <strong>Harbour &amp; Vow</strong>
+            <small>New Zealand celebrant</small>
+          </span>
+        </div>
+
+        <nav class="desktop-nav" aria-label="Primary navigation">
+          <span>Ceremonies</span>
+          <span>About</span>
+          <span>Locations</span>
+          <span>Kind Words</span>
+          <span>Contact</span>
+        </nav>
+
+        <span class="nav-cta">Enquire Now</span>
+
+        <details class="mobile-nav" aria-label="Mobile navigation">
+          <summary class="mobile-menu-button">
+            <span class="sr-only">Menu</span>
+            <span class="menu-lines" aria-hidden="true"><span></span><span></span><span></span></span>
+          </summary>
+          <div class="mobile-dropdown">
+            <span>Ceremonies</span>
+            <span>About</span>
+            <span>Locations</span>
+            <span>Kind Words</span>
+            <span>Contact</span>
+            <span class="mobile-cta">Enquire Now</span>
+          </div>
+        </details>
+      </div>
+    </header>
+
     <main>
-      <p>Wedding celebrant demo</p>
-      <h1>This demo is still in development.</h1>
-      <p>This page will be updated once the wedding celebrant direction is ready to show properly.</p>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="wrap hero-content reveal-item">
+          <p class="eyebrow">Wedding celebrant across Aotearoa New Zealand</p>
+          <h1 id="hero-title">Harbour &amp; Vow Celebrancy</h1>
+          <p class="hero-lead">
+            Warm, modern ceremonies for couples who want the official bit to feel personal, easy, and completely like them.
+          </p>
+          <div class="hero-actions" aria-label="Celebrant contact options">
+            <span class="primary-action">Start Your Enquiry</span>
+            <span class="secondary-action">0800 000 000</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="intro-band" aria-label="Celebrant promise">
+        <div class="wrap intro-grid">
+          <p class="intro-statement reveal-item">
+            Your ceremony should feel calm, beautifully guided, and remembered for the right reasons.
+          </p>
+          <div class="intro-notes">
+            <div class="reveal-item">
+              <strong>Personal vows</strong>
+              <span>Support to shape words that feel natural, honest, and yours.</span>
+            </div>
+            <div class="reveal-item">
+              <strong>NZ-wide travel</strong>
+              <span>Available for local weddings, coastal weekends, and destination celebrations.</span>
+            </div>
+            <div class="reveal-item">
+              <strong>Clear process</strong>
+              <span>Simple paperwork, relaxed planning calls, and steady ceremony guidance.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-space ceremony-section" aria-labelledby="ceremony-title">
+        <div class="wrap">
+          <div class="section-heading reveal-item">
+            <p class="eyebrow">Ceremony options</p>
+            <h2 id="ceremony-title">From intimate elopements to full wedding days.</h2>
+            <p>
+              Every couple brings a different pace, story, and family shape. Harbour &amp; Vow keeps the ceremony grounded, joyful, and easy for guests to follow.
+            </p>
+          </div>
+
+          <div class="ceremony-grid">
+            <article class="ceremony-card reveal-item">
+              <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&amp;fit=crop&amp;w=900&amp;q=82" alt="A couple holding hands during an outdoor wedding ceremony">
+              <div>
+                <span>01</span>
+                <h3>Full wedding ceremony</h3>
+                <p>A personal ceremony script, vow support, legal paperwork, rehearsal cues, and calm guidance on the day.</p>
+              </div>
+            </article>
+            <article class="ceremony-card reveal-item">
+              <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&amp;fit=crop&amp;w=900&amp;q=82" alt="Wedding rings and delicate ceremony details">
+              <div>
+                <span>02</span>
+                <h3>Elopements &amp; micro weddings</h3>
+                <p>Short, meaningful ceremonies for beaches, gardens, private homes, lodges, and scenic New Zealand locations.</p>
+              </div>
+            </article>
+            <article class="ceremony-card reveal-item">
+              <img src="https://images.unsplash.com/photo-1469371670807-013ccf25f16a?auto=format&amp;fit=crop&amp;w=900&amp;q=82" alt="A wedding table set with flowers and glassware">
+              <div>
+                <span>03</span>
+                <h3>Simple legal ceremony</h3>
+                <p>A clean, registry-style option for couples who want the legal words done warmly, clearly, and without fuss.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="location-section section-space" aria-labelledby="locations-title">
+        <div class="wrap location-grid">
+          <div class="location-copy reveal-item">
+            <p class="eyebrow">Where we marry couples</p>
+            <h2 id="locations-title">Coast, vineyard, garden, city rooftop, family farm.</h2>
+            <p>
+              Based in New Zealand and available for ceremonies across Auckland, Waiheke Island, the Coromandel, Bay of Plenty, Queenstown, and beyond by arrangement.
+            </p>
+          </div>
+
+          <div class="location-panel reveal-item">
+            <h3>Popular ceremony settings</h3>
+            <ul>
+              <li>Beach and coastal weddings</li>
+              <li>Vineyard and lodge celebrations</li>
+              <li>Garden ceremonies and family homes</li>
+              <li>Small registry-style ceremonies</li>
+              <li>Destination weddings around New Zealand</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="story-section section-space" aria-labelledby="story-title">
+        <div class="wrap story-grid">
+          <figure class="story-image reveal-item">
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&amp;fit=crop&amp;w=1100&amp;q=82" alt="A New Zealand wedding couple walking together after their ceremony">
+          </figure>
+
+          <div class="story-copy reveal-item">
+            <p class="eyebrow">The feel</p>
+            <h2 id="story-title">Polished enough for the big moment. Relaxed enough to breathe.</h2>
+            <p>
+              You will be guided through the legal requirements, ceremony flow, readings, vows, and family moments without turning the process into homework.
+            </p>
+            <blockquote>
+              "Our ceremony felt like us from the first sentence. It was warm, funny, calm, and everyone said it set the tone for the whole day."
+            </blockquote>
+            <cite>Maddy &amp; Theo, Waiheke Island</cite>
+          </div>
+        </div>
+      </section>
+
+      <section class="enquiry-section" aria-labelledby="enquiry-title">
+        <div class="wrap enquiry-grid">
+          <div class="reveal-item">
+            <p class="eyebrow">Start the conversation</p>
+            <h2 id="enquiry-title">Tell us your date, place, and the kind of ceremony you have in mind.</h2>
+            <p>
+              You do not need all the details sorted. Send the basics and we will come back with availability, next steps, and a simple way to see whether it feels like the right fit.
+            </p>
+          </div>
+
+          <address class="enquiry-card reveal-item">
+            <span>Phone</span>
+            <strong>0800 000 000</strong>
+            <span>Email</span>
+            <strong>hello@harbourandvow.co.nz</strong>
+            <span class="primary-action">Enquire Now</span>
+          </address>
+        </div>
+      </section>
     </main>
+
+    <footer class="footer">
+      <div class="wrap footer-grid">
+        <div>
+          <div class="brand footer-brand" aria-label="Harbour and Vow Celebrancy">
+            <span class="brand-mark" aria-hidden="true">
+              <img src="../../assets/images/h%26v%20logo.png" alt="">
+            </span>
+            <span>
+              <strong>Harbour &amp; Vow</strong>
+              <small>New Zealand celebrant</small>
+            </span>
+          </div>
+          <p>Warm, modern wedding ceremonies across New Zealand for couples who want the moment to feel real.</p>
+        </div>
+
+        <div class="footer-contact">
+          <p><strong>Phone</strong><br>0800 000 000</p>
+          <p><strong>Email</strong><br>hello@harbourandvow.co.nz</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      (() => {
+        const revealItems = document.querySelectorAll('.reveal-item');
+
+        const showItem = item => item.classList.add('is-visible');
+
+        if (!('IntersectionObserver' in window)) {
+          revealItems.forEach(showItem);
+        } else {
+          const observer = new IntersectionObserver((entries, activeObserver) => {
+            entries.forEach(entry => {
+              if (!entry.isIntersecting) {
+                return;
+              }
+
+              showItem(entry.target);
+              activeObserver.unobserve(entry.target);
+            });
+          }, {
+            rootMargin: '0px 0px 14% 0px',
+            threshold: 0.12
+          });
+
+          revealItems.forEach((item, index) => {
+            item.style.setProperty('--reveal-delay', `${(index % 3) * 70}ms`);
+            observer.observe(item);
+          });
+        }
+
+        const mobileNav = document.querySelector('.mobile-nav');
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        let closeTimer;
+
+        if (!mobileNav || !mobileMenuButton) {
+          return;
+        }
+
+        mobileMenuButton.addEventListener('click', event => {
+          event.preventDefault();
+          window.clearTimeout(closeTimer);
+
+          if (mobileNav.open && !mobileNav.classList.contains('is-closing')) {
+            mobileNav.classList.add('is-closing');
+            closeTimer = window.setTimeout(() => {
+              mobileNav.open = false;
+              mobileNav.classList.remove('is-closing');
+            }, 280);
+            return;
+          }
+
+          mobileNav.open = true;
+          mobileNav.classList.remove('is-closing');
+          mobileNav.classList.add('is-opening');
+
+          window.requestAnimationFrame(() => {
+            window.requestAnimationFrame(() => {
+              mobileNav.classList.remove('is-opening');
+            });
+          });
+        });
+      })();
+    </script>
   </body>
 </html>
