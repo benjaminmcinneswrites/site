@@ -5,7 +5,7 @@
 /pricing.html /pricing 301
 /care-plans.html /care-plans 301
 /process.html /process 301
-/about.html /about 301
+/about.html /why-choose-us 301
 /faq.html /faq 301
 /contact.html /contact 301
 /request.html /request 301
@@ -21,7 +21,7 @@
 /pricing /pricing.html 200
 /care-plans /care-plans.html 200
 /process /process.html 200
-/about /about.html 200
+/about /why-choose-us 301
 /faq /faq.html 200
 /contact /contact.html 200
 /request /request.html 200

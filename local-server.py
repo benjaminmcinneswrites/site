@@ -15,7 +15,7 @@ class SiteHandler(SimpleHTTPRequestHandler):
             "/pricing.html": "/pricing",
             "/care-plans.html": "/care-plans",
             "/process.html": "/process",
-            "/about.html": "/about",
+            "/about.html": "/why-choose-us",
             "/faq.html": "/faq",
             "/contact.html": "/contact",
             "/request.html": "/request",
@@ -42,13 +42,35 @@ class SiteHandler(SimpleHTTPRequestHandler):
         self.end_headers()
         return True
 
+    def _legacy_redirect_target(self):
+        url = urlsplit(self.path)
+        redirects = {
+            "/about": "/why-choose-us",
+        }
+        target = redirects.get(url.path)
+        if not target:
+            return None
+
+        return urlunsplit(("", "", target, url.query, url.fragment))
+
+    def _redirect_legacy_url(self):
+        target = self._legacy_redirect_target()
+        if not target:
+            return False
+
+        self.send_response(301)
+        self.send_header("Location", target)
+        self.send_header("Content-Length", "0")
+        self.end_headers()
+        return True
+
     def do_GET(self):
-        if self._redirect_clean_url():
+        if self._redirect_clean_url() or self._redirect_legacy_url():
             return
         super().do_GET()
 
     def do_HEAD(self):
-        if self._redirect_clean_url():
+        if self._redirect_clean_url() or self._redirect_legacy_url():
             return
         super().do_HEAD()
 
