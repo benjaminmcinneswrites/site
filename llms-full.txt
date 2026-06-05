@@ -173,8 +173,8 @@ These may be quoted separately where appropriate, but they should not be describ
 This website is a static site. The codebase uses:
 
 - HTML pages in the site root
-- Shared CSS in styles.css
-- Shared JavaScript in script.js
+- Shared CSS in s.css
+- Shared JavaScript in j.js
 - Image assets in assets/images/
 - Demo pages in demo/
 - _redirects for clean URL routing

@@ -1,0 +1,30 @@
+# Local verification output
+_mobile-check/
+.codex/
+
+# Local strategy and verification files
+marketing/
+scripts/
+tests/
+
+# Python cache files from the local dev server
+__pycache__/
+*.pyc
+
+# Local environment and scratch files
+.env
+.env.*
+*.tmp
+
+# Local logs and OS metadata
+*.log
+Thumbs.db
+.DS_Store
+
+# Playwright
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
