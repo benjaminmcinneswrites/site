@@ -1,4 +1,4 @@
-# Better Site Pricing
+﻿# Better Site Pricing
 
 Website: https://bettersite.co.nz/pricing
 Care plans: https://bettersite.co.nz/care-plans
@@ -81,7 +81,7 @@ Important limits:
 
 ## Payment Notes
 
-The free homepage mockup is free and is delivered within 5 business days according to the website. It is a homepage preview, not a complete free website.
+The free homepage mockup is free and is delivered within 3 business days according to the website. It is a homepage preview, not a complete free website.
 
 If a customer wants to continue after the mockup, the accepted quote should confirm the scope, any upfront payment, and the remaining balance due before delivery or launch.
 

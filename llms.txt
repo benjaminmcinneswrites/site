@@ -1,4 +1,4 @@
-# Better Site
+﻿# Better Site
 
 Website: https://bettersite.co.nz
 Canonical domain: https://bettersite.co.nz
@@ -33,7 +33,7 @@ Prices shown on the site are in NZD. GST status is not stated on the current sit
 
 Hosting, domains, email hosting, ecommerce, custom backend/app functionality, booking systems unless embedded, advanced copywriting, complex animations, extra pages, integrations, unlimited revisions, ongoing care, and large rebuilds are not included in the listed package prices unless quoted separately.
 
-The site says the free homepage mockup is delivered within 5 business days. Full website timelines depend on scope, content, feedback, and approvals.
+The site says the free homepage mockup is delivered within 3 business days. Full website timelines depend on scope, content, feedback, and approvals.
 
 Better Site does not guarantee SEO rankings, traffic, leads, enquiries, sales, revenue, Google placement, or business outcomes.
 

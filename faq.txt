@@ -1,4 +1,4 @@
-# Better Site FAQ
+﻿# Better Site FAQ
 
 Website: https://bettersite.co.nz/faq
 Contact: contact@bettersite.co.nz
@@ -54,7 +54,7 @@ There may be ongoing costs for hosting, domain renewal, email hosting, third-par
 
 ## How long does it take?
 
-The free homepage mockup is delivered within 5 business days. Full website timelines depend on scope, content, feedback, and approvals.
+The free homepage mockup is delivered within 3 business days. Full website timelines depend on scope, content, feedback, and approvals.
 
 ## Do you only work with Christchurch businesses?
 
