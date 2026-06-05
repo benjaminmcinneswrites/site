@@ -1,11 +1,11 @@
 const root = document.documentElement;
-root.classList.add("js", "force-site-motion");
+root.classList.add("js");
 
-const prefersReducedMotion = () => false;
+const prefersReducedMotion = () =>
+  window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const header = document.querySelector("[data-header]");
 const nav = document.querySelector("[data-nav]");
 const menuToggle = document.querySelector("[data-menu-toggle]");
-const themeToggle = document.querySelector("[data-theme-toggle]");
 const form = document.querySelector("[data-mockup-form]");
 const formStatus = document.querySelector("[data-form-status]");
 const contactForm = document.querySelector("[data-contact-form]");
@@ -15,6 +15,76 @@ const year = document.querySelector("[data-year]");
 const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
 const scrollBehavior = () => (prefersReducedMotion() ? "auto" : "smooth");
 const transitionKey = "bm-site-transition";
+
+const setupSkeletonLoader = () => {
+  if (!document.body) return;
+
+  const loader = document.createElement("div");
+  loader.className = "page-loader";
+  loader.setAttribute("aria-hidden", "true");
+  loader.innerHTML = `
+    <div class="page-loader-shell">
+      <div class="page-loader-nav">
+        <span class="skeleton-mark"></span>
+        <span class="skeleton-stack">
+          <span class="skeleton-line skeleton-line-title"></span>
+          <span class="skeleton-line skeleton-line-short"></span>
+        </span>
+        <span class="skeleton-nav-row">
+          <span></span><span></span><span></span><span></span>
+        </span>
+        <span class="skeleton-pill"></span>
+      </div>
+      <div class="page-loader-hero">
+        <div class="page-loader-copy">
+          <span class="skeleton-line skeleton-line-eyebrow"></span>
+          <span class="skeleton-heading skeleton-heading-wide"></span>
+          <span class="skeleton-heading skeleton-heading-mid"></span>
+          <span class="skeleton-line skeleton-line-copy"></span>
+          <span class="skeleton-line skeleton-line-copy skeleton-line-copy-short"></span>
+          <span class="skeleton-actions"><span></span><span></span></span>
+        </div>
+        <div class="page-loader-panel">
+          <span class="skeleton-media"></span>
+          <span class="skeleton-panel-line"></span>
+          <span class="skeleton-panel-line skeleton-panel-line-short"></span>
+        </div>
+      </div>
+      <div class="page-loader-cards">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  `;
+  document.body.prepend(loader);
+
+  const start = performance.now();
+  const reduced = prefersReducedMotion();
+  const minimumVisible = reduced ? 0 : 360;
+  let isHidden = false;
+
+  const hideLoader = () => {
+    if (isHidden) return;
+    isHidden = true;
+
+    const elapsed = performance.now() - start;
+    const wait = Math.max(minimumVisible - elapsed, 0);
+
+    window.setTimeout(() => {
+      loader.classList.add("is-fading");
+      window.setTimeout(() => loader.remove(), reduced ? 20 : 440);
+    }, wait);
+  };
+
+  if (document.readyState === "complete") {
+    window.requestAnimationFrame(hideLoader);
+  } else {
+    window.addEventListener("load", hideLoader, { once: true });
+  }
+
+  window.setTimeout(hideLoader, reduced ? 450 : 1600);
+};
+
+setupSkeletonLoader();
 
 const resetReloadScroll = () => {
   if ("scrollRestoration" in window.history) {
@@ -52,79 +122,10 @@ const storeInternalTransition = () => {
   }
 };
 
-const getStoredTheme = () => {
-  try {
-    return localStorage.getItem("theme");
-  } catch {
-    return null;
-  }
-};
-
-const storeTheme = (theme) => {
-  try {
-    localStorage.setItem("theme", theme);
-  } catch {
-    return;
-  }
-};
-
-let themeTransitionTimer;
-
-const applyTheme = (theme) => {
-  const nextTheme = theme === "light" ? "light" : "dark";
-  root.setAttribute("data-theme", nextTheme);
-
-  if (themeToggle) {
-    const nextLabel = nextTheme === "light" ? "Switch to dark theme" : "Switch to light theme";
-    themeToggle.setAttribute("aria-label", nextLabel);
-    themeToggle.setAttribute("title", nextLabel);
-  }
-};
-
-const transitionTheme = (theme) => {
-  const nextTheme = theme === "light" ? "light" : "dark";
-  const currentTheme = root.getAttribute("data-theme") === "light" ? "light" : "dark";
-
-  if (nextTheme === currentTheme) {
-    applyTheme(nextTheme);
-    return;
-  }
-
-  window.clearTimeout(themeTransitionTimer);
-  root.classList.remove("is-theme-revealing");
-  root.style.setProperty("--theme-transition-wash", currentTheme === "light" ? "#f7f4ee" : "#070b12");
-  root.classList.add("is-theme-changing");
-
-  void root.offsetWidth;
-
-  requestAnimationFrame(() => {
-    applyTheme(nextTheme);
-
-    requestAnimationFrame(() => {
-      root.classList.add("is-theme-revealing");
-    });
-  });
-
-  themeTransitionTimer = window.setTimeout(() => {
-    root.classList.remove("is-theme-changing", "is-theme-revealing");
-    root.style.removeProperty("--theme-transition-wash");
-  }, 620);
-};
-
-applyTheme(getStoredTheme() || root.getAttribute("data-theme") || "dark");
 resetReloadScroll();
 
 if (year) {
   year.textContent = new Date().getFullYear();
-}
-
-if (themeToggle) {
-  themeToggle.addEventListener("click", () => {
-    const currentTheme = root.getAttribute("data-theme") === "light" ? "light" : "dark";
-    const nextTheme = currentTheme === "light" ? "dark" : "light";
-    transitionTheme(nextTheme);
-    storeTheme(nextTheme);
-  });
 }
 
 const closeMenu = () => {
@@ -142,6 +143,14 @@ const openMenu = () => {
   document.body.classList.add("menu-open");
   menuToggle.setAttribute("aria-expanded", "true");
 };
+
+if (nav && !nav.querySelector(".mobile-nav-cta")) {
+  const mobileCta = document.createElement("a");
+  mobileCta.className = "mobile-nav-cta";
+  mobileCta.href = "/request";
+  mobileCta.textContent = "Request a free mockup";
+  nav.appendChild(mobileCta);
+}
 
 if (menuToggle) {
   menuToggle.addEventListener("click", () => {
@@ -776,7 +785,6 @@ setupTetherPanels();
 setupProcessTimelines();
 setupCarousels();
 setupFaqAccordions();
-setupCustomCursor();
 setupPageTransitions();
 
 const setError = (name, message) => {

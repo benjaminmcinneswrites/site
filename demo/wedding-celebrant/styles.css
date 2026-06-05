@@ -204,21 +204,8 @@ img {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(90deg, rgba(33, 24, 33, 0.84) 0%, rgba(33, 24, 33, 0.48) 48%, rgba(33, 24, 33, 0.12) 100%),
-    linear-gradient(180deg, rgba(33, 24, 33, 0.1), rgba(33, 24, 33, 0.58)),
-    url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1800&q=82") center / cover;
+  background: url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1800&q=82") center / cover;
   transform: scale(1.02);
-}
-
-.hero::after {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: min(38vw, 520px);
-  height: 12px;
-  content: "";
-  background: var(--rose);
 }
 
 .hero-content {
@@ -412,7 +399,7 @@ h3 {
 .location-panel {
   padding: 28px;
   color: var(--white);
-  background: linear-gradient(135deg, var(--plum), #8e3654);
+  background: var(--plum);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
@@ -485,9 +472,7 @@ h3 {
 .enquiry-section {
   padding: 86px 0;
   color: var(--white);
-  background:
-    linear-gradient(110deg, rgba(33, 24, 33, 0.96), rgba(110, 32, 58, 0.9)),
-    var(--plum-dark);
+  background: var(--plum-dark);
 }
 
 .enquiry-section h2,
@@ -770,9 +755,7 @@ h3 {
   }
 
   .hero-bg {
-    background:
-      linear-gradient(180deg, rgba(33, 24, 33, 0.72) 0%, rgba(33, 24, 33, 0.62) 44%, rgba(33, 24, 33, 0.82) 100%),
-      url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1100&q=82") center / cover;
+    background: url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1100&q=82") center / cover;
   }
 
   .hero-content {

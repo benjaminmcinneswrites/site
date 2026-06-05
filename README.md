@@ -10,6 +10,7 @@ Static website for Better Site by Benjamin.
 - `assets/images/` contains live image assets used by the site.
 - `demo/` contains linked concept/demo pages shown from the portfolio.
 - `local-server.py` previews the site locally with clean URLs and the custom 404 page.
+- `llms.txt`, `llms-full.txt`, `ai.txt`, `humans.txt`, `site-summary.txt`, `services.txt`, `pricing.txt`, and `faq.txt` provide crawler-friendly plain-text context for search engines, AI assistants, and future maintainers.
+- `robots.txt` and `sitemap.xml` provide crawl guidance and canonical public page references for `https://bettersite.co.nz`.
 
 Generated screenshots, local logs, and Python cache files are ignored by `.gitignore`.
-

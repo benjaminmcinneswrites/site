@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en-NZ" data-theme="dark">
+<html lang="en-NZ">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,8 +8,6 @@
     <meta name="robots" content="noindex">
     <script>
       document.documentElement.classList.add("motion-prep");
-      try { document.documentElement.setAttribute("data-theme", localStorage.getItem("theme") || "dark"); }
-      catch (error) { document.documentElement.setAttribute("data-theme", "dark"); }
     </script>
     <link rel="icon" type="image/png" href="assets/images/logo.png">
     <link rel="stylesheet" href="styles.css">
@@ -33,7 +31,6 @@
           <a href="/contact">Contact</a>
         </nav>
         <div class="nav-actions">
-          <button class="theme-toggle" type="button" aria-label="Switch to light theme" data-theme-toggle><span class="theme-icon" aria-hidden="true"></span></button>
           <a class="nav-cta" href="/request">Free Mockup</a>
           <button class="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" data-menu-toggle><span></span><span></span><span></span><span class="sr-only">Menu</span></button>
         </div>
@@ -65,11 +62,10 @@
 
     <footer class="site-footer">
       <div class="container footer-grid">
-        <div><a class="brand footer-brand" href="/"><span class="brand-mark"><img src="assets/images/logo.png" alt="" width="1254" height="1254"></span><span><strong>Better Site</strong><small>By Benjamin</small></span></a><p>Affordable websites for New Zealand small businesses that need to look credible online and get more enquiries.</p></div>
-        <nav aria-label="Footer navigation"><a href="/services">Services</a><a href="/why-choose-us">Why Choose Us</a><a href="/pricing">Pricing</a><a href="/care-plans">Care Plans</a><a href="/process">How it Works</a><a href="/faq">FAQ</a><a href="/contact">Contact</a></nav>
-        <div><p><strong>Email</strong><br><a href="mailto:contact@bettersite.co.nz">contact@bettersite.co.nz</a></p><p>New Zealand-based. Available for calls with small businesses nationwide.</p></div>
+        <div><a class="brand footer-brand" href="/"><span class="brand-mark"><img src="assets/images/logo.png" alt="" width="1254" height="1254"></span><span><strong>Better Site</strong><small>By Benjamin</small></span></a><p>Affordable websites for New Zealand small businesses that need to look credible online and make enquiries easier.</p></div>
+        <div><p><strong>Email</strong><br><a href="mailto:contact@bettersite.co.nz">contact@bettersite.co.nz</a></p></div>
       </div>
-      <div class="container footer-bottom"><span class="copyright-notice"><span class="copyright-mark" aria-hidden="true">&copy;</span><span>Copyright <span data-year></span> Better Site by Benjamin. All rights reserved.</span></span></div>
+      <div class="container footer-bottom"><span class="copyright-notice"><span class="copyright-mark" aria-hidden="true">&copy;</span><span>Copyright <span data-year></span> Better Site by Benjamin. All rights reserved.</span></span><nav class="footer-policy-row" aria-label="Footer legal navigation"><a href="/privacy-policy">Privacy</a><a href="/terms-of-service">Terms</a><a href="/hosting-care-terms">Hosting</a><a href="/refunds-cancellations">Refunds</a><a href="/acceptable-use">Acceptable Use</a><a href="/cookie-policy">Cookies</a><a href="/accessibility">Accessibility</a></nav></div>
     </footer>
     <script src="script.js"></script>
   </body>

@@ -1,0 +1,96 @@
+# Better Site Pricing
+
+Website: https://bettersite.co.nz/pricing
+Care plans: https://bettersite.co.nz/care-plans
+Contact: contact@bettersite.co.nz
+Last updated: 2026-06-05
+
+Prices are shown in NZD on the website. GST status is not stated on the current site.
+
+These are the visible package prices in the current website copy. Final scope, due dates, any upfront payment, and any remaining balance should be confirmed in the accepted quote or invoice.
+
+## Main Website Offers
+
+### Starter One-Page Site - $199
+
+Best for sole traders, creators, local services, and new businesses that need a simple professional website quickly and affordably.
+
+Included:
+
+- One-page website
+- Up to 5 focused sections
+- Mobile-friendly design
+- Basic contact section
+- Basic SEO title and description
+- One revision round
+- Simple launch support
+
+Important limits:
+
+- Client provides text and images
+- No ecommerce
+- No custom backend or app functionality
+- No booking system unless embedded
+- No email hosting
+- No advanced copywriting
+- No unlimited revisions
+- No complex animations
+
+### Better Business Site - $499
+
+Popular. Best for small businesses that want stronger structure, clearer messaging, and a more polished online presence.
+
+Included:
+
+- Multi-page site
+- Mobile-friendly design
+- Services & offer sections
+- Contact form & enquiry CTA
+- Basic SEO setup
+- Two revision rounds
+- Domain or hosting setup guidance/support if included in the accepted quote
+
+Important limits:
+
+- No ecommerce unless quoted separately
+- No custom backend or app functionality
+- No email hosting unless quoted separately
+- No unlimited revisions
+- No guaranteed SEO rankings, traffic, leads, enquiries, or sales
+
+### Redesign / Glow-Up - $249
+
+Best for businesses with an existing website that looks outdated, unfinished, unclear, or harder to trust than it should.
+
+Included:
+
+- Review of current website
+- Cleaner redesign direction
+- Improved layout and visual hierarchy
+- Mobile-friendly improvements where applicable
+- Better CTA placement
+- Basic SEO/meta cleanup where applicable
+- One revision round
+
+Important limits:
+
+- Does not include rebuilding a large site unless quoted separately
+- Does not include ecommerce rebuilds unless quoted separately
+- Does not guarantee rankings, leads, sales, or traffic
+- Does not include ongoing maintenance unless quoted separately
+
+## Payment Notes
+
+The free homepage mockup is free and is delivered within 5 business days according to the website. It is a homepage preview, not a complete free website.
+
+If a customer wants to continue after the mockup, the accepted quote should confirm the scope, any upfront payment, and the remaining balance due before delivery or launch.
+
+## Separate Care Plans
+
+Care plans still exist on a separate page, but they are not one of the three main website offers on the pricing page. If a business needs hosting, care, content edits, backups, or SEO content updates after launch, Better Site can quote or discuss that separately.
+
+## Notes
+
+Extra pages, ecommerce, booking embeds, integrations, custom functionality, advanced forms, hosting, domains, email hosting, ongoing care, and larger redesign work can be quoted separately.
+
+Owner review is recommended for GST/tax wording, exact payment terms, support boundaries, hosting provider details, domain process, and whether any quoted price includes or excludes third-party costs.

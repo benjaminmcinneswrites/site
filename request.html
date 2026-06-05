@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en-NZ" data-theme="dark">
+<html lang="en-NZ">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,8 +16,6 @@
     <meta name="twitter:description" content="Request a free homepage mockup and see a website direction for your New Zealand business within 5 business days.">
     <script>
       document.documentElement.classList.add("motion-prep");
-      try { document.documentElement.setAttribute("data-theme", localStorage.getItem("theme") || "dark"); }
-      catch (error) { document.documentElement.setAttribute("data-theme", "dark"); }
     </script>
     <link rel="icon" type="image/png" href="assets/images/logo.png">
     <link rel="stylesheet" href="styles.css">
@@ -28,48 +26,45 @@
       <div class="container nav-shell">
         <a class="brand" href="/"><span class="brand-mark"><img src="assets/images/logo.png" alt="" width="1254" height="1254"></span><span><strong>Better Site</strong><small>By Benjamin</small></span></a>
         <nav class="primary-nav" id="primary-nav" data-nav><a href="/work">Work</a><a href="/services">Services</a><a href="/why-choose-us">Why Us</a><a href="/pricing">Pricing</a><a href="/care-plans">Care Plans</a><a href="/process">How it Works</a><a href="/faq">FAQ</a><a href="/contact">Contact</a></nav>
-        <div class="nav-actions"><button class="theme-toggle" type="button" aria-label="Switch to light theme" data-theme-toggle><span class="theme-icon" aria-hidden="true"></span></button><a class="nav-cta" href="/request">Free Mockup</a><button class="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" data-menu-toggle><span></span><span></span><span></span><span class="sr-only">Menu</span></button></div>
+        <div class="nav-actions"><a class="nav-cta" href="/request">Free Mockup</a><button class="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" data-menu-toggle><span></span><span></span><span></span><span class="sr-only">Menu</span></button></div>
       </div>
     </header>
 
     <main id="main">
-      <section class="page-hero">
-        <div class="container page-hero-grid">
-          <div class="reveal">
-            <p class="eyebrow">Free homepage mockup</p>
-            <h1>Request your free homepage mockup.</h1>
-          </div>
-          <p class="page-subhead reveal">
-            Send a few details about your business and I will create a free homepage mockup within 5 business days. No pressure, no obligation.
-          </p>
-        </div>
-      </section>
-
-      <section class="section-pad soft-band">
+      <section class="section-pad soft-band compact-page-start request-page-start">
         <div class="container request-grid">
           <div class="request-copy reveal">
-            <p class="eyebrow">What happens next</p>
-            <h2>I will review your business before designing anything.</h2>
+            <p class="eyebrow">Free homepage mockup</p>
+            <h1>Show me the business before I design the homepage.</h1>
             <p>
-              The more context you give me, the better the homepage direction can be. Current website links, Google Business Profiles, services, competitors, and style preferences are all useful.
+              The more context you give me, the better the homepage direction can be. Current website links, Google Business Profiles, services, competitors, style preferences, and the offer you are considering are all useful.
             </p>
             <div class="request-panel">
               <strong>What you will get</strong>
               <ul class="check-list">
                 <li>A custom homepage direction for your business</li>
                 <li>Clear ideas for copy, layout, trust points, and calls to action</li>
-                <li>A simple next step if you want the full website built</li>
+                <li>A simple next step if you want a Starter One-Page Site, Better Business Site, or redesign built</li>
                 <li>The option to book a call if talking it through is easier</li>
               </ul>
             </div>
           </div>
 
-          <form class="mockup-form reveal" action="https://formsubmit.co/contact@bettersite.co.nz" method="POST" data-mockup-form data-form-submit novalidate>
+          <form class="mockup-form reveal" id="mockup-form" action="https://formsubmit.co/contact@bettersite.co.nz" method="POST" data-mockup-form data-form-submit novalidate>
             <div class="form-status" role="status" aria-live="polite" data-form-status></div>
             <input type="hidden" name="_subject" value="New Better Site free mockup request">
             <input type="hidden" name="_template" value="table">
             <input type="hidden" name="_next" value="https://bettersite.co.nz/thanks" data-form-next>
             <input type="text" name="_honey" tabindex="-1" autocomplete="off" class="form-honey" aria-hidden="true">
+
+            <div class="form-assurance">
+              <strong>Free homepage mockup first.</strong>
+              <span>No payment, no obligation, and enough detail to make the preview useful.</span>
+            </div>
+            <div class="form-mini-proof" aria-label="Request form reassurance">
+              <span>Usually takes 2 minutes</span>
+              <span>Preview within 5 business days</span>
+            </div>
 
             <div class="form-row two-col">
               <div class="field">
@@ -117,7 +112,7 @@
                 <label><input type="checkbox" name="goals" value="bookings">Get more bookings</label>
                 <label><input type="checkbox" name="goals" value="professional">Look more professional</label>
                 <label><input type="checkbox" name="goals" value="services">Show services/prices</label>
-                <label><input type="checkbox" name="goals" value="products">Sell products</label>
+                <label><input type="checkbox" name="goals" value="products">Show products</label>
                 <label><input type="checkbox" name="goals" value="other">Other</label>
               </div>
               <span class="field-error" data-error-for="goals"></span>
@@ -137,7 +132,7 @@
 
             <div class="field">
               <label for="message">Message / anything else I should know</label>
-              <textarea id="message" name="message" rows="5" placeholder="Tell me about your services, customers, competitors, or what you want the website to do. Mention here if you would like to arrange a call."></textarea>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your services, customers, competitors, current website, or what you want the website to do. Mention here if you are considering the Starter, Better Business, or Redesign option."></textarea>
             </div>
 
             <button class="btn btn-primary form-submit" type="submit">Request my free mockup</button>
@@ -149,11 +144,10 @@
 
     <footer class="site-footer">
       <div class="container footer-grid">
-        <div><a class="brand footer-brand" href="/"><span class="brand-mark"><img src="assets/images/logo.png" alt="" width="1254" height="1254"></span><span><strong>Better Site</strong><small>By Benjamin</small></span></a><p>Affordable websites for New Zealand small businesses that need to look credible online and get more enquiries.</p></div>
-        <nav aria-label="Footer navigation"><a href="/services">Services</a><a href="/why-choose-us">Why Choose Us</a><a href="/pricing">Pricing</a><a href="/care-plans">Care Plans</a><a href="/process">How it Works</a><a href="/faq">FAQ</a><a href="/contact">Contact</a></nav>
-        <div><p><strong>Email</strong><br><a href="mailto:contact@bettersite.co.nz">contact@bettersite.co.nz</a></p><p>New Zealand-based. Available for calls with small businesses nationwide.</p></div>
+        <div><a class="brand footer-brand" href="/"><span class="brand-mark"><img src="assets/images/logo.png" alt="" width="1254" height="1254"></span><span><strong>Better Site</strong><small>By Benjamin</small></span></a><p>Affordable websites for New Zealand small businesses that need to look credible online and make enquiries easier.</p></div>
+        <div><p><strong>Email</strong><br><a href="mailto:contact@bettersite.co.nz">contact@bettersite.co.nz</a></p></div>
       </div>
-      <div class="container footer-bottom"><span class="copyright-notice"><span class="copyright-mark" aria-hidden="true">&copy;</span><span>Copyright <span data-year></span> Better Site by Benjamin. All rights reserved.</span></span></div>
+      <div class="container footer-bottom"><span class="copyright-notice"><span class="copyright-mark" aria-hidden="true">&copy;</span><span>Copyright <span data-year></span> Better Site by Benjamin. All rights reserved.</span></span><nav class="footer-policy-row" aria-label="Footer legal navigation"><a href="/privacy-policy">Privacy</a><a href="/terms-of-service">Terms</a><a href="/hosting-care-terms">Hosting</a><a href="/refunds-cancellations">Refunds</a><a href="/acceptable-use">Acceptable Use</a><a href="/cookie-policy">Cookies</a><a href="/accessibility">Accessibility</a></nav></div>
     </footer>
     <script src="script.js"></script>
   </body>

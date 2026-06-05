@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en-NZ" data-theme="dark">
+<html lang="en-NZ">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,8 +16,6 @@
     <meta name="twitter:description" content="Why choose Better Site for professional small business web design in New Zealand instead of using a DIY builder or large agency.">
     <script>
       document.documentElement.classList.add("motion-prep");
-      try { document.documentElement.setAttribute("data-theme", localStorage.getItem("theme") || "dark"); }
-      catch (error) { document.documentElement.setAttribute("data-theme", "dark"); }
     </script>
     <link rel="icon" type="image/png" href="assets/images/logo.png">
     <link rel="stylesheet" href="styles.css">
@@ -41,7 +39,6 @@
           <a href="/contact">Contact</a>
         </nav>
         <div class="nav-actions">
-          <button class="theme-toggle" type="button" aria-label="Switch to light theme" data-theme-toggle><span class="theme-icon" aria-hidden="true"></span></button>
           <a class="nav-cta" href="/request">Free Mockup</a>
           <button class="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" data-menu-toggle><span></span><span></span><span></span><span class="sr-only">Menu</span></button>
         </div>
@@ -72,45 +69,46 @@
 
           <div class="why-benefit-grid">
             <article class="why-card reveal">
-              <span class="card-icon">01</span>
+              <span class="card-icon why-icon why-icon-fit" aria-hidden="true"></span>
               <h3>A Clearer First Impression</h3>
               <p>Your website should instantly show people that your business is real and worth contacting. I focus on making sites that feel branded rather than generic, with carefully planned copywriting and visual decisions that match the business you are building.</p>
             </article>
             <article class="why-card reveal">
-              <span class="card-icon">02</span>
-              <h3>A Site That Converts Clicks to Sales</h3>
-              <p>In order to convert well, visitors must know exactly where to look and where to click within the first five seconds. I think carefully about structure, headings, buttons, page flow, etc., so the site feels natural to navigate, especially for people viewing it on their phone.</p>
+              <span class="card-icon why-icon why-icon-cta" aria-hidden="true"></span>
+              <h3>Clearer Paths to Enquiries</h3>
+              <p>Visitors should quickly understand what you do, why it matters, and how to take the next step. I think carefully about structure, headings, buttons, and page flow so the site feels natural to navigate, especially for people viewing it on their phone.</p>
             </article>
             <article class="why-card reveal">
-              <span class="card-icon">03</span>
+              <span class="card-icon why-icon why-icon-seo" aria-hidden="true"></span>
               <h3>Better Foundations for Being Found</h3>
-              <p>A well SEO-optimized website needs clear page titles, useful headings, well-researched keywords, fast loading, and a specific structure that search engines favor. I build with these basics in mind so your site has a strong starting point in search engine results.</p>
+              <p>A well SEO-optimised website needs clear page titles, useful headings, relevant keywords, fast loading, and a sensible structure that search engines can understand. I build with these basics in mind so your site has a stronger starting point, without promising rankings.</p>
+            </article>
+            <article class="why-card reveal">
+              <span class="card-icon why-icon why-icon-cost" aria-hidden="true"></span>
+              <h3>Pricing, Clear Scope</h3>
+              <p>Better Site keeps the main offers focused: a Starter One-Page Site, a fuller Better Business Site, and a Redesign / Glow-Up for existing websites. Hosting, domains, care, extra pages, and custom features can be discussed separately when you need them.</p>
+            </article>
+            <article class="why-card reveal">
+              <span class="card-icon why-icon why-icon-easy" aria-hidden="true"></span>
+              <h3>A Simpler Way to Get a Professional Website</h3>
+              <p>You don't need to deal with the overpriced, back-and-forth communication nightmare of big agencies. My service is practical for New Zealand small businesses who prioritize clear design, thoughtful wording, and ease of use.</p>
             </article>
           </div>
         </div>
       </section>
 
       <section class="section-pad">
-        <div class="container why-split">
+        <div class="container why-split why-fit-editorial">
           <article class="why-template-card reveal" data-scroll-reveal>
             <p class="eyebrow">Made to fit</p>
             <h2>Made Around Your Business, Not Squeezed Into a Template</h2>
             <p>DIY builders can be useful, but they often lead to websites that feel as if they could belong to anyone. Every business is different, and every business has a brand: specific services or products, customer base, and reasons people choose you.</p>
             <p>I bring design and writing together to build you a site that feels specific, human-authored, and aligned with what it is you actually offer.</p>
           </article>
-
-          <div class="why-stack">
-            <article class="why-card reveal">
-              <span class="card-icon">04</span>
-              <h3>Support After Launch</h3>
-              <p>I understand that brands often want to make content changes to their site over time. I offer a few different hosting and care packages, starting as low as $4.99 a month, so your website stays online 24/7 and never becomes another thing you're left to manage alone.</p>
-            </article>
-            <article class="why-card reveal">
-              <span class="card-icon">05</span>
-              <h3>A Simpler Way to Get a Professional Website</h3>
-              <p>You don't need to deal with the overpriced, back-and-forth communication nightmare of big agencies. My service is practical for New Zealand small businesses who prioritize clear design, thoughtful wording, and ease of use.</p>
-            </article>
-          </div>
+          <aside class="why-fit-note reveal">
+            <strong>Simple, but still specific.</strong>
+            <p>The goal is not to fill a template. It is to make the business feel clearer, easier to trust, and easier to contact.</p>
+          </aside>
         </div>
       </section>
 
@@ -126,11 +124,10 @@
 
     <footer class="site-footer">
       <div class="container footer-grid">
-        <div><a class="brand footer-brand" href="/"><span class="brand-mark"><img src="assets/images/logo.png" alt="" width="1254" height="1254"></span><span><strong>Better Site</strong><small>By Benjamin</small></span></a><p>Affordable websites for New Zealand small businesses that need to look credible online and get more enquiries.</p></div>
-        <nav aria-label="Footer navigation"><a href="/services">Services</a><a href="/why-choose-us">Why Choose Us</a><a href="/pricing">Pricing</a><a href="/care-plans">Care Plans</a><a href="/process">How it Works</a><a href="/faq">FAQ</a><a href="/contact">Contact</a></nav>
-        <div><p><strong>Email</strong><br><a href="mailto:contact@bettersite.co.nz">contact@bettersite.co.nz</a></p><p>New Zealand-based. Available for calls with small businesses nationwide.</p></div>
+        <div><a class="brand footer-brand" href="/"><span class="brand-mark"><img src="assets/images/logo.png" alt="" width="1254" height="1254"></span><span><strong>Better Site</strong><small>By Benjamin</small></span></a><p>Affordable websites for New Zealand small businesses that need to look credible online and make enquiries easier.</p></div>
+        <div><p><strong>Email</strong><br><a href="mailto:contact@bettersite.co.nz">contact@bettersite.co.nz</a></p></div>
       </div>
-      <div class="container footer-bottom"><span class="copyright-notice"><span class="copyright-mark" aria-hidden="true">&copy;</span><span>Copyright <span data-year></span> Better Site by Benjamin. All rights reserved.</span></span></div>
+      <div class="container footer-bottom"><span class="copyright-notice"><span class="copyright-mark" aria-hidden="true">&copy;</span><span>Copyright <span data-year></span> Better Site by Benjamin. All rights reserved.</span></span><nav class="footer-policy-row" aria-label="Footer legal navigation"><a href="/privacy-policy">Privacy</a><a href="/terms-of-service">Terms</a><a href="/hosting-care-terms">Hosting</a><a href="/refunds-cancellations">Refunds</a><a href="/acceptable-use">Acceptable Use</a><a href="/cookie-policy">Cookies</a><a href="/accessibility">Accessibility</a></nav></div>
     </footer>
     <script src="script.js"></script>
   </body>

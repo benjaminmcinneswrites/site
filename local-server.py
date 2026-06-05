@@ -24,6 +24,13 @@ class SiteHandler(SimpleHTTPRequestHandler):
             "/affordable-web-design-nz.html": "/affordable-web-design-nz",
             "/website-design-pricing-nz.html": "/website-design-pricing-nz",
             "/website-redesign-nz.html": "/website-redesign-nz",
+            "/privacy-policy.html": "/privacy-policy",
+            "/terms-of-service.html": "/terms-of-service",
+            "/hosting-care-terms.html": "/hosting-care-terms",
+            "/refunds-cancellations.html": "/refunds-cancellations",
+            "/acceptable-use.html": "/acceptable-use",
+            "/cookie-policy.html": "/cookie-policy",
+            "/accessibility.html": "/accessibility",
         }
         target = redirects.get(url.path)
         if not target:

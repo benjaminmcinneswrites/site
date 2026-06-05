@@ -1,0 +1,18 @@
+{
+  "name": "site",
+  "version": "1.0.0",
+  "description": "Static website for Better Site by Benjamin.",
+  "main": "script.js",
+  "scripts": {
+    "test": "scripts\\playwright-node.cmd test",
+    "test:design": "scripts\\playwright-node.cmd test tests/design.spec.ts --project=chromium"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^25.9.1"
+  }
+}

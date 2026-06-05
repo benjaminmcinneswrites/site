@@ -217,9 +217,7 @@ a {
 .hero {
   position: relative;
   padding: 72px 0 58px;
-  background:
-    linear-gradient(90deg, rgba(245, 247, 244, 0.96), rgba(245, 247, 244, 0.9)),
-    repeating-linear-gradient(135deg, rgba(23, 95, 117, 0.06) 0 2px, transparent 2px 18px);
+  background: var(--paper);
 }
 
 .hero::after {
@@ -406,26 +404,44 @@ h3 {
 }
 
 .service-cards article {
+  position: relative;
   min-height: 250px;
-  padding: 26px;
+  padding: 28px;
+  overflow: hidden;
   background: var(--white);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   box-shadow: 0 10px 28px rgba(18, 25, 29, 0.07);
 }
 
-.service-cards article > span {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+.service-cards article::before {
+  content: "";
+  display: block;
   width: 42px;
   height: 42px;
-  margin-bottom: 32px;
-  color: var(--green-dark);
+  margin-bottom: 30px;
   background: var(--gold-soft);
   border: 1px solid #ead886;
   border-radius: 6px;
-  font-weight: 900;
+  box-shadow:
+    inset 0 0 0 7px var(--white),
+    0 8px 16px rgba(18, 25, 29, 0.06);
+}
+
+.service-cards article::after {
+  content: "";
+  position: absolute;
+  top: 44px;
+  left: 40px;
+  width: 18px;
+  height: 9px;
+  border-bottom: 3px solid var(--green);
+  border-left: 3px solid var(--green);
+  transform: rotate(-45deg);
+}
+
+.service-cards article > span {
+  display: none;
 }
 
 .service-cards p {
@@ -486,9 +502,7 @@ h3 {
 .quote-preview {
   padding: 78px 0;
   color: var(--white);
-  background:
-    linear-gradient(90deg, rgba(18, 25, 29, 0.94), rgba(15, 41, 37, 0.92)),
-    var(--ink);
+  background: var(--ink);
 }
 
 .quote-preview .eyebrow,
@@ -806,7 +820,7 @@ h3 {
     min-height: 0;
   }
 
-  .service-cards article > span {
+  .service-cards article::before {
     margin-bottom: 22px;
   }
 

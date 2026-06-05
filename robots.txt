@@ -1,3 +1,12 @@
+# Better Site robots.txt
+# AI summary: https://bettersite.co.nz/llms.txt
+# Full AI context: https://bettersite.co.nz/llms-full.txt
+# AI guidance: https://bettersite.co.nz/ai.txt
+# Service summary: https://bettersite.co.nz/services.txt
+# Pricing summary: https://bettersite.co.nz/pricing.txt
+# FAQ summary: https://bettersite.co.nz/faq.txt
+# Human credits: https://bettersite.co.nz/humans.txt
+
 User-agent: *
 Allow: /
 
