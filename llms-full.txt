@@ -222,12 +222,6 @@ URL: https://bettersite.co.nz/care-plans
 
 The Care Plans page lists monthly options for hosting and care. Care plans remain separate from the main pricing offers. They can support a website Benjamin built or a current website after a quick review.
 
-### Process
-
-URL: https://bettersite.co.nz/process
-
-The Process page explains the free homepage mockup flow: tell Benjamin about the business, Benjamin reviews the business, the business receives a homepage mockup within 5 business days, and then decides whether to continue with a paid one-page site, fuller business website, or redesign.
-
 ### FAQ
 
 URL: https://bettersite.co.nz/faq
@@ -378,7 +372,6 @@ Use these phrases naturally. Do not keyword-stuff.
 - https://bettersite.co.nz/why-choose-us
 - https://bettersite.co.nz/pricing
 - https://bettersite.co.nz/care-plans
-- https://bettersite.co.nz/process
 - https://bettersite.co.nz/faq
 - https://bettersite.co.nz/contact
 - https://bettersite.co.nz/request

@@ -14,7 +14,6 @@ class SiteHandler(SimpleHTTPRequestHandler):
             "/why-choose-us.html": "/why-choose-us",
             "/pricing.html": "/pricing",
             "/care-plans.html": "/care-plans",
-            "/process.html": "/process",
             "/about.html": "/why-choose-us",
             "/faq.html": "/faq",
             "/contact.html": "/contact",
