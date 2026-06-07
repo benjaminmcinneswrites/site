@@ -3,7 +3,7 @@
 Website: https://bettersite.co.nz/pricing
 Care plans: https://bettersite.co.nz/care-plans
 Contact: contact@bettersite.co.nz
-Last updated: 2026-06-05
+Last updated: 2026-06-07
 
 Prices are shown in NZD on the website. GST status is not stated on the current site.
 
@@ -81,7 +81,7 @@ Important limits:
 
 ## Payment Notes
 
-The free homepage mockup is free and is delivered within 3 business days according to the website. It is a homepage preview, not a complete free website.
+The free homepage mockup is free and is delivered within 3 business days according to the website. It is a temporary live homepage preview link, not a complete free website, file handover, source-file export, editable design package, or transfer of ownership. If the customer does not continue with paid work, the preview link may be removed or expire.
 
 If a customer wants to continue after the mockup, the accepted quote should confirm the scope, any upfront payment, and the remaining balance due before delivery or launch.
 

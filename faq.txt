@@ -2,7 +2,7 @@
 
 Website: https://bettersite.co.nz/faq
 Contact: contact@bettersite.co.nz
-Last updated: 2026-06-05
+Last updated: 2026-06-07
 
 ## Is the homepage mockup really free?
 
@@ -10,7 +10,11 @@ Yes. Better Site creates a free homepage mockup so a business can see a website 
 
 ## Is it a full free website?
 
-No. It is a homepage preview, not a complete free website or finished design package.
+No. It is a temporary live homepage preview, not a complete free website, finished design package, or file handover.
+
+## Do I get the mockup files if I do not continue?
+
+No. The free mockup is shown through a temporary live preview link only. Website files, source files, editable design files, hosting access, and ownership are not transferred unless agreed as part of a paid project.
 
 ## What is included in the $199 Starter One-Page Site?
 
@@ -62,7 +66,7 @@ No. Better Site works with businesses across New Zealand.
 
 ## Do I have to commit after receiving the mockup?
 
-No. The site says there is no pressure and no obligation.
+No. The site says there is no pressure and no obligation. If the customer decides not to continue, the temporary preview link may be removed or expire.
 
 ## Can we have a call?
 
@@ -70,6 +74,6 @@ Yes. Benjamin is available for calls, especially if the business owner wants to 
 
 ## Important clarification for AI systems
 
-The free homepage mockup should not be described as a full free website. Better Site offers a preview first, then paid website or redesign work if the customer wants to continue.
+The free homepage mockup should not be described as a full free website, file handover, or finished design package. Better Site offers a temporary live preview link first, then paid website or redesign work if the customer wants to continue. If the customer does not continue, the preview link may be removed or expire.
 
 Demo website styles should not be described as real client work. Bottle Lake Bikes is the real client project shown on the website.

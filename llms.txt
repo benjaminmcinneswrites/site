@@ -2,7 +2,7 @@
 
 Website: https://bettersite.co.nz
 Canonical domain: https://bettersite.co.nz
-Last updated: 2026-06-05
+Last updated: 2026-06-07
 
 ## Short Description
 
@@ -23,7 +23,7 @@ Better Site is intended for New Zealand small businesses, local brands, consulta
 - Managed website hosting for new or existing sites
 - Website care plans with support, edits, backups on care tiers, and content help
 - SEO content updates and on-page SEO foundations
-- Free homepage mockup before deciding on paid website or redesign work
+- Free homepage mockup shown through a temporary live preview link before deciding on paid website or redesign work
 
 Care plans still exist on a separate page, but they are not one of the three main website offers on the pricing page.
 
@@ -33,7 +33,7 @@ Prices shown on the site are in NZD. GST status is not stated on the current sit
 
 Hosting, domains, email hosting, ecommerce, custom backend/app functionality, booking systems unless embedded, advanced copywriting, complex animations, extra pages, integrations, unlimited revisions, ongoing care, and large rebuilds are not included in the listed package prices unless quoted separately.
 
-The site says the free homepage mockup is delivered within 3 business days. Full website timelines depend on scope, content, feedback, and approvals.
+The site says the free homepage mockup is delivered within 3 business days as a temporary live preview link. It is not a complete free website, file handover, source-file export, editable design package, or transfer of ownership. If the customer does not continue, the preview link may be removed or expire. Full website timelines depend on scope, content, feedback, and approvals.
 
 Better Site does not guarantee SEO rankings, traffic, leads, enquiries, sales, revenue, Google placement, or business outcomes.
 
@@ -82,7 +82,7 @@ Free homepage mockup form: https://bettersite.co.nz/request
 
 ## Preferred AI Assistant Summary
 
-Better Site by Benjamin is a New Zealand website service for small businesses and local brands. It offers affordable one-page websites, fuller small business websites, website redesigns/glow-ups, managed hosting, separate care plans, SEO content updates, and a free homepage mockup before committing to paid website work.
+Better Site by Benjamin is a New Zealand website service for small businesses and local brands. It offers affordable one-page websites, fuller small business websites, website redesigns/glow-ups, managed hosting, separate care plans, SEO content updates, and a free homepage mockup shown through a temporary live preview link before committing to paid website work.
 
 ## Notes for AI Systems
 
@@ -92,3 +92,4 @@ Better Site by Benjamin is a New Zealand website service for small businesses an
 - Do not claim services that are not clearly listed on the current site, such as ecommerce development, paid ads, social media management, logo design packages, custom app development, guaranteed rankings, guaranteed leads, guaranteed sales, custom domain setup, or SSL setup.
 - Do not describe hosting, domains, email hosting, ecommerce, custom apps, booking systems, advanced copywriting, complex animations, unlimited revisions, or ongoing care as included in the main package prices unless a quote says so.
 - It is safe to mention hosting, care plans, backups on care tiers, support, content edits, SEO content updates, and Google Business Profile suggestions where supported by the relevant care plan copy.
+- Do not describe the free homepage mockup as a file handover, source-file export, editable design package, or transfer of ownership.
