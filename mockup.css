@@ -1,0 +1,38 @@
+/* Better Site mockup request page */
+.mockup-page .reveal{opacity:1!important;transform:none!important}
+.mockup-page .site-header{background:linear-gradient(180deg,rgba(6,8,13,.92),rgba(6,8,13,.58) 72%,transparent);backdrop-filter:blur(18px)}
+.mockup-nav-shell{grid-template-columns:auto auto;justify-content:space-between}
+.mockup-header-links{display:flex;align-items:center;justify-content:flex-end;gap:10px}
+.mockup-header-links>a:not(.nav-cta){display:inline-flex;align-items:center;min-height:44px;padding:8px 12px;border:1px solid var(--line);border-radius:999px;color:var(--muted-strong);background:color-mix(in srgb,var(--panel-solid) 62%,transparent);font-size:.9rem;font-weight:850;transition:transform .2s var(--ease-out),border-color .2s ease,color .2s ease}
+.mockup-header-links>a:not(.nav-cta):hover,.mockup-header-links>a:not(.nav-cta):focus-visible{transform:translateY(-2px);border-color:color-mix(in srgb,var(--teal) 30%,var(--line));color:var(--ink)}
+.mockup-hero{display:grid;align-items:end;min-height:min(760px,calc(100svh - 34px));padding:clamp(118px,14vw,168px) 0 clamp(70px,8vw,98px);background:linear-gradient(90deg,#06080d 0%,rgba(6,8,13,.96) 26%,rgba(6,8,13,.74) 58%,rgba(6,8,13,.5) 100%),linear-gradient(180deg,rgba(6,8,13,.16),#06080d 98%),url("assets/images/client-bottle-lake-bikes.webp") right center/auto 88% no-repeat;background-color:var(--bg);overflow:hidden}
+.mockup-hero::before{content:"";position:absolute;inset:auto 0 0;height:34%;background:linear-gradient(180deg,transparent,var(--bg));pointer-events:none}
+.mockup-hero::after{content:"";position:absolute;right:clamp(18px,5vw,72px);bottom:clamp(20px,5vw,64px);width:min(46vw,520px);aspect-ratio:1.55;border:1px solid color-mix(in srgb,var(--teal) 20%,var(--line));border-radius:10px;box-shadow:0 28px 90px rgba(0,0,0,.34);pointer-events:none}
+.mockup-hero-inner{position:relative;z-index:1}
+.mockup-hero-copy{max-width:760px}
+.mockup-hero h1{max-width:760px;font-size:clamp(3rem,7vw,5.75rem);line-height:.94}
+.mockup-hero .hero-subhead{max-width:680px}
+.mockup-proof-row{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px}
+.mockup-proof-row span{display:inline-flex;align-items:center;min-height:36px;padding:7px 11px;border:1px solid color-mix(in srgb,var(--teal) 18%,var(--line));border-radius:999px;color:var(--muted-strong);background:color-mix(in srgb,var(--panel-solid) 70%,transparent);font-size:.83rem;font-weight:850}
+.mockup-proof-row span:nth-child(2n){border-color:color-mix(in srgb,var(--gold-soft) 28%,var(--line))}
+.mockup-reason-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.mockup-reason-grid .feature-card{position:relative;overflow:hidden;padding:26px;border-radius:8px;background:#111822}
+.mockup-reason-grid .feature-card::before{content:"";position:absolute;left:0;top:24px;bottom:24px;width:3px;background:var(--teal)}
+.mockup-reason-grid .feature-card:nth-child(2)::before{background:var(--gold-soft)}
+.mockup-reason-grid .feature-card:nth-child(3)::before{background:var(--blue)}
+.mockup-reason-grid .card-icon{display:inline-flex;align-items:center;justify-content:center;min-width:42px;min-height:34px;margin:0 0 18px;padding:7px 10px;border:1px solid color-mix(in srgb,var(--teal) 28%,transparent);border-radius:7px;color:var(--teal);background:color-mix(in srgb,var(--bg) 64%,transparent);font-size:.78rem;font-weight:950;line-height:1}
+.mockup-preview-grid{display:grid;grid-template-columns:minmax(0,.82fr) minmax(320px,.72fr);gap:46px;align-items:center}
+.mockup-preview-copy{max-width:640px}
+.mockup-preview-figure{position:relative;margin:0;overflow:hidden;border:1px solid var(--line);border-radius:10px;background:var(--panel);box-shadow:var(--shadow-soft)}
+.mockup-preview-figure img{display:block;width:100%;aspect-ratio:1.44;object-fit:cover;object-position:top center}
+.mockup-preview-figure figcaption{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 16px;border-top:1px solid var(--line);color:var(--muted-strong);font-size:.9rem}
+.mockup-preview-figure figcaption strong{color:var(--teal);text-transform:uppercase}
+.mockup-preview-figure figcaption span{color:var(--muted)}
+.mockup-pricing-grid .pricing-card{min-height:100%}
+.mockup-review-band{background:#080b10}
+.mockup-review-card{max-width:980px;margin-inline:auto}
+.mockup-form-section{padding-bottom:clamp(84px,9vw,118px)}
+.mockup-form-grid{align-items:start}
+.mockup-form-copy h2{font-size:clamp(2.05rem,4vw,3.55rem)}
+@media (max-width:980px){.mockup-hero{background:linear-gradient(90deg,#06080d 0%,rgba(6,8,13,.94) 68%,rgba(6,8,13,.78)),url("assets/images/client-bottle-lake-bikes.webp") center bottom/cover no-repeat}.mockup-hero::after{display:none}.mockup-preview-grid,.mockup-reason-grid{grid-template-columns:1fr}.mockup-preview-copy{max-width:none}}
+@media (max-width:720px){.mockup-nav-shell{grid-template-columns:1fr auto;gap:14px}.mockup-header-links>a:not(.nav-cta){display:none}.mockup-header-links .nav-cta{display:inline-flex;min-height:42px;padding-inline:13px}.mockup-hero{min-height:auto;padding:112px 0 64px;background:linear-gradient(180deg,rgba(6,8,13,.72),#06080d 82%),url("assets/images/client-bottle-lake-bikes.webp") center top/150% auto no-repeat}.mockup-hero h1{font-size:clamp(2.35rem,11vw,3.45rem)}.mockup-proof-row span{width:100%;justify-content:center}.mockup-preview-figure figcaption{display:grid;gap:2px}.mockup-form-section .request-grid{gap:28px}}
