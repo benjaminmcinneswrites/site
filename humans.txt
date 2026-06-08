@@ -11,9 +11,9 @@ Service area: Small businesses nationwide in New Zealand
 
 Description: Affordable one-page websites, fuller business websites, website redesigns/glow-ups, hosting, and separate care plans for New Zealand small businesses and local brands that want a cleaner, more credible online presence.
 Primary audience: Small businesses, local brands, consultants, and service businesses in New Zealand.
-Technologies: Static HTML, CSS, and JavaScript. Clean URL redirects via _redirects. Form handling via FormSubmit. Local preview supported by local-server.py.
-Main assets: Logo, headshot, client/demo images, shared CSS, shared JavaScript, and demo concept pages.
-Last updated: 2026-06-05
+Technologies: Static HTML, CSS, and JavaScript. Clean URL redirects via _redirects. Form handling via Web3Forms. Local preview supported by local-server.py.
+Main assets: Hash-named production images, shared CSS, shared JavaScript, and demo concept pages.
+Last updated: 2026-06-09
 
 /* LINKS */
 

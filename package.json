@@ -2,7 +2,7 @@
   "name": "site",
   "version": "1.0.0",
   "description": "Static website for Better Site by Benjamin.",
-  "main": "j.js",
+  "main": "941ef33d4ed0.js",
   "scripts": {
     "test": "scripts\\playwright-node.cmd test",
     "test:design": "scripts\\playwright-node.cmd test tests/design.spec.ts --project=chromium"

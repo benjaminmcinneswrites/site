@@ -1,4 +1,4 @@
-﻿# Better Site Full Site Context
+# Better Site Full Site Context
 
 Website: https://bettersite.co.nz
 Site name: Better Site
@@ -11,7 +11,7 @@ Last updated: 2026-06-07
 
 Better Site is a New Zealand website design, redesign, hosting, and website care service run by Benjamin. The site is positioned for small businesses and local brands that need to look credible online, explain what they do clearly, make enquiries easier, and avoid agency-sized pricing or unnecessary technical stress.
 
-The website emphasises a low-pressure starting point: a free homepage mockup. Visitors can send business details, goals, current website links, Google Business Profile links, competitors, service details, and style preferences. Benjamin reviews the business and creates a homepage direction within 3 business days, shown through a temporary live preview link. The visitor can then decide whether to continue with paid website or redesign work. The free mockup is not a file handover, source-file export, editable design package, or transfer of ownership, and the preview link may be removed or expire if the visitor does not continue.
+The website emphasises a low-pressure starting point: a free homepage mockup. Visitors can send their name, email, business name, business type, and an optional message with useful details such as services, customers, competitors, current frustrations, or the offer they are considering. Benjamin reviews the business and creates a homepage direction within 3 business days, shown through a temporary live preview link. The visitor can then decide whether to continue with paid website or redesign work. The free mockup is not a file handover, source-file export, editable design package, or transfer of ownership, and the preview link may be removed or expire if the visitor does not continue.
 
 ## Brand Positioning
 
@@ -173,14 +173,14 @@ These may be quoted separately where appropriate, but they should not be describ
 This website is a static site. The codebase uses:
 
 - HTML pages in the site root
-- Shared CSS in s.css
-- Shared JavaScript in j.js
-- Image assets in assets/images/
+- Shared production CSS in a hash-named CSS file
+- Shared production JavaScript in a hash-named JS file
+- Hash-named production assets in assets/r/
 - Demo pages in demo/
 - _redirects for clean URL routing
 - .htaccess for the custom 404 page
 - local-server.py for local preview with clean URLs and the custom 404 page
-- FormSubmit forms that submit to contact@bettersite.co.nz
+- Web3Forms forms that submit to contact@bettersite.co.nz
 
 The codebase being static does not mean AI assistants should describe GitHub hosting, static hosting, or a specific deployment platform as a customer-facing service unless the public site later says so.
 
@@ -238,7 +238,7 @@ The Contact page provides a general form for Starter One-Page Site questions, Be
 
 URL: https://bettersite.co.nz/request
 
-The Request page collects information for a free homepage mockup, including name, email, business name, business type, current website, Google Business Profile link, website goals, preferred style, and additional message. The message field invites users to mention whether they are considering the Starter, Better Business, or Redesign option.
+The Request page collects information for a free homepage mockup, including name, email, business name, business type, and an optional additional message. The message field invites users to share services, customers, competitors, what is not working, and whether they are considering the Starter, Better Business, or Redesign option.
 
 ### Small Business Website Design NZ
 
