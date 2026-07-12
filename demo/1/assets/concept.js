@@ -64,7 +64,10 @@
   function syncNavState(options) {
     var open = isOpen();
     body.classList.toggle("nav-sheet-open", open);
-    toggle.setAttribute("aria-label", open ? "Close site menu" : "Open site menu");
+    toggle.setAttribute(
+      "aria-label",
+      open ? "Close site menu" : "Open site menu",
+    );
 
     if (open && options && options.focusFirst) {
       var firstLink = nav.querySelector(".nav-sheet-close, a");
@@ -96,7 +99,9 @@
     }
 
     var focusable = Array.prototype.slice.call(
-      nav.querySelectorAll('a[href], button:not([disabled]), input:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])')
+      nav.querySelectorAll(
+        'a[href], button:not([disabled]), input:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])',
+      ),
     );
 
     if (!focusable.length) {
@@ -116,7 +121,9 @@
   }
 
   function addRouteGraphic() {
-    var firstSection = document.querySelector("main > .hero, main > .page-hero, main > .section:first-child, main > .not-found-hero");
+    var firstSection = document.querySelector(
+      "main > .hero, main > .page-hero, main > .section:first-child, main > .not-found-hero",
+    );
     if (!firstSection || firstSection.querySelector(".route-graphic")) {
       return;
     }
@@ -126,13 +133,15 @@
       '<svg class="route-graphic" viewBox="0 0 760 430" aria-hidden="true" focusable="false">' +
       '<path d="M34 337 C112 286 98 197 177 170 C254 142 302 224 378 191 C455 158 442 74 527 62 C608 51 617 134 715 98 C664 174 590 188 560 255 C526 331 452 382 354 344 C264 308 188 377 101 361" />' +
       '<circle cx="34" cy="337" r="7" /><circle cx="715" cy="98" r="7" />' +
-      '</svg>';
+      "</svg>";
     firstSection.appendChild(wrapper.firstChild);
   }
 
   function initMediaReveals() {
     var frames = Array.prototype.slice.call(
-      document.querySelectorAll(".hero-photo-frame, .section-photo-frame, .about-image-card")
+      document.querySelectorAll(
+        ".hero-photo-frame, .section-photo-frame, .about-image-card",
+      ),
     );
 
     if (!frames.length) {
@@ -143,7 +152,9 @@
       frame.classList.add("trail-media");
     });
 
-    var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var reduceMotion =
+      window.matchMedia &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reduceMotion || !("IntersectionObserver" in window)) {
       frames.forEach(function (frame) {
         frame.classList.add("is-trail-visible");
@@ -151,26 +162,88 @@
       return;
     }
 
-    var observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-trail-visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    }, {
-      threshold: 0.12,
-      rootMargin: "0px 0px -6% 0px"
-    });
+    var observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-trail-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.12,
+        rootMargin: "0px 0px -6% 0px",
+      },
+    );
 
     frames.forEach(function (frame) {
       observer.observe(frame);
     });
   }
 
+  function initBrandDirectory() {
+    var search = document.querySelector("[data-brand-search]");
+    var results = document.querySelector("[data-brand-results]");
+    var emptyState = document.querySelector("[data-brand-empty]");
+    var cards = Array.prototype.slice.call(
+      document.querySelectorAll(".brands-grid .brand-card"),
+    );
+
+    if (!search || !results || !emptyState || !cards.length) {
+      return;
+    }
+
+    function normalize(value) {
+      var text = (value || "").toLocaleLowerCase("en-NZ");
+      return typeof text.normalize === "function"
+        ? text.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+        : text;
+    }
+
+    var searchableCards = cards.map(function (card) {
+      return {
+        card: card,
+        text: normalize(card.textContent),
+      };
+    });
+
+    function filterDirectory() {
+      var query = (search.value || "").trim();
+      var terms = normalize(query).split(/\s+/).filter(Boolean);
+      var shown = 0;
+
+      searchableCards.forEach(function (item) {
+        var matches = terms.every(function (term) {
+          return item.text.indexOf(term) !== -1;
+        });
+        item.card.hidden = !matches;
+        if (matches) {
+          shown += 1;
+        }
+      });
+
+      emptyState.hidden = shown !== 0;
+
+      if (!query) {
+        results.textContent = cards.length + " brands shown";
+      } else if (shown === 1) {
+        results.textContent = '1 brand matches “' + query + '”';
+      } else {
+        results.textContent =
+          shown + ' brands match “' + query + '”';
+      }
+    }
+
+    search.addEventListener("input", filterDirectory);
+    search.addEventListener("search", filterDirectory);
+    filterDirectory();
+  }
+
   addRailDetails();
   addRouteGraphic();
   initMediaReveals();
+  initBrandDirectory();
   syncNavState();
 
   if ("MutationObserver" in window) {
@@ -178,7 +251,7 @@
       syncNavState();
     }).observe(toggle, {
       attributes: true,
-      attributeFilter: ["aria-expanded"]
+      attributeFilter: ["aria-expanded"],
     });
   }
 
@@ -219,4 +292,4 @@
   window.addEventListener("pageshow", function () {
     closeNav(false);
   });
-}());
+})();

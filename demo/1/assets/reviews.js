@@ -7,7 +7,9 @@
 
   var toggle = section.querySelector("[data-reviews-toggle]");
   var label = section.querySelector("[data-reviews-toggle-label]");
-  var extraReviews = Array.prototype.slice.call(section.querySelectorAll("[data-review-extra]"));
+  var extraReviews = Array.prototype.slice.call(
+    section.querySelectorAll("[data-review-extra]"),
+  );
 
   if (!toggle || extraReviews.length === 0) {
     return;
@@ -22,7 +24,9 @@
     });
 
     if (label) {
-      label.textContent = isExpanded ? "Show fewer reviews" : "See more reviews";
+      label.textContent = isExpanded
+        ? "Show fewer reviews"
+        : "See more reviews";
     }
   }
 

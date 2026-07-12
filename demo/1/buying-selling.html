@@ -1,1 +1,278 @@
-<!DOCTYPE html> <html lang="en-NZ"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width,initial-scale=1"> <meta name="robots" content="noindex, nofollow"> <title>Buying &amp; Selling | Bottle Lake Bikes</title> <meta name="description" content="Learn about buying refurbished bikes, selling your bike directly, or selling on commission with Bottle Lake Bikes."> <link rel="canonical" href="https://bottlelakebikes.co.nz/buying-selling.html"> <meta property="og:type" content="website"> <meta property="og:site_name" content="Bottle Lake Bikes"> <meta property="og:title" content="Buying &amp; Selling | Bottle Lake Bikes"> <meta property="og:description" content="Learn about buying refurbished bikes, selling your bike directly, or selling on commission with Bottle Lake Bikes."> <meta property="og:url" content="https://bottlelakebikes.co.nz/buying-selling.html"> <link rel="stylesheet" href="assets/site.min.css"> <link rel="stylesheet" href="assets/concept.css"> <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png"> <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png"> <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"> <link rel="manifest" href="site.webmanifest"> </head> <body class="concept-one"> <div class="site-announcement" data-banner-state="loading" role="status" aria-live="polite"> <div class="container"> <p> <strong data-banner-title>Your new local workshop is here!</strong> <span data-banner-message>Bottle Lake Bikes opens Thursday, April 16th</span> </p> </div> </div> <header class="site-header"> <div class="container header-inner"> <a class="site-logo" href="index.html"><img class="site-logo-image" src="Logo v3.0.png" alt="Bottle Lake Bikes"></a> <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Toggle navigation menu"> <span class="nav-toggle-icon" aria-hidden="true"></span> <span class="visually-hidden">Menu</span> </button> <nav class="site-nav" id="primary-navigation" aria-label="Primary navigation"> <ul class="nav-list"> <li><a href="services.html">Repairs and Servicing</a></li> <li><a href="buying-selling.html" aria-current="page">Buying and Selling</a></li> <li><a href="our-brands.html">Our Brands</a></li> <li><a href="about.html">About</a></li> <li><a href="contact.html">Contact</a></li> <li><a href="booking.html">Bookings</a></li> </ul> </nav> </div> </header> <main> <section class="section"> <div class="container split-section"> <div> <h1>Buy a refurbished bike</h1> <p> Here at Bottlelake bikes we sell good quality, fully serviced bikes. This allows our customers to have full confidence in their purchase while getting much better value for money than buying new. </p> </div> <figure class="section-photo-frame"> <img class="section-photo" src="buying and selling page image.jpeg" alt="Refurbished bikes ready for buying and selling"> </figure> </div> </section> <section class="section section-alt"> <div class="container"> <div class="card-grid two-up"> <article class="card"> <h2>Sell us your bike</h2> <p> Looking to get rid of your bike with the least hassle possible? Have a chat to us, we can buy it from you! </p> <p> This is a good option if you want a simpler process and would rather know your price upfront. </p> </article> <article class="card"> <h2>Let us sell your bike for you</h2> <p> Alternative to selling us your bike, we can sell it for you. To help you get the best price possible we will service, clean and polish the bike prior to sale. </p> <p> This option is better suited to owners who want to aim for a stronger sale result and are comfortable with the bike being sold on commission. </p> </article> </div> </div> </section> <section class="section"> <div class="container"> <div class="section-heading"> <h2>Clear commission structure for bikes sold on your behalf.</h2> </div> <div class="pricing-table-wrap"> <table class="pricing-table"> <caption class="visually-hidden">Commission rates for bike sales</caption> <thead> <tr> <th scope="col">Sale range</th> <th scope="col">Commission</th> </tr> </thead> <tbody> <tr> <td>Sales up to $600</td> <td>35% commission</td> </tr> <tr> <td>Sales between $600 and $1500</td> <td>30% commission</td> </tr> <tr> <td>Sales between $1500 and $3000</td> <td>25% commission</td> </tr> <tr> <td>Sales over $3000</td> <td>20% commission</td> </tr> <tr> <td>Minimum commission</td> <td>$100</td> </tr> </tbody> </table> </div> <div class="card note-card"> <p> <strong>Note:</strong> We will provide an estimated sale price before listing the bike. If you want to know exactly how much you are getting and want the money instantly, you can sell us your bike instead. </p> </div> </div> </section> </main> <footer class="site-footer"> <div class="container footer-grid"> <div> <h2 class="footer-title">Bottle Lake Bikes</h2> <p> Local bike servicing, repairs and sales in Parklands, Christchurch. </p> </div> <div> <h3 class="footer-heading">Contact</h3> <ul class="footer-list"> <li><a href="tel:02102901656">021 0290 1656</a></li> <li><a href="mailto:contact@bottlelakebikes.co.nz">contact@bottlelakebikes.co.nz</a></li> <li>43 Broadhaven Ave, Parklands, Christchurch</li> </ul> </div> <div> <h3 class="footer-heading">Hours</h3> <p>Monday - Friday<br>7:30am - 4:00pm<br>After hours appointments available on request</p> </div> </div> </footer> <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js" defer="defer"></script> <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js" defer="defer"></script> <script src="assets/site.min.js" defer="defer"></script> <script src="assets/concept.js" defer="defer"></script> </body> </html>
+<!doctype html>
+<html lang="en-NZ">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Buying &amp; Selling | Bottle Lake Bikes</title>
+    <meta
+      name="description"
+      content="Learn about buying refurbished bikes, selling your bike directly, or selling on commission with Bottle Lake Bikes."
+    />
+    <link
+      rel="canonical"
+      href="https://bottlelakebikes.co.nz/buying-selling.html"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Bottle Lake Bikes" />
+    <meta
+      property="og:title"
+      content="Buying &amp; Selling | Bottle Lake Bikes"
+    />
+    <meta
+      property="og:description"
+      content="Learn about buying refurbished bikes, selling your bike directly, or selling on commission with Bottle Lake Bikes."
+    />
+    <meta
+      property="og:url"
+      content="https://bottlelakebikes.co.nz/buying-selling.html"
+    />
+    <link rel="stylesheet" href="assets/site.min.css" />
+    <link rel="stylesheet" href="assets/concept.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <meta name="theme-color" content="#092e25" />
+  </head>
+  <body class="concept-one">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div
+      class="site-announcement"
+      data-banner-state="loading"
+      role="status"
+      aria-live="polite"
+    >
+      <div class="container">
+        <p>
+          <strong data-banner-title>Parklands bike workshop</strong>
+          <span data-banner-message
+            >Repairs, servicing and second-hand bikes near Bottle Lake
+            Forest</span
+          >
+        </p>
+      </div>
+    </div>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="site-logo" href="index.html"
+          ><img
+            class="site-logo-image"
+            src="Logo v3.0.png"
+            alt="Bottle Lake Bikes"
+        /></a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+          aria-label="Toggle navigation menu"
+        >
+          <span class="nav-toggle-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Menu</span>
+        </button>
+        <nav
+          class="site-nav"
+          id="primary-navigation"
+          aria-label="Primary navigation"
+        >
+          <ul class="nav-list">
+            <li><a href="services.html">Services &amp; pricing</a></li>
+            <li>
+              <a href="buying-selling.html" aria-current="page"
+                >Buy or sell a bike</a
+              >
+            </li>
+            <li><a href="our-brands.html">Parts &amp; brands</a></li>
+            <li><a href="about.html">About Patrick</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="booking.html">Book a service</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="main-content">
+      <section class="section">
+        <div class="container split-section">
+          <div>
+            <p class="eyebrow">Second-hand, done properly</p>
+            <h1>Buy a serviced bike. Sell yours your way.</h1>
+            <p>
+              Every used bike sold by Bottle Lake Bikes is fully serviced
+              before sale. If you are selling, choose a direct offer for a
+              simpler handover or have Patrick prepare and sell the bike on your
+              behalf.
+            </p>
+            <div class="button-row">
+              <a class="btn btn-primary" href="contact.html">Ask what is available</a>
+              <a class="btn btn-secondary" href="#selling-options">Compare selling options</a>
+            </div>
+          </div>
+          <figure class="section-photo-frame sale-bike-frame">
+            <img
+              class="section-photo sale-bike-photo"
+              src="../assets/blb/sale-bike-expanded.webp"
+              alt="Full-suspension mountain bike photographed side-on"
+              width="1672"
+              height="941"
+              fetchpriority="high"
+              decoding="async"
+            />
+            <figcaption>Serviced, checked and ready for its next rider</figcaption>
+          </figure>
+        </div>
+      </section>
+      <section
+        class="section section-alt"
+        id="selling-options"
+        aria-labelledby="selling-options-title"
+      >
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Choose your route</p>
+            <h2 id="selling-options-title">Three ways Bottle Lake Bikes can help.</h2>
+          </div>
+          <div class="card-grid three-up selling-options-grid">
+            <article class="card">
+              <span class="card-index" aria-hidden="true">01</span>
+              <h3>Sell directly</h3>
+              <p>
+                Bottle Lake Bikes can buy your bike from you. This route suits
+                sellers who want to agree an amount upfront and keep the
+                handover simple.
+              </p>
+            </article>
+            <article class="card">
+              <span class="card-index" aria-hidden="true">02</span>
+              <h3>Sell on commission</h3>
+              <p>
+                Patrick can service, clean, polish and list the bike for you.
+                This route is for sellers aiming for a stronger sale result and
+                comfortable paying commission after the sale.
+              </p>
+            </article>
+            <article class="card">
+              <span class="card-index" aria-hidden="true">03</span>
+              <h3>Get help buying</h3>
+              <p>
+                If you know the kind of bike you need but want another set of
+                eyes on the search, Patrick can act as a buying agent and help
+                you avoid a poor purchase.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Commission sales</p>
+            <h2>Know the rate before the bike is listed.</h2>
+            <p>
+              Bottle Lake Bikes will provide an estimated sale price before
+              listing your bike. A minimum commission of $100 applies.
+            </p>
+          </div>
+          <div class="pricing-table-wrap">
+            <table class="pricing-table">
+              <caption class="pricing-table-caption">
+                Commission rates by final sale price
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Sale range</th>
+                  <th scope="col">Commission</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-label="Sale price">Sales up to $600</td>
+                  <td data-label="Commission">35%</td>
+                </tr>
+                <tr>
+                  <td data-label="Sale price">Sales between $600 and $1,500</td>
+                  <td data-label="Commission">30%</td>
+                </tr>
+                <tr>
+                  <td data-label="Sale price">Sales between $1,500 and $3,000</td>
+                  <td data-label="Commission">25%</td>
+                </tr>
+                <tr>
+                  <td data-label="Sale price">Sales over $3,000</td>
+                  <td data-label="Commission">20%</td>
+                </tr>
+                <tr>
+                  <td data-label="Sale price">Minimum commission</td>
+                  <td data-label="Commission">$100</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="card note-card">
+            <h3>Not sure which selling route fits?</h3>
+            <p>
+              Ask for a direct offer if certainty matters most. Ask about
+              commission if you would rather have the bike prepared and sold on
+              your behalf.
+            </p>
+            <a class="btn btn-secondary" href="contact.html">Talk through the bike</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <h2 class="footer-title">Bottle Lake Bikes</h2>
+          <p>
+            Bike servicing, repairs and second-hand sales in Parklands,
+            Christchurch.
+          </p>
+        </div>
+        <nav aria-label="Footer navigation">
+          <h3 class="footer-heading">Explore</h3>
+          <ul class="footer-list">
+            <li><a href="services.html">Services &amp; pricing</a></li>
+            <li><a href="buying-selling.html">Buy or sell a bike</a></li>
+            <li><a href="our-brands.html">Parts &amp; brands</a></li>
+            <li><a href="booking.html">Book a service</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h3 class="footer-heading">Contact</h3>
+          <ul class="footer-list">
+            <li><a href="tel:02102901656">021 0290 1656</a></li>
+            <li>
+              <a href="mailto:contact@bottlelakebikes.co.nz"
+                >contact@bottlelakebikes.co.nz</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.google.com/maps/search/?api=1&amp;query=43+Broadhaven+Ave+Parklands+Christchurch"
+                >43 Broadhaven Ave, Parklands</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-heading">Hours</h3>
+          <p>
+            Monday&ndash;Friday<br />7:30am&ndash;4:00pm<br />After-hours handover
+            available on request
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"
+      defer="defer"
+    ></script>
+    <script
+      src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js"
+      defer="defer"
+    ></script>
+    <script src="assets/site.min.js" defer="defer"></script>
+    <script src="assets/concept.js" defer="defer"></script>
+  </body>
+</html>
