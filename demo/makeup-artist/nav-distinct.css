@@ -1,0 +1,59 @@
+/* Fashion index: a quiet masthead with a persistent editorial rail on wide screens. */
+@media (min-width: 1051px) {
+  .aster-header .header-grid {
+    grid-template-columns: minmax(0, 1fr) auto auto;
+  }
+
+  .aster-header .desktop-nav {
+    position: fixed;
+    z-index: 70;
+    top: calc(50% + 32px);
+    right: 0;
+    display: grid;
+    width: 138px;
+    transform: translateY(-50%);
+    color: var(--porcelain);
+    background: var(--black);
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    border-right: 0;
+    box-shadow: -18px 18px 48px rgba(16, 15, 15, 0.16);
+  }
+
+  .aster-header .desktop-nav a {
+    display: flex;
+    align-items: center;
+    min-height: 58px;
+    padding: 12px 18px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  }
+
+  .aster-header .desktop-nav a:last-child { border-bottom: 0; }
+  .aster-header .desktop-nav a:hover { color: var(--black); background: var(--porcelain); }
+
+  .aster-header + main,
+  .aster-footer {
+    margin-right: 138px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .aster-header .mobile-nav a {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+  }
+
+  .book-link,
+  .service-row a,
+  .aster-mark {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+}
+
+@media (max-width: 1050px) and (prefers-reduced-motion: no-preference) {
+  .js [data-reveal="line"] {
+    transform: translateY(34px);
+  }
+}

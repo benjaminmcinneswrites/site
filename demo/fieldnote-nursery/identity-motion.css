@@ -1,0 +1,168 @@
+/* Fieldnote: botanical book typography and pressed-paper movement. */
+body {
+  font-family: "Palatino Linotype", Palatino, "Book Antiqua", serif;
+  overflow-x: hidden;
+}
+
+.field-nav,
+.field-marquee,
+.botanical,
+.section-head > p,
+.project-label,
+.visit > div > p,
+.specimen dl,
+footer {
+  font-family: Candara, "Segoe UI", sans-serif;
+}
+
+.wordmark strong,
+.hero-paper h1,
+.hero-paper .lead,
+.section-head h2,
+.specimen h3,
+.selection-note h3,
+.project-copy h2,
+.project-copy > p,
+.visit h2 {
+  font-family: Constantia, Georgia, serif;
+}
+
+.project-copy li > b {
+  min-width: 58px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.hero-paper h1,
+.selection-note h3 { margin-top: 0; }
+
+.section-head {
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 40px;
+}
+
+.project-section { grid-template-columns: minmax(0, 1.2fr) minmax(240px, .55fr); }
+
+@media (max-width: 900px) {
+  .section-head { grid-template-columns: 1fr; }
+  .project-section { grid-template-columns: 1fr; }
+  .project-section aside { grid-column: auto; }
+}
+
+.js .field-hero figure {
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 1.05s cubic-bezier(.2,.76,.2,1);
+}
+
+.js.field-ready .field-hero figure {
+  clip-path: inset(0);
+}
+
+.js .field-hero figure img {
+  transform: scale(1.07);
+  transition: transform 1.5s cubic-bezier(.2,.76,.2,1);
+}
+
+.js.field-ready .field-hero figure img { transform: scale(1); }
+
+.js .hero-paper h1,
+.js .hero-paper .lead,
+.js .hero-paper > a {
+  clip-path: inset(0 0 100%);
+  transform: translateY(24px);
+  transition: clip-path .82s cubic-bezier(.2,.76,.2,1), transform .82s cubic-bezier(.2,.76,.2,1);
+}
+
+.js.field-ready .hero-paper h1,
+.js.field-ready .hero-paper .lead,
+.js.field-ready .hero-paper > a {
+  clip-path: inset(0);
+  transform: none;
+}
+
+.js.field-ready .hero-paper .lead { transition-delay: .16s; }
+.js.field-ready .hero-paper > a { transition-delay: .28s; }
+
+.hero-leaf path {
+  stroke-dasharray: 640;
+  stroke-dashoffset: 640;
+}
+
+.field-ready .hero-leaf path {
+  animation: grow-line 1.35s .35s cubic-bezier(.2,.76,.2,1) forwards;
+}
+
+.js .season-stamp {
+  transform: rotate(20deg) scale(.86);
+  transition: transform .7s .2s cubic-bezier(.2,.82,.28,1.12);
+}
+
+.js .section-head.is-in .season-stamp,
+.js .plant-section.is-in .season-stamp { transform: rotate(7deg) scale(1); }
+
+.js .field-motion {
+  transform: translateY(28px) rotate(var(--paper-angle, .45deg));
+  transition: transform .75s var(--field-delay, 0ms) cubic-bezier(.2,.78,.2,1), clip-path .85s var(--field-delay, 0ms) cubic-bezier(.2,.78,.2,1), opacity .55s var(--field-delay, 0ms) ease;
+}
+
+.js .field-motion:nth-child(even) { --paper-angle: -.45deg; }
+.js .field-motion.is-in { transform: none; clip-path: inset(0); opacity: 1; }
+
+.js .species-photo.field-motion {
+  clip-path: inset(0 12% 0 0);
+  transform: none;
+}
+
+.js .selection-note.field-motion {
+  transform: translateX(-22px) rotate(1.2deg);
+}
+
+.js .project-section aside.field-motion {
+  transform: translateY(35px) rotate(5deg);
+}
+
+.js .project-section aside.field-motion.is-in {
+  transform: rotate(2deg);
+}
+
+@keyframes grow-line { to { stroke-dashoffset: 0; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .js .field-hero figure,
+  .js .field-hero figure img,
+  .js .hero-paper h1,
+  .js .hero-paper .lead,
+  .js .hero-paper > a,
+  .js .season-stamp,
+  .js .field-motion,
+  .js .species-photo.field-motion,
+  .js .selection-note.field-motion,
+  .js .project-section aside.field-motion {
+    clip-path: none;
+    transform: none;
+    opacity: 1;
+    transition: none;
+  }
+
+  .hero-leaf path { stroke-dashoffset: 0; animation: none; }
+}
+
+@media (max-width: 900px) {
+  .hero-paper > a,
+  .selection-note a,
+  footer a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+}
+
+@media (max-width: 900px) and (prefers-reduced-motion: no-preference) {
+  .js .selection-note.field-motion {
+    transform: translateY(24px);
+  }
+
+  .js .selection-note.field-motion.is-in {
+    transform: none;
+  }
+}

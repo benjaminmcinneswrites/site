@@ -1,0 +1,156 @@
+/* Tide & Track: condensed expedition type and motion that follows a swell. */
+body {
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  overflow-x: hidden;
+}
+
+.hero-copy h1,
+.trip-intro h2,
+.trip-card h3,
+.route-copy h2,
+.safety h2,
+.sea-cta h2 {
+  font-family: "Bahnschrift Condensed", Bahnschrift, "Arial Narrow", sans-serif;
+  font-weight: 800;
+  letter-spacing: -.035em;
+}
+
+.trip-note blockquote {
+  font-family: "Palatino Linotype", Palatino, serif;
+}
+
+.hero-copy h1,
+.trip-intro h2,
+.route-copy h2,
+.safety h2,
+.sea-cta h2 { margin-top: 0; }
+
+.safety-title { grid-template-columns: 1fr; }
+
+.js .sea-hero .hero-image {
+  clip-path: inset(0 0 100% 0);
+  transform: scale(1.08);
+  transform-origin: 50% 70%;
+  transition: clip-path 1.05s cubic-bezier(.2,.78,.2,1), transform 1.45s cubic-bezier(.2,.78,.2,1);
+}
+
+.js.sea-ready .sea-hero .hero-image {
+  clip-path: inset(0);
+  transform: scale(1);
+}
+
+.js .tide-line {
+  transform: rotate(-2deg) scaleX(0);
+  transform-origin: left center;
+  transition: transform 1.15s .35s cubic-bezier(.2,.78,.2,1);
+}
+
+.js.sea-ready .tide-line {
+  transform: rotate(-2deg) scaleX(1);
+}
+
+.js .hero-copy > * {
+  clip-path: inset(0 0 100%);
+  transform: translateY(28px);
+  transition: clip-path .8s cubic-bezier(.2,.78,.2,1), transform .8s cubic-bezier(.2,.78,.2,1);
+}
+
+.js.sea-ready .hero-copy > * {
+  clip-path: inset(0);
+  transform: none;
+}
+
+.js.sea-ready .hero-copy > :nth-child(2) { transition-delay: .12s; }
+.js.sea-ready .hero-copy > :nth-child(3) { transition-delay: .22s; }
+.js.sea-ready .hero-copy > :nth-child(4) { transition-delay: .3s; }
+
+.js .conditions {
+  transform: translateY(calc(100% + 34px));
+  transition: transform .75s .48s cubic-bezier(.16,.84,.24,1);
+}
+
+.js.sea-ready .conditions {
+  transform: none;
+}
+
+.js .sea-motion {
+  transform: translateY(34px) rotate(var(--sea-tilt, -.6deg));
+  clip-path: inset(0 0 16% 0);
+  transition: transform .8s var(--sea-delay, 0ms) cubic-bezier(.18,.78,.2,1), clip-path .8s var(--sea-delay, 0ms) cubic-bezier(.18,.78,.2,1);
+}
+
+.js .sea-motion:nth-child(even) { --sea-tilt: .6deg; }
+
+.js .sea-motion.is-in {
+  transform: none;
+  clip-path: inset(0);
+}
+
+.route-map.is-visible circle {
+  animation: buoy-in .46s both cubic-bezier(.2,.85,.3,1.25);
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.route-map.is-visible circle:nth-of-type(2) { animation-delay: .38s; }
+.route-map.is-visible circle:nth-of-type(3) { animation-delay: .76s; }
+.route-map.is-visible circle:nth-of-type(4) { animation-delay: 1.14s; }
+
+.route-map ol li {
+  transform: translateX(24px);
+  opacity: .45;
+  transition: transform .55s cubic-bezier(.2,.78,.2,1), opacity .4s ease;
+}
+
+.route-map.is-visible ol li { transform: none; opacity: 1; }
+.route-map.is-visible ol li:nth-child(2) { transition-delay: .35s; }
+.route-map.is-visible ol li:nth-child(3) { transition-delay: .7s; }
+.route-map.is-visible ol li:nth-child(4) { transition-delay: 1.05s; }
+
+@keyframes buoy-in {
+  from { transform: scale(0); }
+  to { transform: scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js .sea-hero .hero-image,
+  .js .tide-line,
+  .js .hero-copy > *,
+  .js .conditions,
+  .js .sea-motion,
+  .route-map ol li {
+    clip-path: none;
+    transform: none;
+    opacity: 1;
+    transition: none;
+  }
+
+  .route-map.is-visible circle { animation: none; }
+}
+
+@media (max-width: 600px) {
+  .js .sea-motion,
+  .js .sea-motion:nth-child(even) {
+    --sea-tilt: 0deg;
+    transform: translateY(28px);
+  }
+
+  .js .sea-motion.is-in { transform: none; }
+  .route-map ol li { transform: translateY(16px); }
+  .route-map.is-visible ol li { transform: none; }
+}
+
+@media (max-width: 850px) {
+  .nav-book,
+  .trip-card > a,
+  footer a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+}
+
+@media (max-width: 850px) and (prefers-reduced-motion: no-preference) {
+  .route-map ol li { transform: translateY(16px); }
+  .route-map.is-visible ol li { transform: none; }
+}

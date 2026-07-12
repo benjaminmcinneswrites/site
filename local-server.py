@@ -16,15 +16,15 @@ class SiteHandler(SimpleHTTPRequestHandler):
         redirects = {
             "/index.html": "/",
             "/work.html": "/work",
-            "/services.html": "/services",
+            "/services.html": "/pricing#website-projects",
             "/why-choose-us.html": "/why-choose-us",
             "/pricing.html": "/pricing",
-            "/care-plans.html": "/care-plans",
+            "/care-plans.html": "/pricing#care-plans",
             "/about.html": "/why-choose-us",
             "/faq.html": "/faq",
             "/contact.html": "/contact",
             "/request.html": "/request",
-            "/free-website-mockup.html": "/free-website-mockup",
+            "/free-website-mockup.html": "/request",
             "/thanks.html": "/thanks",
             "/small-business-website-design-nz.html": "/small-business-website-design-nz",
             "/affordable-web-design-nz.html": "/affordable-web-design-nz",
@@ -59,6 +59,9 @@ class SiteHandler(SimpleHTTPRequestHandler):
         url = urlsplit(self.path)
         redirects = {
             "/about": "/why-choose-us",
+            "/services": "/pricing#website-projects",
+            "/care-plans": "/pricing#care-plans",
+            "/free-website-mockup": "/request",
         }
         target = redirects.get(url.path)
         if not target:

@@ -1,0 +1,140 @@
+/* Ledger workspace: a desktop section index runs down the left edge. */
+.ledger-mobile-nav { display: none; }
+
+@media (min-width: 901px) {
+  .ledger-nav {
+    position: fixed;
+    z-index: 40;
+    top: 64px;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 194px;
+    min-height: 0;
+    padding: 26px 18px 22px;
+    border-right: 1px solid var(--ink);
+    border-bottom: 0;
+  }
+
+  .ledger-nav .ledger-logo {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .ledger-nav > nav {
+    display: grid;
+    gap: 0;
+    margin-top: 48px;
+    border-top: 1px solid var(--ink);
+  }
+
+  .ledger-nav > nav a {
+    display: flex;
+    align-items: center;
+    min-height: 52px;
+    padding: 10px 4px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .ledger-nav > nav a:hover { color: var(--blue); background: var(--white); }
+
+  .ledger-nav .start {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: auto;
+    min-height: 48px;
+    margin-top: auto;
+    padding: 12px;
+    text-align: center;
+  }
+
+  .ledger-nav + main,
+  body > footer {
+    margin-left: 194px;
+  }
+}
+
+@media (max-width: 900px) {
+  .ledger-nav {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    gap: 10px;
+    width: auto;
+  }
+
+  .ledger-mobile-nav {
+    position: relative;
+    display: block;
+  }
+
+  .ledger-mobile-nav summary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 10px 12px;
+    color: var(--ink);
+    border: 1px solid var(--ink);
+    font-size: 0.68rem;
+    font-weight: 900;
+    list-style: none;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  .ledger-mobile-nav summary::-webkit-details-marker { display: none; }
+
+  .ledger-mobile-nav > div {
+    position: absolute;
+    z-index: 30;
+    top: calc(100% + 8px);
+    right: 0;
+    display: grid;
+    min-width: 220px;
+    padding: 8px;
+    color: var(--white);
+    background: var(--ink);
+    border: 1px solid var(--ink);
+    box-shadow: 9px 10px 0 var(--acid);
+  }
+
+  .ledger-mobile-nav a {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 10px 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+    font-size: 0.76rem;
+    font-weight: 800;
+    text-decoration: none;
+  }
+
+  .ledger-mobile-nav a:last-child { border-bottom: 0; }
+}
+
+@media (max-width: 620px) {
+  .ledger-nav {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      "brand menu"
+      "start start";
+  }
+
+  .ledger-nav .ledger-logo { grid-area: brand; }
+  .ledger-nav .start {
+    grid-area: start;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: stretch;
+    min-height: 44px;
+  }
+  .ledger-mobile-nav { grid-area: menu; }
+}

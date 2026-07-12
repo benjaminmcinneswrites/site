@@ -1,25 +1,25 @@
-﻿# Better Site Pricing
+# Better Site Pricing
 
 Website: https://bettersite.co.nz/pricing
-Care plans: https://bettersite.co.nz/care-plans
+Hosting and care: https://bettersite.co.nz/pricing#care-plans
 Contact: contact@bettersite.co.nz
-Last updated: 2026-06-07
+Last updated: 2026-07-11
 
-Prices are shown in NZD on the website. GST status is not stated on the current site.
+Prices are shown as starting prices in NZD. The written quote confirms the final total and GST treatment before acceptance.
 
 These are the visible package prices in the current website copy. Final scope, due dates, any upfront payment, and any remaining balance should be confirmed in the accepted quote or invoice.
 
 ## Main Website Offers
 
-### Starter One-Page Site - $199
+### Starter One-Page Site - from $99 NZD
 
-Best for sole traders, creators, local services, and new businesses that need a simple professional website quickly and affordably.
+Best for mobile-first one-page sites: sole traders, creators, local services, and new businesses that need a simple professional website quickly and affordably.
 
 Included:
 
-- One-page website
-- Up to 5 focused sections
-- Mobile-friendly design
+- One-page website aimed at mobile visitors
+- Up to 5 main sections
+- Mobile-first design
 - Basic contact section
 - Basic SEO title and description
 - One revision round
@@ -27,7 +27,8 @@ Included:
 
 Important limits:
 
-- Client provides text and images
+- Client provides useful business information and available images
+- Help organising and improving supplied text is included; full copywriting is quoted separately
 - No ecommerce
 - No custom backend or app functionality
 - No booking system unless embedded
@@ -36,14 +37,14 @@ Important limits:
 - No unlimited revisions
 - No complex animations
 
-### Better Business Site - $499
+### Better Business Site - from $249 NZD
 
-Popular. Best for small businesses that want stronger structure, clearer messaging, and a more polished online presence.
+Popular. Best for small businesses that want more pages, better service detail, and a more established website.
 
 Included:
 
-- Multi-page site
-- Mobile-friendly design
+- Multi-page site, with the final page count confirmed in the quote
+- Mobile-first design
 - Services & offer sections
 - Contact form & enquiry CTA
 - Basic SEO setup
@@ -58,15 +59,16 @@ Important limits:
 - No unlimited revisions
 - No guaranteed SEO rankings, traffic, leads, enquiries, or sales
 
-### Redesign / Glow-Up - $249
+### Redesign / Glow-Up - from $149 NZD
 
 Best for businesses with an existing website that looks outdated, unfinished, unclear, or harder to trust than it should.
 
 Included:
 
 - Review of current website
-- Cleaner redesign direction
-- Improved layout and visual hierarchy
+- Final pages or templates confirmed in the quote
+- Updated homepage design
+- Easier-to-scan layout
 - Mobile-friendly improvements where applicable
 - Better CTA placement
 - Basic SEO/meta cleanup where applicable
@@ -85,12 +87,12 @@ The free homepage mockup is free and is delivered within 3 business days accordi
 
 If a customer wants to continue after the mockup, the accepted quote should confirm the scope, any upfront payment, and the remaining balance due before delivery or launch.
 
-## Separate Care Plans
+## Hosting and Care Plans
 
-Care plans still exist on a separate page, but they are not one of the three main website offers on the pricing page. If a business needs hosting, care, content edits, backups, or SEO content updates after launch, Better Site can quote or discuss that separately.
+The Pricing page also lists monthly options for hosting, support, content edits, backups and SEO content updates. These can be added to a new project or discussed for an existing website after a quick review.
 
 ## Notes
 
 Extra pages, ecommerce, booking embeds, integrations, custom functionality, advanced forms, hosting, domains, email hosting, ongoing care, and larger redesign work can be quoted separately.
 
-Owner review is recommended for GST/tax wording, exact payment terms, support boundaries, hosting provider details, domain process, and whether any quoted price includes or excludes third-party costs.
+The accepted written quote remains the source of truth for GST treatment, exact payment terms, scope, support boundaries, hosting, domains, and third-party costs.

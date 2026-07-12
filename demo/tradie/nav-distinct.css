@@ -1,0 +1,90 @@
+/* Industrial two-tier masthead: business controls above a full-width job index. */
+@media (min-width: 1001px) {
+  .trade-header .nav-shell {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      "brand quote"
+      "nav nav";
+    column-gap: 28px;
+    row-gap: 14px;
+    min-height: 138px;
+    padding-top: 14px;
+  }
+
+  .trade-header .trade-brand { grid-area: brand; }
+  .trade-header .quote-button { grid-area: quote; }
+
+  .trade-header .desktop-nav {
+    grid-area: nav;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    width: 100%;
+    color: var(--white);
+    background: var(--ink);
+    border-inline: 1px solid var(--ink);
+  }
+
+  .trade-header .desktop-nav a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    padding: 10px 16px;
+    border-top: 4px solid transparent;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .trade-header .desktop-nav a:last-child { border-right: 0; }
+
+  .trade-header .desktop-nav a:hover {
+    color: var(--ink);
+    background: var(--acid);
+    border-top-color: var(--orange);
+    text-decoration: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  .trade-header .nav-shell {
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    grid-template-areas: "brand quote menu";
+  }
+
+  .trade-header .trade-brand { grid-area: brand; }
+  .trade-header .quote-button { grid-area: quote; }
+  .trade-header .mobile-nav { grid-area: menu; }
+  .trade-header .mobile-nav a {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+  }
+
+  .job-stamp {
+    right: 0;
+  }
+
+  .angle-mark {
+    left: 0;
+  }
+
+  .service-card a,
+  .trade-footer .trade-brand {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+  }
+}
+
+@media (max-width: 1000px) and (prefers-reduced-motion: no-preference) {
+  .js [data-reveal="left"],
+  .js [data-reveal="right"] {
+    transform: translateY(34px);
+  }
+}
+
+@media (max-width: 680px) {
+  .trade-header .nav-shell {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas: "brand menu";
+  }
+}

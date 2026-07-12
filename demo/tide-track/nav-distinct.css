@@ -1,0 +1,97 @@
+/* Expedition header: brand and booking stay high; section links sit on the hero's tide line. */
+.sea-mobile-nav { display: none; }
+
+@media (min-width: 851px) {
+  .sea-nav {
+    grid-template-columns: minmax(0, 1fr) auto;
+    border-bottom: 0;
+  }
+
+  .sea-nav .sea-section-nav {
+    position: absolute;
+    top: calc(100vh - 126px);
+    left: 4vw;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 0;
+    color: white;
+    background: rgba(5, 30, 40, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.38);
+    backdrop-filter: blur(12px);
+  }
+
+  .sea-nav .sea-section-nav a {
+    display: flex;
+    align-items: center;
+    min-height: 58px;
+    padding: 12px 22px;
+    border-right: 1px solid rgba(255, 255, 255, 0.25);
+  }
+
+  .sea-nav .sea-section-nav a:last-child { border-right: 0; }
+  .sea-nav .sea-section-nav a:hover { color: var(--ink); background: var(--orange); }
+}
+
+@media (max-width: 850px) {
+  .sea-nav {
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    gap: 10px;
+  }
+
+  .sea-mobile-nav {
+    position: relative;
+    display: block;
+  }
+
+  .sea-mobile-nav summary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 10px 12px;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.66);
+    font-size: 0.7rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    list-style: none;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  .sea-mobile-nav summary::-webkit-details-marker { display: none; }
+
+  .sea-mobile-nav > div {
+    position: absolute;
+    z-index: 30;
+    top: calc(100% + 8px);
+    right: 0;
+    display: grid;
+    min-width: 230px;
+    padding: 8px;
+    color: var(--ink);
+    background: var(--foam);
+    border: 1px solid var(--ink);
+    box-shadow: 10px 12px 0 var(--orange);
+  }
+
+  .sea-mobile-nav a {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 10px 12px;
+    border-bottom: 1px solid #aac2c7;
+    font-size: 0.76rem;
+    font-weight: 800;
+    text-decoration: none;
+  }
+
+  .sea-mobile-nav a:last-child { border-bottom: 0; }
+}
+
+@media (max-width: 460px) {
+  .sea-nav { gap: 7px; }
+  .sea-logo strong { font-size: 0.76rem; }
+  .nav-book { padding-inline: 9px; }
+  .sea-mobile-nav summary { padding-inline: 9px; }
+}

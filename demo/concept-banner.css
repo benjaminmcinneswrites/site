@@ -1,0 +1,303 @@
+:root {
+  --bs-demo-ink: #102f3d;
+  --bs-demo-teal: #0f766e;
+  --bs-demo-teal-dark: #0b5f59;
+  --bs-demo-gold: #bd8530;
+  --bs-demo-paper: #f6f2e9;
+  --bs-demo-white: #fffdf8;
+  --bs-demo-line: #c9d8d3;
+}
+
+.bs-demo-bar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  color: var(--bs-demo-ink);
+  background: var(--bs-demo-paper);
+  border-bottom: 1px solid var(--bs-demo-line);
+  box-shadow: 0 8px 22px rgba(16, 47, 61, 0.1);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.25;
+}
+
+.bs-demo-bar,
+.bs-demo-bar * {
+  box-sizing: border-box;
+}
+
+.bs-demo-bar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: min(calc(100% - 32px), 1180px);
+  min-height: 64px;
+  margin-inline: auto;
+}
+
+.bs-demo-bar .bs-demo-bar__label {
+  margin: 0;
+  color: #39525d;
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  text-transform: none;
+}
+
+.bs-demo-bar__label strong {
+  color: var(--bs-demo-teal);
+}
+
+.bs-demo-bar__label::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 3px;
+  margin-right: 10px;
+  vertical-align: middle;
+  background: linear-gradient(90deg, var(--bs-demo-teal) 0 68%, var(--bs-demo-gold) 68% 100%);
+}
+
+.bs-demo-bar__actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 0 0 auto;
+}
+
+.bs-demo-bar__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 15px;
+  color: var(--bs-demo-ink);
+  background: rgba(255, 253, 248, 0.82);
+  border: 1px solid #b9cbc6;
+  border-radius: 6px;
+  font-weight: 800;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease;
+}
+
+.bs-demo-bar__link:hover {
+  color: var(--bs-demo-teal-dark);
+  background: #ffffff;
+  border-color: #83aaa3;
+}
+
+.bs-demo-bar__link--primary {
+  color: var(--bs-demo-white);
+  background: var(--bs-demo-teal);
+  border-color: var(--bs-demo-teal);
+  box-shadow: inset 0 -2px 0 rgba(5, 52, 49, 0.22);
+}
+
+.bs-demo-bar__link--primary:hover {
+  color: var(--bs-demo-white);
+  background: var(--bs-demo-teal-dark);
+  border-color: var(--bs-demo-teal-dark);
+}
+
+.bs-demo-bar__link:focus-visible,
+.bs-demo-nav-link:focus-visible,
+.bs-demo-action-link:focus-visible {
+  outline: 3px solid var(--bs-demo-gold);
+  outline-offset: 3px;
+}
+
+.bs-demo-bar + .site-header {
+  position: relative;
+  top: auto;
+}
+
+.bs-demo-bar + .site-top .service-strip-inner {
+  padding-left: 0;
+}
+
+.bs-demo-nav-link,
+.bs-demo-action-link {
+  cursor: pointer !important;
+  text-decoration: none !important;
+}
+
+.bs-demo-nav-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 8px 10px;
+  color: inherit;
+  border-radius: 6px;
+}
+
+.bs-demo-nav-link:hover {
+  text-decoration: underline !important;
+  text-underline-offset: 4px;
+}
+
+.mobile-panel .bs-demo-nav-link,
+.mobile-dropdown .bs-demo-nav-link {
+  display: flex;
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 12px;
+  color: inherit;
+  border-bottom: 1px solid rgba(7, 17, 29, 0.12);
+}
+
+.bs-demo-preview-label {
+  cursor: default !important;
+  pointer-events: none;
+  user-select: text !important;
+}
+
+.demo-brand-icon {
+  display: block;
+  flex: 0 0 auto;
+  width: 46px !important;
+  height: 46px !important;
+  margin: 0;
+  border-radius: 6px;
+  object-fit: cover !important;
+}
+
+.vow-brand { align-items: center; }
+.vow-brand .demo-brand-icon { margin-right: 8px; }
+.sea-logo .demo-brand-icon { grid-row: span 2; }
+
+/* Kauri Trade headings no longer reserve space for micro labels. */
+.trade-heading h2,
+.trade-hero .hero-copy h1,
+.project-copy h2,
+.coverage-section h2,
+.quote-section h2,
+.service-card h3 {
+  margin-top: 0;
+}
+
+.bs-demo-contact-card {
+  display: grid;
+  gap: 6px;
+  justify-self: end;
+  width: min(100%, 340px);
+  padding: 26px;
+  color: inherit;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 8px;
+}
+
+.bs-demo-contact-card > span:not(.primary-action) {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.76rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.bs-demo-contact-card > strong {
+  margin-bottom: 14px;
+  color: #fff;
+  font-size: 1.06rem;
+}
+
+.bs-demo-contact-card > .primary-action {
+  width: 100%;
+  margin-top: 6px;
+}
+
+section[id] {
+  scroll-margin-top: 80px;
+}
+
+body.bs-demo-placeholder {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  place-items: stretch;
+  min-height: 100vh;
+  padding: 0;
+}
+
+body.bs-demo-placeholder main {
+  align-self: center;
+  justify-self: center;
+  width: min(calc(100% - 48px), 620px);
+  margin: 24px;
+}
+
+@media (max-width: 760px) {
+  .bs-demo-bar + .site-header .nav-shell {
+    min-height: 76px;
+    padding-block: 14px;
+  }
+
+  .bs-demo-bar + .site-top .service-strip {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 620px) {
+  .bs-demo-bar__inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    justify-content: stretch;
+    gap: 6px;
+    width: 100%;
+    min-height: 0;
+    padding: 8px 12px;
+  }
+
+  .bs-demo-bar .bs-demo-bar__label {
+    font-size: 0.77rem;
+    text-align: center;
+  }
+
+  .bs-demo-bar__actions {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.35fr);
+    gap: 6px;
+  }
+
+  .bs-demo-bar__link {
+    min-width: 0;
+    padding-inline: 8px;
+    font-size: 0.78rem;
+  }
+
+  section[id] {
+    scroll-margin-top: 112px;
+  }
+
+  body.bs-demo-placeholder main {
+    width: min(calc(100% - 32px), 620px);
+    margin: 16px;
+  }
+
+  .bs-demo-contact-card {
+    justify-self: stretch;
+    width: 100%;
+  }
+
+  .bs-demo-bar + .site-header .nav-shell {
+    padding-left: 0;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 520px) {
+  .bs-demo-bar__inner {
+    min-height: 52px;
+  }
+
+  .bs-demo-bar__link {
+    min-height: 44px;
+    padding-block: 8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bs-demo-bar__link {
+    transition: none;
+  }
+}

@@ -1,0 +1,155 @@
+/* North Ledger: precise office typography and status-driven motion. */
+body {
+  font-family: Aptos, "Segoe UI", Tahoma, sans-serif;
+  overflow-x: hidden;
+}
+
+.hero-copy h1,
+.service-title h2,
+.month-head h2,
+.scope h2,
+.start-section h2 {
+  font-family: "Trebuchet MS", Aptos, sans-serif;
+  font-weight: 800;
+}
+
+.service-table article > span {
+  color: var(--blue);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.hero-copy h1,
+.service-title h2,
+.month-head h2,
+.scope h2,
+.start-section h2 { margin-top: 0; }
+
+.service-table article {
+  grid-template-columns: minmax(180px, .8fr) minmax(0, 1.2fr) 140px;
+}
+
+.month-head { grid-template-columns: 1fr; }
+.month-cards h3 { margin-top: 0; }
+
+@media (max-width: 900px) {
+  .service-table article { grid-template-columns: 1fr; }
+  .service-table article p,
+  .service-table article strong { grid-column: auto; }
+}
+
+.js .hero-copy h1 span {
+  display: inline-block;
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path .8s .18s cubic-bezier(.2,.78,.2,1);
+}
+
+.js.ledger-ready .hero-copy h1 span { clip-path: inset(0); }
+
+.js .hero-ledger b {
+  transform: scaleX(0);
+  transition: transform .7s cubic-bezier(.2,.78,.2,1);
+}
+
+.js.ledger-ready .hero-ledger b { transform: scaleX(1); }
+.js.ledger-ready .hero-ledger b:nth-of-type(2) { transition-delay: .16s; }
+.js.ledger-ready .hero-ledger b:nth-of-type(3) { transition-delay: .32s; }
+
+.js .ledger-motion {
+  transform: translateX(26px);
+  clip-path: inset(0 0 0 8%);
+  transition: transform .68s var(--ledger-delay, 0ms) cubic-bezier(.2,.78,.2,1), clip-path .68s var(--ledger-delay, 0ms) cubic-bezier(.2,.78,.2,1), background-color .35s ease;
+}
+
+.js .ledger-motion.is-in {
+  transform: none;
+  clip-path: inset(0);
+}
+
+.service-table article.ledger-motion {
+  position: relative;
+}
+
+.service-table article.ledger-motion::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+  height: 3px;
+  background: var(--acid);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .62s var(--ledger-delay, 0ms) cubic-bezier(.2,.78,.2,1);
+}
+
+.service-table article.ledger-motion.is-in::after { transform: scaleX(1); }
+
+.month-line::before {
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 1s cubic-bezier(.2,.78,.2,1);
+}
+
+.month-board.is-in .month-line::before { transform: scaleX(1); }
+
+.month-line i {
+  transform: scale(0);
+  transition: transform .35s cubic-bezier(.2,.82,.28,1.2);
+}
+
+.month-board.is-in .month-line i { transform: scale(1); }
+.month-board.is-in .month-line i:nth-child(2) { transition-delay: .22s; }
+.month-board.is-in .month-line i:nth-child(3) { transition-delay: .44s; }
+.month-board.is-in .month-line i:nth-child(4) { transition-delay: .66s; }
+
+.month-cards article.ledger-motion {
+  transform: translateY(28px);
+  clip-path: inset(12% 0 0);
+}
+
+.month-cards article.ledger-motion.is-in {
+  transform: none;
+  clip-path: inset(0);
+}
+
+.scope-grid.ledger-motion {
+  transform: none;
+  clip-path: inset(0 0 0 18%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js .hero-copy h1 span,
+  .js .hero-ledger b,
+  .js .ledger-motion,
+  .month-cards article.ledger-motion,
+  .scope-grid.ledger-motion,
+  .month-line::before,
+  .month-line i {
+    clip-path: none;
+    transform: none;
+    transition: none;
+  }
+
+  .service-table article.ledger-motion::after { transform: scaleX(1); transition: none; }
+}
+
+@media (max-width: 900px) {
+  .js .ledger-motion { transform: translateY(24px); clip-path: inset(8% 0 0); }
+  .js .ledger-motion.is-in { transform: none; clip-path: inset(0); }
+
+  .ledger-nav .start,
+  footer a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+}
+
+@media (max-width: 900px) and (prefers-reduced-motion: reduce) {
+  .js .ledger-motion,
+  .js .ledger-motion.is-in {
+    clip-path: none;
+    transform: none;
+  }
+}

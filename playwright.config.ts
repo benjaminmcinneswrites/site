@@ -2,6 +2,9 @@ import { defineConfig, devices } from '@playwright/test';
 
 const port = Number(process.env.PLAYWRIGHT_PORT ?? 4173);
 const baseURL = `http://127.0.0.1:${port}`;
+const serverCommand = process.platform === 'win32'
+  ? `"C:\\Program Files\\nodejs\\node.exe" local-server.js ${port}`
+  : `node local-server.js ${port}`;
 
 export default defineConfig({
   testDir: './tests',
@@ -29,7 +32,7 @@ export default defineConfig({
     },
   ],
   webServer: {
-    command: `python local-server.py ${port}`,
+    command: serverCommand,
     url: `${baseURL}/`,
     reuseExistingServer: true,
     timeout: 10_000,

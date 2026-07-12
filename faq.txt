@@ -1,4 +1,4 @@
-﻿# Better Site FAQ
+# Better Site FAQ
 
 Website: https://bettersite.co.nz/faq
 Contact: contact@bettersite.co.nz
@@ -6,7 +6,7 @@ Last updated: 2026-06-07
 
 ## Is the homepage mockup really free?
 
-Yes. Better Site creates a free homepage mockup so a business can see a website direction before deciding whether to move forward.
+Yes. Better Site creates a free homepage mockup so a business can see a working homepage preview before deciding whether to move forward.
 
 ## Is it a full free website?
 
@@ -16,25 +16,25 @@ No. It is a temporary live homepage preview, not a complete free website, finish
 
 No. The free mockup is shown through a temporary live preview link only. Website files, source files, editable design files, hosting access, and ownership are not transferred unless agreed as part of a paid project.
 
-## What is included in the $199 Starter One-Page Site?
+## What is included in the Starter One-Page Site?
 
-The Starter One-Page Site includes one page, up to 5 focused sections, mobile-friendly design, a basic contact section, a basic SEO title and description, one revision round, and simple launch support. The client provides text and images.
+The Starter One-Page Site includes one mobile-first page, up to 5 main sections, a basic contact section, a basic SEO title and description, one revision round, and simple launch support. The client provides text and images.
 
 ## Why is the Starter site so affordable?
 
-It stays focused: one page, clear limits, client-provided content, and no agency-style overheads. Extra pages, ecommerce, advanced copywriting, complex animations, and custom features are quoted separately.
+The limits are straightforward: one page, client-provided content, and no agency-style overheads. Extra pages, ecommerce, advanced copywriting, complex animations, and custom features are quoted separately.
 
-## Is the $499 Better Business Site custom?
+## Is the Better Business Site custom?
 
-Yes. It is shaped around the business, content, and offer, but it is still a focused small-business website package rather than a custom app, ecommerce build, or unlimited-scope project.
+Yes. It is based on the business, content, and offer, but it is still a small-business website package rather than a custom app, ecommerce build, or unlimited-scope project.
 
-## What is the difference between the $199 and $499 options?
+## What is the difference between the Starter and Better Business options?
 
-The $199 Starter option is a clean one-page website. The $499 Better Business Site is for businesses that need more structure, clearer service and offer detail, a contact form and enquiry CTA, and two revision rounds.
+The Starter option begins from $99 NZD and is a one-page website. The Better Business Site begins from $249 NZD and is for businesses that need more pages, better service and offer detail, a contact form and enquiry CTA, and two revision rounds.
 
 ## Can Better Site redesign my existing website?
 
-Yes. The Redesign / Glow-Up offer is $249 and is for improving an existing website's look, structure, mobile experience, CTA placement, and basic SEO/meta setup where applicable.
+Yes. The Redesign / Glow-Up offer begins from $149 NZD and is for improving an existing website's look, page layout, mobile use, CTA placement, and basic SEO/meta setup where applicable.
 
 ## Do these prices include hosting?
 
@@ -46,7 +46,7 @@ No. Domain names are usually purchased and owned by the client. Better Site can 
 
 ## Do these prices include SEO?
 
-They include basic SEO setup such as page titles, descriptions, headings, and sensible structure where applicable. They do not guarantee rankings, traffic, leads, enquiries, or sales.
+They include basic SEO setup such as page titles, descriptions, headings, and logically arranged pages where applicable. They do not guarantee rankings, traffic, leads, enquiries, or sales.
 
 ## Can a customer request extra pages or features?
 

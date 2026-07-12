@@ -1,7 +1,12 @@
 ﻿ErrorDocument 404 /404.html
 
+Redirect 301 /care-plans /pricing#care-plans
+Redirect 301 /care-plans.html /pricing#care-plans
+RedirectMatch 301 ^/services(?:\.html)?$ /pricing#website-projects
+RedirectMatch 301 ^/blb/demo$ /blb/demo/
+
 <IfModule mod_headers.c>
-Header always set Content-Security-Policy "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self' https://formsubmit.co; img-src 'self' data: https: https://www.facebook.com https://www.facebook.com.au; script-src 'self' 'unsafe-inline' https://connect.facebook.net; style-src 'self' 'unsafe-inline'; connect-src 'self' https://formsubmit.co https://www.facebook.com https://connect.facebook.net; upgrade-insecure-requests"
+Header always set Content-Security-Policy "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self' https://api.web3forms.com; img-src 'self' data: https: https://www.facebook.com https://www.facebook.com.au; script-src 'self' 'unsafe-inline' https://connect.facebook.net; style-src 'self' 'unsafe-inline'; connect-src 'self' https://api.web3forms.com https://www.facebook.com https://connect.facebook.net; upgrade-insecure-requests"
 Header always set X-Frame-Options "DENY"
 Header always set Referrer-Policy "strict-origin-when-cross-origin"
 </IfModule>

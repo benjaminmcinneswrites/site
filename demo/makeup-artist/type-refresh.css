@@ -1,0 +1,30 @@
+/* Fashion-led contrast: clean grotesk copy with a high-fashion display face. */
+body { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+.aster-mark strong,
+.hero-title h1,
+.folio-heading h2,
+.service-header h2,
+.service-row h3,
+.method-copy h2,
+.booking-intro h2,
+.booking h2,
+.quote-layout blockquote,
+.booking-story h3 {
+  font-family: "Bodoni MT", Didot, "Times New Roman", serif;
+}
+
+.hero-title h1,
+.folio-heading h2,
+.service-header h2,
+.method-copy h2,
+.booking-intro h2,
+.booking h2 { margin-top: 0; }
+
+.service-row { grid-template-columns: .7fr 1fr auto; }
+.booking-story h3 { margin-top: 0; }
+.quote-layout { grid-template-columns: minmax(0, 1.35fr) minmax(150px, .27fr); }
+
+@media (max-width: 1050px) {
+  .service-row,
+  .quote-layout { grid-template-columns: 1fr; }
+}

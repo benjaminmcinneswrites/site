@@ -9,7 +9,7 @@ Service area: Small businesses nationwide in New Zealand
 
 /* SITE */
 
-Description: Affordable one-page websites, fuller business websites, website redesigns/glow-ups, hosting, and separate care plans for New Zealand small businesses and local brands that want a cleaner, more credible online presence.
+Description: Affordable one-page websites, fuller business websites, website redesigns/glow-ups, hosting, and care plans for New Zealand small businesses and local brands that want a more current, credible website.
 Primary audience: Small businesses, local brands, consultants, and service businesses in New Zealand.
 Technologies: Static HTML, CSS, and JavaScript. Clean URL redirects via _redirects. Form handling via Web3Forms. Local preview supported by local-server.py.
 Main assets: Hash-named production images, shared CSS, shared JavaScript, and demo concept pages.
@@ -19,9 +19,8 @@ Last updated: 2026-06-09
 
 Home: https://bettersite.co.nz/
 Work: https://bettersite.co.nz/work
-Services: https://bettersite.co.nz/services
 Pricing: https://bettersite.co.nz/pricing
-Care plans: https://bettersite.co.nz/care-plans
+Hosting and care: https://bettersite.co.nz/pricing#care-plans
 FAQ: https://bettersite.co.nz/faq
 Contact: https://bettersite.co.nz/contact
 Request a free mockup: https://bettersite.co.nz/request

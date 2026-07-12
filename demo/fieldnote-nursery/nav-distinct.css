@@ -1,0 +1,118 @@
+/* Nursery masthead: centred wordmark above a field-guide ribbon. */
+.field-mobile-nav { display: none; }
+
+@media (min-width: 901px) {
+  .field-nav {
+    position: relative;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "brand"
+      "nav";
+    justify-items: center;
+    gap: 12px;
+    min-height: 148px;
+    padding: 14px 4vw 0;
+  }
+
+  .field-nav .wordmark {
+    grid-area: brand;
+    justify-self: center;
+  }
+
+  .field-nav > nav {
+    grid-area: nav;
+    justify-content: center;
+    width: calc(100% + 8vw);
+    margin-inline: -4vw;
+    min-height: 54px;
+    color: var(--cream);
+    background: var(--forest);
+  }
+
+  .field-nav > nav a {
+    display: flex;
+    align-items: center;
+    min-height: 54px;
+    padding: 10px 28px;
+    border-inline: 1px solid rgba(251, 248, 239, 0.16);
+    text-decoration: none;
+  }
+
+  .field-nav > nav a:hover { color: var(--forest); background: var(--paper); }
+
+  .field-nav .stock-link {
+    position: absolute;
+    top: 23px;
+    right: 4vw;
+    min-height: 44px;
+  }
+}
+
+@media (max-width: 900px) {
+  .field-nav {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      "brand menu"
+      "stock stock";
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .field-nav .wordmark { grid-area: brand; }
+
+  .field-nav .stock-link {
+    grid-area: stock;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: stretch;
+    min-height: 44px;
+  }
+
+  .field-mobile-nav {
+    position: relative;
+    grid-area: menu;
+    display: block;
+  }
+
+  .field-mobile-nav summary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 10px 12px;
+    color: var(--forest);
+    border: 1px solid var(--forest);
+    font: 800 0.68rem ui-monospace, monospace;
+    list-style: none;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  .field-mobile-nav summary::-webkit-details-marker { display: none; }
+
+  .field-mobile-nav > div {
+    position: absolute;
+    z-index: 30;
+    top: calc(100% + 8px);
+    right: 0;
+    display: grid;
+    min-width: 220px;
+    padding: 8px;
+    color: var(--cream);
+    background: var(--forest);
+    border: 1px solid var(--forest);
+    box-shadow: 9px 10px 0 var(--clay);
+  }
+
+  .field-mobile-nav a {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 10px 12px;
+    border-bottom: 1px solid rgba(251, 248, 239, 0.24);
+    text-decoration: none;
+  }
+
+  .field-mobile-nav a:last-child { border-bottom: 0; }
+}

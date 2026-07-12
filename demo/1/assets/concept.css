@@ -1,0 +1,1442 @@
+/*
+ * Bottle Lake Bikes concept 1: Forest Route / Local Trail Atlas
+ * This layer intentionally sits after the original production CSS.
+ */
+
+:root {
+  --route-pine: #092e25;
+  --route-pine-soft: #17483b;
+  --route-bone: #f0eee4;
+  --route-paper: #faf9f3;
+  --route-orange: #e85d2a;
+  --route-ink: #102a23;
+  --route-muted: #52645e;
+  --route-line: rgba(9, 46, 37, 0.2);
+  --route-rail: 88px;
+  --route-max: 1320px;
+  --route-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+html {
+  scroll-padding-top: 24px;
+}
+
+body.concept-one {
+  min-width: 320px;
+  padding-left: var(--route-rail);
+  overflow-x: hidden;
+  color: var(--route-ink);
+  background:
+    linear-gradient(90deg, rgba(9, 46, 37, 0.035) 1px, transparent 1px) 0 0 / 80px 80px,
+    linear-gradient(rgba(9, 46, 37, 0.035) 1px, transparent 1px) 0 0 / 80px 80px,
+    var(--route-bone);
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.68;
+}
+
+body.concept-one::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  pointer-events: none;
+  background: rgba(2, 18, 14, 0.62);
+  opacity: 0;
+  transition: opacity 220ms ease;
+}
+
+body.concept-one.nav-sheet-open::before {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+body.concept-one.nav-sheet-open {
+  overflow: hidden;
+}
+
+body.concept-one a,
+body.concept-one button,
+body.concept-one input,
+body.concept-one textarea {
+  border-radius: 0;
+}
+
+body.concept-one :focus-visible {
+  outline: 3px solid var(--route-orange);
+  outline-offset: 4px;
+}
+
+body.concept-one h1,
+body.concept-one h2,
+body.concept-one h3,
+body.concept-one .footer-title,
+body.concept-one .footer-heading {
+  color: var(--route-pine);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.045em;
+}
+
+body.concept-one h1 {
+  max-width: 12ch;
+  margin: 0 0 24px;
+  font-size: clamp(3rem, 7.2vw, 7.4rem);
+  line-height: 0.88;
+}
+
+body.concept-one h2 {
+  font-size: clamp(2rem, 4vw, 4.8rem);
+  line-height: 0.98;
+}
+
+body.concept-one h3 {
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  line-height: 1.08;
+}
+
+body.concept-one p,
+body.concept-one li,
+body.concept-one dd,
+body.concept-one td {
+  color: var(--route-muted);
+}
+
+body.concept-one main {
+  position: relative;
+  z-index: 1;
+}
+
+body.concept-one .container {
+  width: min(calc(100% - clamp(40px, 7vw, 112px)), var(--route-max));
+  margin-inline: auto;
+}
+
+body.concept-one .narrow {
+  max-width: 940px;
+}
+
+/* Fixed desktop trail rail */
+body.concept-one .site-header {
+  position: fixed;
+  inset: 0 auto 0 0;
+  z-index: 100;
+  width: var(--route-rail);
+  border: 0;
+  border-right: 1px solid rgba(240, 238, 228, 0.2);
+  background: var(--route-pine);
+  color: var(--route-bone);
+  box-shadow: 16px 0 40px rgba(9, 46, 37, 0.12);
+  backdrop-filter: none;
+}
+
+body.concept-one .header-inner {
+  width: 100%;
+  height: 100%;
+  padding: 16px 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+body.concept-one .site-logo {
+  width: 56px;
+  height: 56px;
+  margin: 0;
+  padding: 4px;
+  display: grid;
+  place-items: center;
+  background: var(--route-bone);
+  border: 1px solid rgba(240, 238, 228, 0.42);
+}
+
+body.concept-one .site-logo-image {
+  content: url("../android-chrome-192x192.png");
+  width: 44px;
+  height: 44px;
+  max-width: none;
+  object-fit: contain;
+}
+
+body.concept-one .nav-toggle {
+  width: 56px;
+  height: 56px;
+  margin: 0;
+  display: inline-flex !important;
+  flex: 0 0 auto;
+  color: var(--route-bone);
+  border: 1px solid rgba(240, 238, 228, 0.35);
+  background: transparent;
+}
+
+body.concept-one .nav-toggle:hover,
+body.concept-one .nav-toggle:focus-visible {
+  color: var(--route-pine);
+  border-color: var(--route-orange);
+  background: var(--route-orange);
+}
+
+body.concept-one .nav-toggle-icon,
+body.concept-one .nav-toggle-icon::before,
+body.concept-one .nav-toggle-icon::after {
+  width: 22px;
+  background: currentColor;
+}
+
+body.concept-one .rail-label {
+  margin-top: auto;
+  color: rgba(240, 238, 228, 0.72);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+body.concept-one .rail-book {
+  width: 56px;
+  min-height: 56px;
+  display: grid;
+  place-items: center;
+  color: var(--route-pine);
+  background: var(--route-orange);
+  font-size: 0.68rem;
+  font-weight: 900;
+  line-height: 1.05;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+body.concept-one .rail-book:hover,
+body.concept-one .rail-book:focus-visible {
+  color: var(--route-pine);
+  background: var(--route-bone);
+}
+
+/* Off-canvas route index */
+body.concept-one .site-nav,
+body.concept-one .js-nav-ready .site-nav {
+  position: fixed;
+  inset: 0 auto 0 var(--route-rail);
+  z-index: 110;
+  width: min(410px, calc(100vw - var(--route-rail)));
+  height: 100dvh;
+  margin: 0;
+  padding: clamp(28px, 5vw, 64px);
+  display: flex !important;
+  flex-direction: column;
+  overflow-y: auto;
+  color: var(--route-bone);
+  background: var(--route-pine);
+  box-shadow: 32px 0 80px rgba(2, 18, 14, 0.35);
+  transform: translateX(calc(-100% - 24px));
+  visibility: hidden;
+  transition: transform 420ms var(--route-ease), visibility 0s linear 420ms;
+}
+
+body.concept-one .site-nav.is-open {
+  transform: translateX(0);
+  visibility: visible;
+  transition-delay: 0s;
+}
+
+body.concept-one .nav-sheet-heading {
+  margin: 0 0 32px;
+  padding: 0 64px 20px 0;
+  border-bottom: 1px solid rgba(240, 238, 228, 0.25);
+  color: var(--route-orange);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+body.concept-one .nav-sheet-close {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  color: var(--route-bone);
+  border: 1px solid rgba(240, 238, 228, 0.35);
+  background: transparent;
+  cursor: pointer;
+}
+
+body.concept-one .nav-sheet-close span,
+body.concept-one .nav-sheet-close span::after {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: currentColor;
+}
+
+body.concept-one .nav-sheet-close span {
+  transform: rotate(45deg);
+}
+
+body.concept-one .nav-sheet-close span::after {
+  content: "";
+  transform: rotate(90deg);
+}
+
+body.concept-one .nav-sheet-close:hover,
+body.concept-one .nav-sheet-close:focus-visible {
+  color: var(--route-pine);
+  border-color: var(--route-orange);
+  background: var(--route-orange);
+}
+
+body.concept-one .nav-list {
+  width: 100%;
+  display: grid;
+  gap: 0;
+  align-items: stretch;
+}
+
+body.concept-one .nav-list li {
+  border-bottom: 1px solid rgba(240, 238, 228, 0.18);
+}
+
+body.concept-one .nav-list a {
+  position: relative;
+  width: 100%;
+  min-height: 64px;
+  padding: 16px 36px 16px 0;
+  display: flex;
+  align-items: center;
+  color: var(--route-bone);
+  background: transparent;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: clamp(1.25rem, 3vw, 1.7rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+body.concept-one .nav-list a::after {
+  content: "\2197";
+  position: absolute;
+  right: 0;
+  color: var(--route-orange);
+}
+
+body.concept-one .nav-list a:hover,
+body.concept-one .nav-list a:focus-visible,
+body.concept-one .nav-list a[aria-current="page"] {
+  color: var(--route-orange);
+  background: transparent;
+  box-shadow: none;
+  transform: none;
+}
+
+body.concept-one .nav-sheet-contact {
+  margin-top: auto;
+  padding-top: 32px;
+  display: grid;
+  gap: 8px;
+}
+
+body.concept-one .nav-sheet-contact a {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  color: var(--route-bone);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+body.concept-one .nav-sheet-contact a:hover,
+body.concept-one .nav-sheet-contact a:focus-visible {
+  color: var(--route-orange);
+}
+
+/* Live announcement retains Firebase behavior */
+body.concept-one .site-announcement {
+  position: relative;
+  z-index: 4;
+  min-height: 44px;
+  padding: 10px clamp(20px, 5vw, 72px);
+  color: var(--route-bone);
+  background: var(--route-orange);
+  border: 0;
+}
+
+body.concept-one .site-announcement .container {
+  width: min(100%, var(--route-max));
+}
+
+body.concept-one .site-announcement p,
+body.concept-one .site-announcement strong,
+body.concept-one .site-announcement span {
+  color: var(--route-pine);
+}
+
+body.concept-one .site-announcement p {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+/* Trail route graphic */
+body.concept-one .route-graphic {
+  position: absolute;
+  inset: 4% 2% auto auto;
+  z-index: 0;
+  width: min(58vw, 850px);
+  height: auto;
+  pointer-events: none;
+  opacity: 0.88;
+}
+
+body.concept-one .route-graphic path {
+  fill: none;
+  stroke: var(--route-orange);
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 1260;
+  stroke-dashoffset: 1260;
+  animation: route-draw 1500ms 260ms var(--route-ease) forwards;
+}
+
+body.concept-one .route-graphic circle {
+  fill: var(--route-orange);
+  opacity: 0;
+  animation: route-pin 280ms 1450ms ease forwards;
+}
+
+@keyframes route-draw {
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes route-pin {
+  to { opacity: 1; }
+}
+
+/* Main hero and page introductions */
+body.concept-one .hero,
+body.concept-one .page-hero,
+body.concept-one main > .section:first-child {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: var(--route-bone);
+}
+
+body.concept-one main > .section:first-child > .container,
+body.concept-one .not-found-hero > .container {
+  position: relative;
+  z-index: 2;
+}
+
+body.concept-one .hero {
+  min-height: min(860px, calc(100dvh - 44px));
+  padding: clamp(72px, 10vw, 148px) 0;
+  display: grid;
+  align-items: center;
+}
+
+body.concept-one .hero-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(420px, 1.1fr);
+  gap: clamp(44px, 7vw, 112px);
+  align-items: center;
+}
+
+body.concept-one .hero-copy {
+  position: relative;
+  z-index: 2;
+  padding-top: 32px;
+}
+
+body.concept-one .hero-copy::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 112px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--route-orange) 0 68%, var(--route-pine) 68% 100%);
+}
+
+body.concept-one .hero h1 {
+  max-width: 7ch;
+}
+
+body.concept-one .hero-text,
+body.concept-one .lead {
+  max-width: 58ch;
+  color: var(--route-muted);
+  font-size: clamp(1.05rem, 1.6vw, 1.3rem);
+}
+
+body.concept-one .hero-photo-frame,
+body.concept-one .section-photo-frame,
+body.concept-one .about-image-card {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border: 0;
+  background: var(--route-pine);
+  box-shadow: 20px 24px 0 rgba(9, 46, 37, 0.12);
+  clip-path: polygon(14% 0, 100% 0, 100% 87%, 84% 100%, 0 100%, 0 14%);
+}
+
+body.concept-one .hero-photo-frame::before,
+body.concept-one .section-photo-frame::before,
+body.concept-one .about-image-card::before {
+  content: "";
+  position: absolute;
+  inset: 18px;
+  z-index: 2;
+  pointer-events: none;
+  border: 1px solid rgba(240, 238, 228, 0.68);
+  clip-path: inherit;
+}
+
+body.concept-one .hero-photo,
+body.concept-one .section-photo,
+body.concept-one .about-image {
+  width: 100%;
+  height: 100%;
+  min-height: 520px;
+  display: block;
+  object-fit: cover;
+  filter: saturate(0.85) contrast(1.06);
+  transform: scale(1.035);
+}
+
+body.concept-one .page-hero {
+  min-height: 560px;
+  padding: clamp(96px, 13vw, 180px) 0 clamp(72px, 10vw, 132px);
+  display: grid;
+  align-items: end;
+  border-bottom: 1px solid var(--route-line);
+}
+
+body.concept-one .page-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+body.concept-one .page-hero h1 {
+  max-width: 10ch;
+}
+
+body.concept-one .page-intro {
+  margin-bottom: clamp(44px, 7vw, 92px);
+}
+
+body.concept-one .page-intro h1,
+body.concept-one main > .section:first-child h1 {
+  max-width: 11ch;
+}
+
+/* Buttons and links */
+body.concept-one .button-row {
+  gap: 12px;
+}
+
+body.concept-one .btn {
+  position: relative;
+  min-height: 52px;
+  padding: 14px 20px;
+  border: 1px solid var(--route-pine);
+  color: var(--route-pine);
+  background: transparent;
+  font-size: 0.86rem;
+  font-weight: 850;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  box-shadow: none;
+  transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease;
+}
+
+body.concept-one .btn::after {
+  content: "\2197";
+  margin-left: 18px;
+}
+
+body.concept-one .btn-primary {
+  color: var(--route-bone);
+  background: var(--route-pine);
+}
+
+body.concept-one .btn:hover,
+body.concept-one .btn:focus-visible,
+body.concept-one .btn-primary:hover,
+body.concept-one .btn-primary:focus-visible,
+body.concept-one .btn-secondary:hover,
+body.concept-one .btn-secondary:focus-visible {
+  color: var(--route-pine);
+  border-color: var(--route-orange);
+  background: var(--route-orange);
+  box-shadow: none;
+  transform: none;
+}
+
+body.concept-one a:not(.btn):not(.site-logo):not(.rail-book) {
+  text-underline-offset: 3px;
+}
+
+/* Sections, cards and trail-marker layouts */
+body.concept-one .section {
+  position: relative;
+  padding: clamp(80px, 10vw, 152px) 0;
+  border-top: 1px solid var(--route-line);
+  background: rgba(240, 238, 228, 0.9);
+}
+
+body.concept-one .section-alt {
+  color: var(--route-bone);
+  background: var(--route-pine);
+  border-color: rgba(240, 238, 228, 0.18);
+}
+
+body.concept-one .section-alt h1,
+body.concept-one .section-alt h2,
+body.concept-one .section-alt h3,
+body.concept-one .section-alt p,
+body.concept-one .section-alt li,
+body.concept-one .section-alt td,
+body.concept-one .section-alt th {
+  color: var(--route-bone);
+}
+
+body.concept-one .section-alt .card h2,
+body.concept-one .section-alt .card h3,
+body.concept-one .section-alt .card p,
+body.concept-one .section-alt .card li {
+  color: var(--route-ink);
+}
+
+body.concept-one .section-heading {
+  max-width: 900px;
+  margin-bottom: clamp(48px, 7vw, 92px);
+}
+
+body.concept-one .section-heading h1,
+body.concept-one .section-heading h2 {
+  max-width: 13ch;
+}
+
+body.concept-one .section-heading p {
+  max-width: 64ch;
+  font-size: 1.06rem;
+}
+
+body.concept-one .card-grid {
+  gap: 1px;
+  background: var(--route-line);
+  border: 1px solid var(--route-line);
+}
+
+body.concept-one .card {
+  position: relative;
+  padding: clamp(28px, 4vw, 52px);
+  overflow: hidden;
+  color: var(--route-ink);
+  background: var(--route-paper);
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+body.concept-one .card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 46px;
+  height: 5px;
+  background: var(--route-orange);
+  transition: width 320ms var(--route-ease);
+}
+
+body.concept-one .card:hover::before {
+  width: 100%;
+}
+
+body.concept-one .card:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+body.concept-one .quick-links-grid {
+  grid-template-columns: 1.1fr 0.9fr 1fr;
+}
+
+body.concept-one .quick-link-card:nth-child(2) {
+  transform: translateY(42px);
+}
+
+body.concept-one .quick-link-card:nth-child(3) {
+  transform: translateY(-28px);
+}
+
+body.concept-one .quick-link-card:hover:nth-child(2),
+body.concept-one .quick-link-card:hover:nth-child(3) {
+  transform: translateY(inherit);
+}
+
+body.concept-one .quick-link-card .btn {
+  margin-top: 18px;
+}
+
+body.concept-one .service-package-grid {
+  grid-template-columns: 0.8fr 1.1fr 1.1fr;
+  align-items: stretch;
+}
+
+body.concept-one .service-package-grid .package-card {
+  grid-column: auto;
+}
+
+body.concept-one .package-card:nth-child(2) {
+  background: var(--route-orange);
+}
+
+body.concept-one .package-card:nth-child(2) h3,
+body.concept-one .package-card:nth-child(2) p,
+body.concept-one .package-card:nth-child(2) li {
+  color: var(--route-pine);
+}
+
+body.concept-one .price {
+  color: var(--route-pine);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: clamp(2rem, 4vw, 4rem);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+}
+
+body.concept-one .two-up,
+body.concept-one .split-section,
+body.concept-one .form-layout {
+  gap: clamp(40px, 7vw, 108px);
+  align-items: center;
+}
+
+body.concept-one .split-section {
+  display: grid;
+  grid-template-columns: minmax(0, 0.86fr) minmax(420px, 1.14fr);
+}
+
+body.concept-one .form-layout {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.72fr) minmax(440px, 1.28fr);
+  align-items: start;
+}
+
+body.concept-one .form-layout > .card:first-child {
+  position: sticky;
+  top: 48px;
+  background: var(--route-orange);
+}
+
+body.concept-one .form-layout > .card:first-child h1,
+body.concept-one .form-layout > .card:first-child h2,
+body.concept-one .form-layout > .card:first-child dt,
+body.concept-one .form-layout > .card:first-child dd,
+body.concept-one .form-layout > .card:first-child a {
+  color: var(--route-pine);
+}
+
+body.concept-one label,
+body.concept-one dt {
+  color: var(--route-pine);
+  font-weight: 800;
+}
+
+body.concept-one input,
+body.concept-one textarea {
+  width: 100%;
+  min-height: 52px;
+  padding: 14px 0;
+  color: var(--route-pine);
+  border: 0;
+  border-bottom: 2px solid rgba(9, 46, 37, 0.35);
+  background: transparent;
+  font: inherit;
+}
+
+body.concept-one .form-card input:not([type="checkbox"]),
+body.concept-one .form-card textarea {
+  border: 0 !important;
+  border-bottom: 2px solid rgba(9, 46, 37, 0.35) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body.concept-one textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+body.concept-one input:focus,
+body.concept-one textarea:focus {
+  border-color: var(--route-orange);
+  outline: 0;
+}
+
+body.concept-one .form-field {
+  margin-bottom: 28px;
+}
+
+body.concept-one .form-feedback {
+  padding: 16px;
+  border-left: 4px solid var(--route-orange);
+  background: rgba(232, 93, 42, 0.12);
+}
+
+body.concept-one .cta-panel {
+  position: relative;
+  padding: clamp(34px, 6vw, 72px);
+  color: var(--route-bone);
+  border: 0;
+  background: var(--route-pine);
+  box-shadow: none;
+}
+
+body.concept-one .cta-panel::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 18%;
+  height: 8px;
+  background: var(--route-orange);
+}
+
+body.concept-one .cta-panel h2,
+body.concept-one .cta-panel p,
+body.concept-one .cta-panel a:not(.btn) {
+  color: var(--route-bone);
+}
+
+body.concept-one .cta-panel .btn-primary {
+  color: var(--route-pine);
+  border-color: var(--route-orange);
+  background: var(--route-orange);
+}
+
+/* Pricing tables become field ledgers */
+body.concept-one .pricing-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--route-line);
+  background: var(--route-paper);
+}
+
+body.concept-one .pricing-table {
+  min-width: 620px;
+  border-collapse: collapse;
+}
+
+body.concept-one .pricing-table th,
+body.concept-one .pricing-table td {
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--route-line);
+  text-align: left;
+}
+
+body.concept-one .pricing-table th {
+  color: var(--route-bone);
+  background: var(--route-pine);
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+body.concept-one .pricing-table td:last-child {
+  color: var(--route-pine);
+  font-weight: 850;
+}
+
+/* Reviews are arranged like trail notes */
+body.concept-one .reviews-section {
+  background: var(--route-pine);
+}
+
+body.concept-one .reviews-header {
+  align-items: end;
+  border-bottom: 1px solid rgba(240, 238, 228, 0.2);
+}
+
+body.concept-one .reviews-heading h2,
+body.concept-one .reviews-score-value,
+body.concept-one .reviews-score-label {
+  color: var(--route-bone);
+}
+
+body.concept-one .reviews-score-stars,
+body.concept-one .review-stars {
+  color: var(--route-orange);
+}
+
+body.concept-one .reviews-score {
+  color: var(--route-pine);
+  border: 0;
+  background: var(--route-orange);
+}
+
+body.concept-one .reviews-score .reviews-score-value,
+body.concept-one .reviews-score .reviews-score-label,
+body.concept-one .reviews-score .reviews-score-stars {
+  color: var(--route-pine);
+}
+
+body.concept-one .reviews-grid {
+  margin-top: 44px;
+  grid-template-columns: repeat(12, 1fr);
+  background: transparent;
+  border: 0;
+  gap: 20px;
+}
+
+body.concept-one .review-card {
+  grid-column: span 4;
+  min-height: 260px;
+  background: rgba(240, 238, 228, 0.07);
+  border: 1px solid rgba(240, 238, 228, 0.22);
+}
+
+body.concept-one .review-card:nth-child(2n) {
+  transform: translateY(28px);
+}
+
+body.concept-one .review-card h3,
+body.concept-one .review-card p {
+  color: var(--route-bone);
+}
+
+body.concept-one .section-alt .review-card h3,
+body.concept-one .section-alt .review-card p {
+  color: var(--route-bone);
+}
+
+body.concept-one .reviews-more .btn {
+  color: var(--route-pine);
+  border-color: var(--route-orange);
+  background: var(--route-orange);
+}
+
+/* Dense brand directory retains all supplier content */
+body.concept-one .brands-hero {
+  min-height: 620px;
+  color: var(--route-bone);
+  background: var(--route-pine);
+}
+
+body.concept-one .brands-hero h1,
+body.concept-one .brands-hero p {
+  color: var(--route-bone);
+}
+
+body.concept-one .brand-category-nav {
+  margin-bottom: 48px;
+  padding: 0 0 24px;
+  display: flex;
+  gap: 10px 28px;
+  flex-wrap: wrap;
+  border: 0;
+  border-bottom: 1px solid var(--route-line);
+}
+
+body.concept-one .brand-category-nav span {
+  color: var(--route-pine);
+  font-size: 0.78rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+body.concept-one .brands-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  border: 1px solid var(--route-line);
+  background: var(--route-line);
+}
+
+body.concept-one .brand-card {
+  min-width: 0;
+  padding: 24px;
+  background: var(--route-paper);
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+body.concept-one .brand-card:nth-child(9n + 1),
+body.concept-one .brand-card:nth-child(9n + 6) {
+  grid-column: span 2;
+}
+
+body.concept-one .brand-card:hover {
+  transform: none;
+  background: #fffdf5;
+  box-shadow: none;
+}
+
+body.concept-one .brand-logo-panel,
+body.concept-one .brand-mark {
+  min-height: 112px;
+  border: 0;
+  background: transparent;
+}
+
+body.concept-one .brand-logo-panel-dark {
+  background: var(--route-pine);
+}
+
+body.concept-one .brand-logo {
+  max-width: 78%;
+  max-height: 64px;
+}
+
+body.concept-one .brand-card h2 {
+  margin-top: 20px;
+  font-size: 1.25rem;
+}
+
+body.concept-one .brand-category-list {
+  padding-left: 18px;
+  font-size: 0.86rem;
+}
+
+/* About page: long-form field journal */
+body.concept-one .about-simple-layout {
+  grid-template-columns: minmax(0, 1.15fr) minmax(360px, 0.85fr);
+  align-items: start;
+}
+
+body.concept-one .about-simple-layout > div {
+  max-width: 760px;
+}
+
+body.concept-one .about-simple-layout > div > p {
+  max-width: 65ch;
+  padding: 0 0 24px 28px;
+  border-left: 1px solid var(--route-line);
+  font-size: 1.05rem;
+}
+
+body.concept-one .about-image-card {
+  position: sticky;
+  top: 40px;
+}
+
+body.concept-one .about-image {
+  min-height: 720px;
+}
+
+/* Booking and confirmation */
+body.concept-one .booking-hero {
+  min-height: calc(100dvh - 44px);
+  color: var(--route-bone);
+  background:
+    linear-gradient(105deg, rgba(9, 46, 37, 0.96) 0 54%, rgba(9, 46, 37, 0.72) 76%, rgba(9, 46, 37, 0.9) 100%),
+    url("../Workshop page image.jpg") center / cover;
+}
+
+body.concept-one .booking-hero h1,
+body.concept-one .booking-hero .lead,
+body.concept-one .booking-hero .lead a {
+  color: var(--route-bone);
+}
+
+body.concept-one .booking-hero .btn-primary {
+  color: var(--route-pine);
+  border-color: var(--route-orange);
+  background: var(--route-orange);
+}
+
+/* Diagonal media reveals */
+body.concept-one .trail-media {
+  clip-path: polygon(16% 0, 16% 0, 0 100%, 0 100%);
+  opacity: 0.25;
+  transition: clip-path 900ms var(--route-ease), opacity 500ms ease;
+}
+
+body.concept-one .trail-media.is-trail-visible {
+  clip-path: polygon(16% 0, 100% 0, 100% 100%, 0 100%);
+  opacity: 1;
+}
+
+/* Disable the generic production fade so only branded motion remains. */
+body.concept-one .reveal-on-scroll,
+body.concept-one .reveal-on-scroll.is-visible {
+  opacity: 1 !important;
+  transform: none !important;
+  filter: none !important;
+}
+
+/* Footer */
+body.concept-one .site-footer {
+  padding: clamp(64px, 9vw, 120px) 0;
+  color: var(--route-bone);
+  background: #041d17;
+  border-top: 8px solid var(--route-orange);
+}
+
+body.concept-one .site-footer h2,
+body.concept-one .site-footer h3,
+body.concept-one .site-footer p,
+body.concept-one .site-footer li,
+body.concept-one .site-footer a {
+  color: var(--route-bone);
+  overflow-wrap: anywhere;
+}
+
+body.concept-one .footer-grid {
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: clamp(32px, 7vw, 96px);
+}
+
+body.concept-one .footer-list {
+  padding: 0;
+  list-style: none;
+}
+
+/* 404 retains its self-contained markup but joins the atlas system. */
+body.concept-one .not-found-hero {
+  min-height: 70dvh;
+  padding: clamp(80px, 12vw, 160px) 0;
+  overflow: hidden;
+  background: var(--route-bone);
+}
+
+body.concept-one .not-found-card {
+  border: 1px solid var(--route-line);
+  border-radius: 0;
+  box-shadow: 20px 20px 0 rgba(9, 46, 37, 0.1);
+}
+
+@media (max-width: 1100px) {
+  body.concept-one .hero-grid,
+  body.concept-one .split-section,
+  body.concept-one .about-simple-layout {
+    grid-template-columns: 1fr 0.9fr;
+    gap: 48px;
+  }
+
+  body.concept-one .hero-photo,
+  body.concept-one .section-photo,
+  body.concept-one .about-image {
+    min-height: 440px;
+  }
+
+  body.concept-one .brands-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  body.concept-one .form-layout {
+    grid-template-columns: minmax(260px, 0.8fr) minmax(360px, 1.2fr);
+    gap: 32px;
+  }
+}
+
+@media (max-width: 900px) {
+  :root {
+    --route-rail: 0px;
+  }
+
+  html {
+    scroll-padding-top: 72px;
+  }
+
+  body.concept-one {
+    padding: 72px 0 0;
+  }
+
+  body.concept-one .site-header {
+    inset: 0 0 auto;
+    width: 100%;
+    height: 72px;
+    border-right: 0;
+    border-bottom: 1px solid rgba(240, 238, 228, 0.18);
+    box-shadow: 0 12px 32px rgba(9, 46, 37, 0.16);
+  }
+
+  body.concept-one .header-inner {
+    height: 72px;
+    padding: 8px 16px;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  body.concept-one .site-logo {
+    width: 48px;
+    height: 48px;
+  }
+
+  body.concept-one .site-logo-image {
+    width: 38px;
+    height: 38px;
+  }
+
+  body.concept-one .nav-toggle {
+    width: 48px;
+    height: 48px;
+    order: 3;
+  }
+
+  body.concept-one .rail-label {
+    margin: 0 auto 0 0;
+    writing-mode: horizontal-tb;
+    transform: none;
+    font-size: 0.68rem;
+  }
+
+  body.concept-one .rail-book {
+    width: auto;
+    min-width: 76px;
+    min-height: 48px;
+    padding: 0 12px;
+  }
+
+  body.concept-one .site-nav,
+  body.concept-one .js-nav-ready .site-nav {
+    inset: 0 auto 0 0;
+    width: min(88vw, 390px);
+    padding: 32px 24px;
+    transform: translateX(calc(-100% - 16px));
+  }
+
+  body.concept-one .site-nav.is-open {
+    transform: translateX(0);
+  }
+
+  body.concept-one .site-announcement {
+    padding: 10px 20px;
+  }
+
+  body.concept-one .hero,
+  body.concept-one .page-hero {
+    min-height: auto;
+  }
+
+  body.concept-one .hero-grid,
+  body.concept-one .split-section,
+  body.concept-one .about-simple-layout,
+  body.concept-one .form-layout {
+    grid-template-columns: 1fr;
+  }
+
+  body.concept-one .hero h1 {
+    max-width: 9ch;
+  }
+
+  body.concept-one .hero-photo,
+  body.concept-one .section-photo,
+  body.concept-one .about-image {
+    min-height: min(68vw, 540px);
+  }
+
+  body.concept-one .about-image-card,
+  body.concept-one .form-layout > .card:first-child {
+    position: relative;
+    top: auto;
+  }
+
+  body.concept-one .about-image-card {
+    order: -1;
+  }
+
+  body.concept-one .service-package-grid,
+  body.concept-one .quick-links-grid {
+    grid-template-columns: 1fr;
+  }
+
+  body.concept-one .quick-link-card:nth-child(2),
+  body.concept-one .quick-link-card:nth-child(3),
+  body.concept-one .review-card:nth-child(2n) {
+    transform: none;
+  }
+
+  body.concept-one .review-card {
+    grid-column: span 6;
+  }
+
+  body.concept-one .brands-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  body.concept-one .brand-card:nth-child(9n + 1),
+  body.concept-one .brand-card:nth-child(9n + 6) {
+    grid-column: span 1;
+  }
+
+  body.concept-one .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 620px) {
+  body.concept-one {
+    font-size: 0.98rem;
+  }
+
+  body.concept-one .container {
+    width: min(calc(100% - 32px), var(--route-max));
+  }
+
+  body.concept-one h1 {
+    font-size: clamp(2.8rem, 15vw, 4.6rem);
+  }
+
+  body.concept-one h2 {
+    font-size: clamp(2rem, 10vw, 3.3rem);
+  }
+
+  body.concept-one .rail-label {
+    display: none;
+  }
+
+  body.concept-one .rail-book {
+    margin-left: auto;
+  }
+
+  body.concept-one .site-announcement p {
+    display: block;
+    font-size: 0.78rem;
+  }
+
+  body.concept-one .site-announcement span {
+    display: block;
+  }
+
+  body.concept-one .hero,
+  body.concept-one .page-hero,
+  body.concept-one .section {
+    padding-block: 72px;
+  }
+
+  body.concept-one .hero-copy {
+    padding-top: 32px;
+  }
+
+  body.concept-one .hero-photo-frame,
+  body.concept-one .section-photo-frame,
+  body.concept-one .about-image-card {
+    box-shadow: 10px 12px 0 rgba(9, 46, 37, 0.12);
+  }
+
+  body.concept-one .hero-photo,
+  body.concept-one .section-photo,
+  body.concept-one .about-image {
+    min-height: 360px;
+  }
+
+  body.concept-one .button-row {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  body.concept-one .button-row .btn {
+    width: 100%;
+  }
+
+  body.concept-one .card {
+    padding: 28px 22px;
+  }
+
+  body.concept-one .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+
+  body.concept-one .review-card {
+    grid-column: auto;
+    min-height: 0;
+  }
+
+  body.concept-one .brands-grid {
+    grid-template-columns: 1fr;
+  }
+
+  body.concept-one .brand-card,
+  body.concept-one .brand-card:nth-child(9n + 1),
+  body.concept-one .brand-card:nth-child(9n + 6) {
+    grid-column: auto;
+  }
+
+  body.concept-one .brand-logo-panel,
+  body.concept-one .brand-mark {
+    min-height: 90px;
+  }
+
+  body.concept-one .about-simple-layout > div > p {
+    padding-left: 18px;
+  }
+
+  body.concept-one .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  body.concept-one .route-graphic {
+    width: 120vw;
+    right: -56%;
+  }
+
+  body.concept-one .not-found-hero .route-graphic {
+    right: 0;
+    width: 100%;
+  }
+
+  body.concept-one .pricing-table th,
+  body.concept-one .pricing-table td {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 430px) {
+  body.concept-one .rail-book {
+    display: none;
+  }
+
+  body.concept-one .site-logo {
+    margin-right: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  body.concept-one *,
+  body.concept-one *::before,
+  body.concept-one *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  body.concept-one .route-graphic path {
+    stroke-dashoffset: 0;
+  }
+
+  body.concept-one .route-graphic circle {
+    opacity: 1;
+  }
+
+  body.concept-one .trail-media,
+  body.concept-one .trail-media.is-trail-visible {
+    clip-path: polygon(16% 0, 100% 0, 100% 100%, 0 100%);
+    opacity: 1;
+  }
+}

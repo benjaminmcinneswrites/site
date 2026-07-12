@@ -1,0 +1,48 @@
+/* Editorial masthead: the wordmark is centred between two balanced link groups. */
+@media (min-width: 981px) {
+  .vow-header .nav-frame {
+    position: relative;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    grid-template-areas: "left brand right";
+    gap: 24px;
+    min-height: 104px;
+  }
+
+  .vow-header .desktop-nav-left {
+    grid-area: left;
+    justify-self: end;
+  }
+
+  .vow-header .vow-brand {
+    grid-area: brand;
+    justify-self: center;
+  }
+
+  .vow-header .desktop-nav-right {
+    grid-area: right;
+    justify-self: start;
+    padding-right: 112px;
+  }
+
+  .vow-header .enquire-link {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    min-height: 44px;
+  }
+
+  .vow-header .desktop-nav a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+}
+
+@media (max-width: 980px) {
+  .vow-header .mobile-nav a {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+  }
+}

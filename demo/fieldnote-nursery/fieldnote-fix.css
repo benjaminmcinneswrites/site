@@ -1,0 +1,65 @@
+/* The field list is always visible; motion is enhancement, never a content gate. */
+.specimen-grid {
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.species-photo {
+  position: relative;
+  grid-column: span 9;
+  min-height: 510px;
+  margin: 0;
+  overflow: hidden;
+  border-right: 1px solid var(--hair);
+  border-bottom: 1px solid var(--hair);
+  background: var(--cream);
+}
+
+.species-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.species-photo figcaption {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 15px 20px;
+  color: var(--cream);
+  background: rgba(24, 56, 45, .9);
+  font: 700 .64rem ui-monospace, monospace;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.selection-note {
+  grid-column: span 3;
+  min-height: 510px;
+}
+
+.specimen {
+  grid-column: span 4;
+  min-height: 300px;
+}
+
+.js .specimen,
+.js .specimen.in {
+  clip-path: none;
+  animation: none;
+}
+
+@media (max-width: 900px) {
+  .specimen-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .species-photo { grid-column: 1 / -1; min-height: 420px; }
+  .selection-note,
+  .specimen { grid-column: auto; }
+  .selection-note { min-height: 360px; }
+}
+
+@media (max-width: 600px) {
+  .species-photo,
+  .selection-note,
+  .specimen { grid-column: 1 / -1; }
+  .species-photo { min-height: 300px; }
+}
