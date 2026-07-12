@@ -256,7 +256,7 @@
   }
 
   function addMeasuredMotion() {
-    var sections = Array.prototype.slice.call(document.querySelectorAll("main > section"));
+    var sections = Array.prototype.slice.call(document.querySelectorAll("main > section:not(.hero)"));
     var images = Array.prototype.slice.call(document.querySelectorAll(".hero-photo-frame, .section-photo-frame, .about-image-card"));
     var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
