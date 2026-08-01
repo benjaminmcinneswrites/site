@@ -4,6 +4,7 @@ const path = require('node:path');
 
 const root = path.resolve(__dirname);
 const port = Number(process.argv[2] || 8000);
+const publicMockupBase = (process.env.MOCKUP_PUBLIC_BASE || 'https://bettersite.co.nz').replace(/\/$/, '');
 
 const cleanRedirects = new Map([
   ['/index.html', '/'],
@@ -100,6 +101,37 @@ function sendFile(request, response, file, status = 200) {
   response.end(body);
 }
 
+function readMockups() {
+  const mockupRoot = path.join(root, 'mockup');
+  if (!fs.existsSync(mockupRoot)) return [];
+
+  return fs.readdirSync(mockupRoot, { withFileTypes: true })
+    .filter((entry) => entry.isDirectory() && /^(?:[a-z0-9]+(?:-[a-z0-9]+)*-)?\d{12}$/.test(entry.name))
+    .map((entry) => {
+      const indexFile = path.join(mockupRoot, entry.name, 'index.html');
+      if (!fs.existsSync(indexFile)) return null;
+      const html = fs.readFileSync(indexFile, 'utf8');
+      const title = (html.match(/<meta\s+name=["']mockup-client["']\s+content=["']([^"']+)["']/i)?.[1]
+        || html.match(/<title>(.*?)<\/title>/is)?.[1])
+        ?.replace(/\s+[—|-]\s+Private website preview.*$/i, '')
+        ?.replace(/&amp;/g, '&')
+        ?.replace(/&lt;/g, '<')
+        ?.replace(/&gt;/g, '>')
+        ?.replace(/&quot;/g, '"')
+        ?.replace(/&#39;/g, "'")
+        ?.trim() || `Mockup ${entry.name}`;
+      return {
+        id: entry.name,
+        name: title,
+        updated: fs.statSync(indexFile).mtime.toISOString(),
+        localUrl: `/mockup/${entry.name}/`,
+        shareUrl: `${publicMockupBase}/mockup/${entry.name}/`,
+      };
+    })
+    .filter(Boolean)
+    .sort((a, b) => b.updated.localeCompare(a.updated));
+}
+
 const server = http.createServer((request, response) => {
   if (request.method !== 'GET' && request.method !== 'HEAD') {
     response.writeHead(405, { Allow: 'GET, HEAD' });
@@ -113,6 +145,16 @@ const server = http.createServer((request, response) => {
     return response.end('Bad request');
   }
 
+  if (pathname === '/__mockups') {
+    const body = Buffer.from(JSON.stringify({ mockups: readMockups() }));
+    setNoCacheHeaders(response);
+    response.statusCode = 200;
+    response.setHeader('Content-Type', 'application/json; charset=utf-8');
+    response.setHeader('Content-Length', body.length);
+    if (request.method === 'HEAD') return response.end();
+    return response.end(body);
+  }
+
   const redirectTarget = cleanRedirects.get(pathname) || legacyRedirects.get(pathname);
   if (redirectTarget) {
     const query = requestUrl.search || '';
@@ -121,6 +163,11 @@ const server = http.createServer((request, response) => {
     setNoCacheHeaders(response);
     response.writeHead(301, { Location: location, 'Content-Length': '0' });
     return response.end();
+  }
+
+  if (/^\/mockups?\//.test(pathname)) {
+    response.setHeader('X-Robots-Tag', 'noindex, nofollow, noarchive, nosnippet');
+    response.setHeader('Referrer-Policy', 'no-referrer');
   }
 
   const file = resolveFile(pathname);
