@@ -8,7 +8,10 @@
   --route-pine-soft: #17483b;
   --route-bone: #f0eee4;
   --route-paper: #faf9f3;
-  --route-orange: #e85d2a;
+  --route-orange: #e75c29;
+  --route-orange-text: #b63b12;
+  --route-orange-on-dark: #ff8b65;
+  --route-orange-ink: #041d17;
   --route-ink: #102a23;
   --route-muted: #52645e;
   --route-line: rgba(9, 46, 37, 0.2);
@@ -27,7 +30,8 @@ body.concept-one {
   overflow-x: hidden;
   color: var(--route-ink);
   background:
-    linear-gradient(90deg, rgba(9, 46, 37, 0.035) 1px, transparent 1px) 0 0 / 80px 80px,
+    linear-gradient(90deg, rgba(9, 46, 37, 0.035) 1px, transparent 1px) 0 0 /
+      80px 80px,
     linear-gradient(rgba(9, 46, 37, 0.035) 1px, transparent 1px) 0 0 / 80px 80px,
     var(--route-bone);
   font-family: "Segoe UI", Arial, sans-serif;
@@ -67,6 +71,34 @@ body.concept-one :focus-visible {
   outline-offset: 4px;
 }
 
+body.concept-one .skip-link {
+  position: fixed;
+  top: 12px;
+  left: calc(var(--route-rail) + 12px);
+  z-index: 220;
+  padding: 12px 16px;
+  color: var(--route-orange-ink);
+  background: var(--route-orange);
+  font-weight: 800;
+  transform: translateY(calc(-100% - 20px));
+  transition: transform 160ms ease;
+}
+
+body.concept-one .skip-link:focus {
+  color: var(--route-orange-ink);
+  transform: translateY(0);
+}
+
+body.concept-one .eyebrow {
+  margin: 0 0 14px;
+  color: var(--route-orange-text);
+  font-size: 0.76rem;
+  font-weight: 850;
+  letter-spacing: 0.14em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
 body.concept-one h1,
 body.concept-one h2,
 body.concept-one h3,
@@ -81,8 +113,8 @@ body.concept-one .footer-heading {
 body.concept-one h1 {
   max-width: 12ch;
   margin: 0 0 24px;
-  font-size: clamp(3rem, 7.2vw, 7.4rem);
-  line-height: 0.88;
+  font-size: clamp(3rem, 6.7vw, 6.9rem);
+  line-height: 0.9;
 }
 
 body.concept-one h2 {
@@ -114,6 +146,22 @@ body.concept-one .container {
 
 body.concept-one .narrow {
   max-width: 940px;
+}
+
+body.concept-one figure figcaption {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  left: 18px;
+  z-index: 3;
+  padding: 12px 14px;
+  color: var(--route-bone);
+  background: rgba(4, 29, 23, 0.88);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1.35;
+  text-transform: uppercase;
 }
 
 /* Fixed desktop trail rail */
@@ -174,7 +222,7 @@ body.concept-one .nav-toggle {
 
 body.concept-one .nav-toggle:hover,
 body.concept-one .nav-toggle:focus-visible {
-  color: var(--route-pine);
+  color: var(--route-orange-ink);
   border-color: var(--route-orange);
   background: var(--route-orange);
 }
@@ -202,7 +250,7 @@ body.concept-one .rail-book {
   min-height: 56px;
   display: grid;
   place-items: center;
-  color: var(--route-pine);
+  color: var(--route-orange-ink);
   background: var(--route-orange);
   font-size: 0.68rem;
   font-weight: 900;
@@ -235,7 +283,9 @@ body.concept-one .js-nav-ready .site-nav {
   box-shadow: 32px 0 80px rgba(2, 18, 14, 0.35);
   transform: translateX(calc(-100% - 24px));
   visibility: hidden;
-  transition: transform 420ms var(--route-ease), visibility 0s linear 420ms;
+  transition:
+    transform 320ms var(--route-ease),
+    visibility 0s linear 320ms;
 }
 
 body.concept-one .site-nav.is-open {
@@ -248,7 +298,7 @@ body.concept-one .nav-sheet-heading {
   margin: 0 0 32px;
   padding: 0 64px 20px 0;
   border-bottom: 1px solid rgba(240, 238, 228, 0.25);
-  color: var(--route-orange);
+  color: var(--route-orange-on-dark);
   font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.14em;
@@ -288,7 +338,7 @@ body.concept-one .nav-sheet-close span::after {
 
 body.concept-one .nav-sheet-close:hover,
 body.concept-one .nav-sheet-close:focus-visible {
-  color: var(--route-pine);
+  color: var(--route-orange-ink);
   border-color: var(--route-orange);
   background: var(--route-orange);
 }
@@ -329,7 +379,7 @@ body.concept-one .nav-list a::after {
 body.concept-one .nav-list a:hover,
 body.concept-one .nav-list a:focus-visible,
 body.concept-one .nav-list a[aria-current="page"] {
-  color: var(--route-orange);
+  color: var(--route-orange-on-dark);
   background: transparent;
   box-shadow: none;
   transform: none;
@@ -353,7 +403,7 @@ body.concept-one .nav-sheet-contact a {
 
 body.concept-one .nav-sheet-contact a:hover,
 body.concept-one .nav-sheet-contact a:focus-visible {
-  color: var(--route-orange);
+  color: var(--route-orange-on-dark);
 }
 
 /* Live announcement retains Firebase behavior */
@@ -374,7 +424,7 @@ body.concept-one .site-announcement .container {
 body.concept-one .site-announcement p,
 body.concept-one .site-announcement strong,
 body.concept-one .site-announcement span {
-  color: var(--route-pine);
+  color: var(--route-orange-ink);
 }
 
 body.concept-one .site-announcement p {
@@ -415,11 +465,15 @@ body.concept-one .route-graphic circle {
 }
 
 @keyframes route-draw {
-  to { stroke-dashoffset: 0; }
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 @keyframes route-pin {
-  to { opacity: 1; }
+  to {
+    opacity: 1;
+  }
 }
 
 /* Main hero and page introductions */
@@ -467,11 +521,15 @@ body.concept-one .hero-copy::before {
   left: 0;
   width: 112px;
   height: 4px;
-  background: linear-gradient(90deg, var(--route-orange) 0 68%, var(--route-pine) 68% 100%);
+  background: linear-gradient(
+    90deg,
+    var(--route-orange) 0 68%,
+    var(--route-pine) 68% 100%
+  );
 }
 
 body.concept-one .hero h1 {
-  max-width: 7ch;
+  max-width: 9ch;
 }
 
 body.concept-one .hero-text,
@@ -517,6 +575,28 @@ body.concept-one .about-image {
   transform: scale(1.035);
 }
 
+body.concept-one .hero-photo {
+  object-position: center 58%;
+}
+
+body.concept-one .sale-bike-frame {
+  background: #626a6e;
+}
+
+body.concept-one .sale-bike-photo {
+  object-fit: contain;
+  object-position: center;
+  transform: none;
+}
+
+body.concept-one .service-addons-photo {
+  object-position: 58% center;
+}
+
+body.concept-one .about-image {
+  object-position: center 38%;
+}
+
 body.concept-one .page-hero {
   min-height: 560px;
   padding: clamp(96px, 13vw, 180px) 0 clamp(72px, 10vw, 132px);
@@ -560,7 +640,10 @@ body.concept-one .btn {
   letter-spacing: 0.04em;
   text-transform: uppercase;
   box-shadow: none;
-  transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease;
+  transition:
+    color 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease;
 }
 
 body.concept-one .btn::after {
@@ -579,7 +662,7 @@ body.concept-one .btn-primary:hover,
 body.concept-one .btn-primary:focus-visible,
 body.concept-one .btn-secondary:hover,
 body.concept-one .btn-secondary:focus-visible {
-  color: var(--route-pine);
+  color: var(--route-orange-ink);
   border-color: var(--route-orange);
   background: var(--route-orange);
   box-shadow: none;
@@ -677,6 +760,10 @@ body.concept-one .quick-links-grid {
   grid-template-columns: 1.1fr 0.9fr 1fr;
 }
 
+body.concept-one .quick-links-heading {
+  margin-bottom: clamp(64px, 8vw, 108px);
+}
+
 body.concept-one .quick-link-card:nth-child(2) {
   transform: translateY(42px);
 }
@@ -685,17 +772,23 @@ body.concept-one .quick-link-card:nth-child(3) {
   transform: translateY(-28px);
 }
 
-body.concept-one .quick-link-card:hover:nth-child(2),
-body.concept-one .quick-link-card:hover:nth-child(3) {
-  transform: translateY(inherit);
-}
-
 body.concept-one .quick-link-card .btn {
   margin-top: 18px;
 }
 
+body.concept-one .card-index,
+body.concept-one .booking-step-number {
+  display: block;
+  margin-bottom: 22px;
+  color: var(--route-orange-text);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+}
+
 body.concept-one .service-package-grid {
-  grid-template-columns: 0.8fr 1.1fr 1.1fr;
+  grid-template-columns: 1.05fr 1.05fr 0.9fr;
   align-items: stretch;
 }
 
@@ -703,14 +796,41 @@ body.concept-one .service-package-grid .package-card {
   grid-column: auto;
 }
 
-body.concept-one .package-card:nth-child(2) {
+body.concept-one .package-card-featured {
   background: var(--route-orange);
 }
 
-body.concept-one .package-card:nth-child(2) h3,
-body.concept-one .package-card:nth-child(2) p,
-body.concept-one .package-card:nth-child(2) li {
-  color: var(--route-pine);
+body.concept-one .package-card-featured h2,
+body.concept-one .package-card-featured p,
+body.concept-one .package-card-featured li {
+  color: var(--route-orange-ink);
+}
+
+body.concept-one .package-card h2 {
+  max-width: 12ch;
+  font-size: clamp(1.8rem, 2.8vw, 2.7rem);
+  line-height: 1;
+}
+
+body.concept-one .package-kicker {
+  margin-bottom: 16px;
+  color: var(--route-orange-text);
+  font-size: 0.72rem;
+  font-weight: 850;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+body.concept-one .package-card-featured .package-kicker {
+  color: var(--route-orange-ink);
+}
+
+body.concept-one .selling-options-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+body.concept-one .note-card {
+  margin-top: 28px;
 }
 
 body.concept-one .price {
@@ -747,10 +867,34 @@ body.concept-one .form-layout > .card:first-child {
 
 body.concept-one .form-layout > .card:first-child h1,
 body.concept-one .form-layout > .card:first-child h2,
+body.concept-one .form-layout > .card:first-child p,
 body.concept-one .form-layout > .card:first-child dt,
 body.concept-one .form-layout > .card:first-child dd,
 body.concept-one .form-layout > .card:first-child a {
-  color: var(--route-pine);
+  color: var(--route-orange-ink);
+}
+
+body.concept-one .contact-details-card h1 {
+  max-width: 9ch;
+  font-size: clamp(2.8rem, 5vw, 5rem);
+}
+
+body.concept-one .contact-intro {
+  margin-bottom: 30px;
+  font-size: 1.05rem;
+}
+
+body.concept-one .map-link {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  font-weight: 800;
+  text-decoration: underline;
+}
+
+body.concept-one .contact-book-link {
+  margin-top: 30px;
+  border-color: var(--route-pine);
 }
 
 body.concept-one label,
@@ -795,10 +939,26 @@ body.concept-one .form-field {
   margin-bottom: 28px;
 }
 
+body.concept-one .form-field label span,
+body.concept-one .field-hint {
+  color: var(--route-muted);
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+
+body.concept-one .field-hint {
+  margin: 0;
+}
+
 body.concept-one .form-feedback {
   padding: 16px;
   border-left: 4px solid var(--route-orange);
   background: rgba(232, 93, 42, 0.12);
+}
+
+body.concept-one .form-card button[disabled] {
+  cursor: wait;
+  opacity: 0.62;
 }
 
 body.concept-one .cta-panel {
@@ -827,7 +987,7 @@ body.concept-one .cta-panel a:not(.btn) {
 }
 
 body.concept-one .cta-panel .btn-primary {
-  color: var(--route-pine);
+  color: var(--route-orange-ink);
   border-color: var(--route-orange);
   background: var(--route-orange);
 }
@@ -842,6 +1002,16 @@ body.concept-one .pricing-table-wrap {
 body.concept-one .pricing-table {
   min-width: 620px;
   border-collapse: collapse;
+}
+
+body.concept-one .pricing-table-caption {
+  padding: 18px 24px;
+  color: var(--route-orange-ink);
+  background: var(--route-orange);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.05rem;
+  font-weight: 800;
+  text-align: left;
 }
 
 body.concept-one .pricing-table th,
@@ -894,7 +1064,7 @@ body.concept-one .reviews-score {
 body.concept-one .reviews-score .reviews-score-value,
 body.concept-one .reviews-score .reviews-score-label,
 body.concept-one .reviews-score .reviews-score-stars {
-  color: var(--route-pine);
+  color: var(--route-orange-ink);
 }
 
 body.concept-one .reviews-grid {
@@ -927,7 +1097,7 @@ body.concept-one .section-alt .review-card p {
 }
 
 body.concept-one .reviews-more .btn {
-  color: var(--route-pine);
+  color: var(--route-orange-ink);
   border-color: var(--route-orange);
   background: var(--route-orange);
 }
@@ -944,22 +1114,58 @@ body.concept-one .brands-hero p {
   color: var(--route-bone);
 }
 
-body.concept-one .brand-category-nav {
+body.concept-one .brand-directory-tools {
   margin-bottom: 48px;
-  padding: 0 0 24px;
-  display: flex;
-  gap: 10px 28px;
-  flex-wrap: wrap;
-  border: 0;
+  padding: 0 0 32px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 24px;
+  align-items: end;
   border-bottom: 1px solid var(--route-line);
 }
 
-body.concept-one .brand-category-nav span {
+body.concept-one .brand-search-field {
+  max-width: 720px;
+}
+
+body.concept-one .brand-search-field label {
+  display: block;
+  margin-bottom: 10px;
   color: var(--route-pine);
-  font-size: 0.78rem;
+}
+
+body.concept-one .brand-search-field input {
+  padding: 14px 16px;
+  border: 2px solid var(--route-pine);
+  background: var(--route-paper);
+}
+
+body.concept-one .brand-search-field input:focus {
+  border-color: var(--route-orange);
+}
+
+body.concept-one .brand-search-field p,
+body.concept-one .brand-results-status {
+  margin: 8px 0 0;
+  font-size: 0.86rem;
+}
+
+body.concept-one .brand-results-status {
+  color: var(--route-pine);
   font-weight: 850;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+body.concept-one .brand-no-results {
+  margin-bottom: 32px;
+  padding: 28px;
+  border-left: 6px solid var(--route-orange);
+  background: var(--route-paper);
+}
+
+body.concept-one .brand-no-results[hidden],
+body.concept-one .brand-card[hidden] {
+  display: none !important;
 }
 
 body.concept-one .brands-grid {
@@ -1026,11 +1232,23 @@ body.concept-one .about-simple-layout > div {
   max-width: 760px;
 }
 
-body.concept-one .about-simple-layout > div > p {
+body.concept-one .about-story > p:not(.eyebrow) {
   max-width: 65ch;
   padding: 0 0 24px 28px;
   border-left: 1px solid var(--route-line);
   font-size: 1.05rem;
+}
+
+body.concept-one .about-story h2 {
+  max-width: 14ch;
+  margin: 44px 0 20px;
+  font-size: clamp(1.8rem, 3vw, 3rem);
+}
+
+body.concept-one .about-story .about-intro {
+  color: var(--route-pine);
+  font-size: clamp(1.25rem, 2vw, 1.65rem);
+  font-weight: 700;
 }
 
 body.concept-one .about-image-card {
@@ -1042,13 +1260,26 @@ body.concept-one .about-image {
   min-height: 720px;
 }
 
+body.concept-one .about-cta {
+  margin-top: clamp(64px, 9vw, 120px);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 32px;
+  align-items: end;
+}
+
 /* Booking and confirmation */
 body.concept-one .booking-hero {
   min-height: calc(100dvh - 44px);
   color: var(--route-bone);
   background:
-    linear-gradient(105deg, rgba(9, 46, 37, 0.96) 0 54%, rgba(9, 46, 37, 0.72) 76%, rgba(9, 46, 37, 0.9) 100%),
-    url("../Workshop page image.jpg") center / cover;
+    linear-gradient(
+      105deg,
+      rgba(9, 46, 37, 0.96) 0 54%,
+      rgba(9, 46, 37, 0.72) 76%,
+      rgba(9, 46, 37, 0.9) 100%
+    ),
+    url("../../assets/blb/workshop-fork-expanded.webp") 62% center / cover;
 }
 
 body.concept-one .booking-hero h1,
@@ -1057,17 +1288,92 @@ body.concept-one .booking-hero .lead a {
   color: var(--route-bone);
 }
 
+body.concept-one .booking-hero .eyebrow {
+  color: var(--route-orange-on-dark);
+}
+
 body.concept-one .booking-hero .btn-primary {
-  color: var(--route-pine);
+  color: var(--route-orange-ink);
   border-color: var(--route-orange);
   background: var(--route-orange);
+}
+
+body.concept-one .booking-hero .btn-secondary {
+  color: var(--route-bone);
+  border-color: rgba(240, 238, 228, 0.72);
+  background: rgba(4, 29, 23, 0.38);
+}
+
+body.concept-one .booking-steps {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  list-style: none;
+  border: 1px solid var(--route-line);
+  background: var(--route-line);
+}
+
+body.concept-one .booking-step {
+  padding: clamp(28px, 4vw, 48px);
+  background: var(--route-paper);
+}
+
+body.concept-one .booking-step h3 {
+  margin-bottom: 16px;
+}
+
+body.concept-one .confirmation-hero {
+  min-height: 68dvh;
+  color: var(--route-orange-ink);
+  background: var(--route-orange);
+}
+
+body.concept-one .confirmation-hero h1,
+body.concept-one .confirmation-hero .lead,
+body.concept-one .confirmation-hero .lead a,
+body.concept-one .confirmation-hero .eyebrow {
+  color: var(--route-orange-ink);
+}
+
+body.concept-one .confirmation-hero .btn-secondary {
+  color: var(--route-orange-ink);
+  border-color: var(--route-orange-ink);
+}
+
+body.concept-one .confirmation-hero .route-graphic path {
+  stroke: var(--route-pine);
+}
+
+body.concept-one .confirmation-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(440px, 1.2fr);
+  gap: clamp(40px, 8vw, 120px);
+  align-items: start;
+}
+
+body.concept-one .confirmation-list {
+  margin: 0;
+  border-top: 1px solid var(--route-line);
+}
+
+body.concept-one .confirmation-list > div {
+  padding: 22px 0;
+  border-bottom: 1px solid var(--route-line);
+}
+
+body.concept-one .confirmation-list dd {
+  margin: 6px 0 0;
 }
 
 /* Diagonal media reveals */
 body.concept-one .trail-media {
   clip-path: polygon(16% 0, 16% 0, 0 100%, 0 100%);
   opacity: 0.25;
-  transition: clip-path 900ms var(--route-ease), opacity 500ms ease;
+  transition:
+    clip-path 900ms var(--route-ease),
+    opacity 500ms ease;
 }
 
 body.concept-one .trail-media.is-trail-visible {
@@ -1101,8 +1407,8 @@ body.concept-one .site-footer a {
 }
 
 body.concept-one .footer-grid {
-  grid-template-columns: 1.4fr 1fr 1fr;
-  gap: clamp(32px, 7vw, 96px);
+  grid-template-columns: 1.35fr 0.8fr 1.1fr 0.85fr;
+  gap: clamp(28px, 5vw, 72px);
 }
 
 body.concept-one .footer-list {
@@ -1110,7 +1416,7 @@ body.concept-one .footer-list {
   list-style: none;
 }
 
-/* 404 retains its self-contained markup but joins the atlas system. */
+/* 404 route recovery */
 body.concept-one .not-found-hero {
   min-height: 70dvh;
   padding: clamp(80px, 12vw, 160px) 0;
@@ -1118,10 +1424,43 @@ body.concept-one .not-found-hero {
   background: var(--route-bone);
 }
 
+body.concept-one .not-found-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+  gap: clamp(40px, 8vw, 112px);
+  align-items: center;
+}
+
 body.concept-one .not-found-card {
+  padding: clamp(28px, 5vw, 52px);
+  background: var(--route-paper);
   border: 1px solid var(--route-line);
   border-radius: 0;
   box-shadow: 20px 20px 0 rgba(9, 46, 37, 0.1);
+}
+
+body.concept-one .not-found-links {
+  margin: 28px 0 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--route-line);
+}
+
+body.concept-one .not-found-links a {
+  min-height: 52px;
+  padding: 12px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  color: var(--route-pine);
+  border-bottom: 1px solid var(--route-line);
+  font-weight: 800;
+}
+
+body.concept-one .not-found-links a::after {
+  content: "\2197";
+  color: var(--route-orange);
 }
 
 @media (max-width: 1100px) {
@@ -1145,6 +1484,10 @@ body.concept-one .not-found-card {
   body.concept-one .form-layout {
     grid-template-columns: minmax(260px, 0.8fr) minmax(360px, 1.2fr);
     gap: 32px;
+  }
+
+  body.concept-one .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -1232,7 +1575,9 @@ body.concept-one .not-found-card {
   body.concept-one .hero-grid,
   body.concept-one .split-section,
   body.concept-one .about-simple-layout,
-  body.concept-one .form-layout {
+  body.concept-one .form-layout,
+  body.concept-one .confirmation-grid,
+  body.concept-one .not-found-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1257,8 +1602,16 @@ body.concept-one .not-found-card {
   }
 
   body.concept-one .service-package-grid,
-  body.concept-one .quick-links-grid {
+  body.concept-one .quick-links-grid,
+  body.concept-one .selling-options-grid,
+  body.concept-one .booking-steps {
     grid-template-columns: 1fr;
+  }
+
+  body.concept-one .about-cta,
+  body.concept-one .brand-directory-tools {
+    grid-template-columns: 1fr;
+    align-items: start;
   }
 
   body.concept-one .quick-link-card:nth-child(2),
@@ -1280,9 +1633,6 @@ body.concept-one .not-found-card {
     grid-column: span 1;
   }
 
-  body.concept-one .footer-grid {
-    grid-template-columns: 1fr 1fr;
-  }
 }
 
 @media (max-width: 620px) {
@@ -1341,6 +1691,11 @@ body.concept-one .not-found-card {
     min-height: 360px;
   }
 
+  body.concept-one .hero-photo-frame.trail-media {
+    clip-path: polygon(16% 0, 100% 0, 100% 100%, 0 100%);
+    opacity: 1;
+  }
+
   body.concept-one .button-row {
     display: grid;
     grid-template-columns: 1fr;
@@ -1378,7 +1733,7 @@ body.concept-one .not-found-card {
     min-height: 90px;
   }
 
-  body.concept-one .about-simple-layout > div > p {
+  body.concept-one .about-story > p:not(.eyebrow) {
     padding-left: 18px;
   }
 
@@ -1399,6 +1754,57 @@ body.concept-one .not-found-card {
   body.concept-one .pricing-table th,
   body.concept-one .pricing-table td {
     padding: 16px;
+  }
+
+  body.concept-one .pricing-table-wrap {
+    overflow: visible;
+    border: 0;
+    background: transparent;
+  }
+
+  body.concept-one .pricing-table {
+    min-width: 0;
+    display: block;
+    background: transparent;
+  }
+
+  body.concept-one .pricing-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+  }
+
+  body.concept-one .pricing-table tbody {
+    display: grid;
+    gap: 12px;
+  }
+
+  body.concept-one .pricing-table tr {
+    display: grid;
+    border: 1px solid var(--route-line);
+    background: var(--route-paper);
+  }
+
+  body.concept-one .pricing-table td {
+    display: grid;
+    grid-template-columns: minmax(82px, 0.34fr) minmax(0, 1fr);
+    gap: 14px;
+    border-bottom: 1px solid var(--route-line);
+  }
+
+  body.concept-one .pricing-table td::before {
+    content: attr(data-label);
+    color: var(--route-muted);
+    font-size: 0.72rem;
+    font-weight: 850;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  body.concept-one .pricing-table td:last-child {
+    border-bottom: 0;
   }
 }
 

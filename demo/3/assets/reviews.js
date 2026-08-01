@@ -22,8 +22,10 @@
     });
 
     if (label) {
-      label.textContent = isExpanded ? "Show fewer reviews" : "See more reviews";
+      label.textContent = isExpanded ? "Show fewer reviews" : "Show 3 more reviews";
     }
+
+    document.dispatchEvent(new CustomEvent("reviews:change", { detail: { expanded: isExpanded } }));
   }
 
   setExpanded(false);

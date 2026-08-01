@@ -14,9 +14,12 @@
     if (headerInner && !headerInner.querySelector(".header-book")) {
       var bookLink = document.createElement("a");
       bookLink.className = "header-book";
-      bookLink.href = "booking.html";
-      bookLink.textContent = "Book a service";
-      bookLink.setAttribute("data-google-ads-conversion", "booking-start");
+      var bookingPage = pageName === "booking" || pageName === "thanks-for-booking";
+      bookLink.href = bookingPage ? "tel:02102901656" : "booking.html";
+      bookLink.textContent = bookingPage ? "Call the workshop" : "Book a service";
+      if (!bookingPage) {
+        bookLink.setAttribute("data-google-ads-conversion", "booking-start");
+      }
 
       if (toggle) {
         headerInner.insertBefore(bookLink, toggle);
@@ -33,6 +36,17 @@
         '<p><strong>Get in touch</strong><a href="tel:02102901656">021 0290 1656</a><br>' +
         '<a href="mailto:contact@bottlelakebikes.co.nz">Email Bottle Lake Bikes</a></p>';
       nav.appendChild(menuMeta);
+    }
+
+    var menuScrim = document.querySelector(".menu-scrim");
+    if (nav && toggle && !menuScrim) {
+      menuScrim = document.createElement("button");
+      menuScrim.className = "menu-scrim";
+      menuScrim.type = "button";
+      menuScrim.tabIndex = -1;
+      menuScrim.setAttribute("aria-label", "Close site menu");
+      menuScrim.setAttribute("aria-hidden", "true");
+      document.body.appendChild(menuScrim);
     }
 
     function menuIsOpen() {
@@ -62,6 +76,20 @@
       }
     }
 
+    function closeMenu(returnFocus) {
+      if (!nav || !toggle || !menuIsOpen()) {
+        return;
+      }
+
+      nav.classList.remove("is-open");
+      toggle.setAttribute("aria-expanded", "false");
+      syncMenuState(false);
+
+      if (returnFocus) {
+        toggle.focus({ preventScroll: true });
+      }
+    }
+
     if (nav && toggle) {
       syncMenuState(false);
 
@@ -69,6 +97,18 @@
         window.requestAnimationFrame(function () {
           syncMenuState(true);
         });
+      });
+
+      if (menuScrim) {
+        menuScrim.addEventListener("click", function () {
+          closeMenu(true);
+        });
+      }
+
+      nav.addEventListener("click", function (event) {
+        if (event.target && event.target.closest("a")) {
+          closeMenu(false);
+        }
       });
 
       var stateObserver = new MutationObserver(function () {
@@ -86,10 +126,7 @@
 
           if (event.key === "Escape") {
             event.preventDefault();
-            nav.classList.remove("is-open");
-            toggle.setAttribute("aria-expanded", "false");
-            syncMenuState(false);
-            toggle.focus({ preventScroll: true });
+            closeMenu(true);
             return;
           }
 
@@ -140,7 +177,96 @@
     var reviewRail = document.querySelector(".reviews-grid");
     if (reviewRail) {
       reviewRail.tabIndex = 0;
-      reviewRail.setAttribute("aria-label", "Customer reviews. Scroll sideways to read more.");
+      reviewRail.setAttribute(
+        "aria-label",
+        "Customer reviews. Use the previous and next controls or the left and right arrow keys."
+      );
+
+      var railControls = document.createElement("div");
+      railControls.className = "review-rail-controls";
+      railControls.innerHTML =
+        '<button class="rail-button" type="button" data-review-previous>Previous</button>' +
+        '<button class="rail-button" type="button" data-review-next>Next</button>';
+      reviewRail.parentNode.insertBefore(railControls, reviewRail);
+
+      var previousButton = railControls.querySelector("[data-review-previous]");
+      var nextButton = railControls.querySelector("[data-review-next]");
+      var updateRailControls = function () {
+        var maxScroll = Math.max(0, reviewRail.scrollWidth - reviewRail.clientWidth);
+        previousButton.disabled = reviewRail.scrollLeft <= 4;
+        nextButton.disabled = reviewRail.scrollLeft >= maxScroll - 4 || maxScroll <= 4;
+      };
+      var moveReviewRail = function (direction) {
+        var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        reviewRail.scrollBy({
+          left: direction * Math.max(280, reviewRail.clientWidth * 0.72),
+          behavior: reduceMotion ? "auto" : "smooth"
+        });
+      };
+
+      previousButton.addEventListener("click", function () {
+        moveReviewRail(-1);
+      });
+      nextButton.addEventListener("click", function () {
+        moveReviewRail(1);
+      });
+      reviewRail.addEventListener("keydown", function (event) {
+        if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
+          event.preventDefault();
+          moveReviewRail(event.key === "ArrowLeft" ? -1 : 1);
+        }
+      });
+      reviewRail.addEventListener("scroll", updateRailControls, { passive: true });
+      window.addEventListener("resize", updateRailControls);
+      document.addEventListener("reviews:change", function () {
+        window.requestAnimationFrame(updateRailControls);
+      });
+      updateRailControls();
+    }
+
+    var brandSearch = document.getElementById("brand-search");
+    var brandCatalogue = document.getElementById("brand-catalogue");
+    if (brandSearch && brandCatalogue) {
+      var brandCards = Array.prototype.slice.call(brandCatalogue.querySelectorAll(".brand-card"));
+      var resultCount = document.getElementById("brand-results-count");
+      var emptyState = document.getElementById("brand-empty-state");
+      var clearSearch = document.querySelector("[data-clear-brand-search]");
+      var normalise = function (value) {
+        var text = String(value || "").toLowerCase();
+        return text.normalize ? text.normalize("NFD").replace(/[\u0300-\u036f]/g, "") : text;
+      };
+      var filterBrands = function () {
+        var query = normalise(brandSearch.value.trim());
+        var visibleCount = 0;
+
+        brandCards.forEach(function (card) {
+          var matches = !query || normalise(card.textContent).indexOf(query) !== -1;
+          card.hidden = !matches;
+          if (matches) {
+            visibleCount += 1;
+          }
+        });
+
+        brandCatalogue.classList.toggle("is-filtered", Boolean(query));
+        if (resultCount) {
+          resultCount.textContent = query
+            ? visibleCount + (visibleCount === 1 ? " match" : " matches")
+            : brandCards.length + " brands shown";
+        }
+        if (emptyState) {
+          emptyState.hidden = visibleCount !== 0;
+        }
+      };
+
+      brandSearch.addEventListener("input", filterBrands);
+      if (clearSearch) {
+        clearSearch.addEventListener("click", function () {
+          brandSearch.value = "";
+          filterBrands();
+          brandSearch.focus();
+        });
+      }
+      filterBrands();
     }
 
     window.requestAnimationFrame(function () {

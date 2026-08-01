@@ -1,5 +1,9 @@
 .reviews-section {
-  background: linear-gradient(180deg, rgba(238, 243, 239, 0.98) 0%, #f6f8f6 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(238, 243, 239, 0.98) 0%,
+    #f6f8f6 100%
+  );
 }
 
 .reviews-section .container {
@@ -143,7 +147,10 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .review-card {
-    transition: transform var(--duration-base) var(--ease-standard), box-shadow var(--duration-base) var(--ease-standard), border-color var(--duration-fast) var(--ease-standard);
+    transition:
+      transform var(--duration-base) var(--ease-standard),
+      box-shadow var(--duration-base) var(--ease-standard),
+      border-color var(--duration-fast) var(--ease-standard);
   }
 
   .reviews-section.is-expanded .review-card[data-review-extra] {

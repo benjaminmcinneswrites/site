@@ -28,6 +28,10 @@
     return file || "index.html";
   }
 
+  function isCurrentRoute(route) {
+    return currentFile() === route.href || (currentFile() === "thanks-for-booking.html" && route.href === "booking.html");
+  }
+
   function makeLink(route, className) {
     var link = document.createElement("a");
     link.href = route.href;
@@ -36,7 +40,7 @@
     if (route.desktopOnly) {
       link.classList.add("tool-dock__desktop-only");
     }
-    if (currentFile() === route.href || (currentFile() === "thanks-for-booking.html" && route.href === "booking.html")) {
+    if (isCurrentRoute(route)) {
       link.setAttribute("aria-current", "page");
     }
     return link;
@@ -51,7 +55,48 @@
     var actions = document.createElement("div");
     actions.className = "precision-actions";
     actions.innerHTML = '<a class="precision-phone" href="tel:02102901656">021 0290 1656</a><a class="precision-book" href="booking.html">Book a service</a>';
+    if (currentFile() === "booking.html" || currentFile() === "thanks-for-booking.html") {
+      actions.querySelector(".precision-book").setAttribute("aria-current", "page");
+    }
     headerInner.appendChild(actions);
+  }
+
+  function polishAnnouncement() {
+    var title = document.querySelector("[data-banner-title]");
+    var message = document.querySelector("[data-banner-message]");
+
+    if (!title || !message) {
+      return;
+    }
+
+    function updateCopy() {
+      if (title.textContent.trim() === "On Holiday!") {
+        title.textContent = "Workshop holiday";
+      }
+
+      var currentMessage = message.textContent;
+      var polishedMessage = currentMessage
+        .replace(
+          /from the (\d{1,2})(?:st|nd|rd|th) - (\d{1,2})(?:st|nd|rd|th) of ([A-Za-z]+)/i,
+          "from $1\u2013$2 $3"
+        )
+        .replace(
+          /Feel free to book in online for when we return\./i,
+          "Book online now for an appointment after we return."
+        );
+
+      if (polishedMessage !== currentMessage) {
+        message.textContent = polishedMessage;
+      }
+    }
+
+    updateCopy();
+
+    if ("MutationObserver" in window) {
+      var observer = new MutationObserver(updateCopy);
+      observer.observe(title, { childList: true, characterData: true, subtree: true });
+      observer.observe(message, { childList: true, characterData: true, subtree: true });
+    }
   }
 
   function addMenuSheet() {
@@ -90,7 +135,7 @@
       var link = document.createElement("a");
       link.href = route.href;
       link.innerHTML = '<span class="precision-menu__icon">' + icons[route.key] + "</span><span>" + route.label + "</span>";
-      if (currentFile() === route.href) {
+      if (isCurrentRoute(route)) {
         link.setAttribute("aria-current", "page");
       }
       nav.appendChild(link);
@@ -169,7 +214,7 @@
       }
       var first = focusable[0];
       var last = focusable[focusable.length - 1];
-      if (event.shiftKey && document.activeElement === first) {
+      if (event.shiftKey && (document.activeElement === first || document.activeElement === menuParts.panel)) {
         event.preventDefault();
         last.focus();
       } else if (!event.shiftKey && document.activeElement === last) {
@@ -211,7 +256,7 @@
   }
 
   function addMeasuredMotion() {
-    var sections = Array.prototype.slice.call(document.querySelectorAll("main > section"));
+    var sections = Array.prototype.slice.call(document.querySelectorAll("main > section:not(.hero)"));
     var images = Array.prototype.slice.call(document.querySelectorAll(".hero-photo-frame, .section-photo-frame, .about-image-card"));
     var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -247,15 +292,81 @@
     });
   }
 
+  function addBrandSearch() {
+    var input = document.getElementById("brand-search");
+    var grid = document.querySelector("[data-brand-grid]");
+    var status = document.getElementById("brand-search-status");
+    var clear = document.querySelector("[data-brand-search-clear]");
+
+    if (!input || !grid || !status) {
+      return;
+    }
+
+    var cards = Array.prototype.slice.call(grid.querySelectorAll(".brand-card"));
+
+    function normalise(value) {
+      return value.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+    }
+
+    function update() {
+      var query = normalise(input.value);
+      var terms = query ? query.split(" ") : [];
+      var matches = 0;
+
+      cards.forEach(function (card) {
+        var cardText = normalise(card.textContent || "");
+        var isMatch = terms.every(function (term) {
+          return cardText.indexOf(term) !== -1;
+        });
+        card.hidden = !isMatch;
+        if (isMatch) {
+          matches += 1;
+        }
+      });
+
+      if (clear) {
+        clear.hidden = !query;
+      }
+
+      if (!query) {
+        status.textContent = "Showing all " + cards.length + " brands.";
+      } else if (matches === 0) {
+        status.textContent = "No directory matches for “" + input.value.trim() + "”. Bottle Lake Bikes may still be able to source it.";
+      } else {
+        status.textContent = "Showing " + matches + (matches === 1 ? " matching brand." : " matching brands.");
+      }
+    }
+
+    input.addEventListener("input", update);
+    input.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && input.value) {
+        input.value = "";
+        update();
+      }
+    });
+
+    if (clear) {
+      clear.addEventListener("click", function () {
+        input.value = "";
+        update();
+        input.focus();
+      });
+    }
+
+    update();
+  }
+
   function init() {
     var file = currentFile().replace(/\.html$/, "") || "index";
     document.body.setAttribute("data-concept-page", file);
     document.documentElement.classList.add("precision-concept");
+    polishAnnouncement();
     addHeaderActions();
     var menu = addMenuSheet();
     addToolDock(menu);
     addProgressRail();
     addMeasuredMotion();
+    addBrandSearch();
   }
 
   if (document.readyState === "loading") {

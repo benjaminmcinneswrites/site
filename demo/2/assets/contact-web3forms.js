@@ -7,6 +7,8 @@
   var feedback = document.getElementById("contact-form-feedback");
   var submitButton = form.querySelector('button[type="submit"]');
   var endpoint = "https://api.web3forms.com/submit";
+  var idleLabel = submitButton ? (submitButton.getAttribute("data-idle-label") || submitButton.textContent) : "";
+  var busyLabel = submitButton ? (submitButton.getAttribute("data-busy-label") || "Sending…") : "";
 
   function setFeedback(message, type) {
     if (!feedback) {
@@ -15,6 +17,7 @@
 
     feedback.hidden = false;
     feedback.textContent = message;
+    feedback.setAttribute("role", type === "error" ? "alert" : "status");
     feedback.classList.remove("form-feedback-error", "form-feedback-success");
     feedback.classList.add(type === "success" ? "form-feedback-success" : "form-feedback-error");
   }
@@ -34,6 +37,17 @@
     return field ? (field.value || "").trim() : "";
   }
 
+  function setBusy(isBusy) {
+    if (!submitButton) {
+      return;
+    }
+
+    submitButton.disabled = isBusy;
+    submitButton.setAttribute("aria-disabled", String(isBusy));
+    submitButton.textContent = isBusy ? busyLabel : idleLabel;
+    form.setAttribute("aria-busy", String(isBusy));
+  }
+
   form.addEventListener("submit", function (event) {
     event.preventDefault();
     event.stopImmediatePropagation();
@@ -49,9 +63,7 @@
       return;
     }
 
-    if (submitButton) {
-      submitButton.disabled = true;
-    }
+    setBusy(true);
 
     var formData = new FormData(form);
     var email = getFieldValue("#contact-email").toLowerCase();
@@ -83,15 +95,16 @@
       })
       .then(function () {
         form.reset();
-        setFeedback("Thanks, your message has been sent. We will get back to you soon.", "success");
+        setFeedback("Thanks, your message has been sent to Bottle Lake Bikes.", "success");
+        if (feedback) {
+          feedback.focus();
+        }
       })
       .catch(function () {
         setFeedback("Sorry, we could not send your message right now. Please try again or email us directly.", "error");
       })
       .finally(function () {
-        if (submitButton) {
-          submitButton.disabled = false;
-        }
+        setBusy(false);
       });
   }, true);
 }());

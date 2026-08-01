@@ -4,6 +4,7 @@
   "description": "Static website for Better Site by Benjamin.",
   "main": "941ef33d4ed0.js",
   "scripts": {
+    "mockup:new": "node tools/create-mockup.js",
     "test": "scripts\\playwright-node.cmd test",
     "test:design": "scripts\\playwright-node.cmd test tests/design.spec.ts --project=chromium"
   },

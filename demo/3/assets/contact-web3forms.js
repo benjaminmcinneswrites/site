@@ -6,7 +6,18 @@
 
   var feedback = document.getElementById("contact-form-feedback");
   var submitButton = form.querySelector('button[type="submit"]');
+  var submitLabel = submitButton ? submitButton.textContent : "Send enquiry";
   var endpoint = "https://api.web3forms.com/submit";
+
+  function setSubmitting(isSubmitting) {
+    form.setAttribute("aria-busy", String(isSubmitting));
+    if (!submitButton) {
+      return;
+    }
+
+    submitButton.disabled = isSubmitting;
+    submitButton.textContent = isSubmitting ? "Sending\u2026" : submitLabel;
+  }
 
   function setFeedback(message, type) {
     if (!feedback) {
@@ -49,9 +60,7 @@
       return;
     }
 
-    if (submitButton) {
-      submitButton.disabled = true;
-    }
+    setSubmitting(true);
 
     var formData = new FormData(form);
     var email = getFieldValue("#contact-email").toLowerCase();
@@ -89,9 +98,7 @@
         setFeedback("Sorry, we could not send your message right now. Please try again or email us directly.", "error");
       })
       .finally(function () {
-        if (submitButton) {
-          submitButton.disabled = false;
-        }
+        setSubmitting(false);
       });
   }, true);
 }());

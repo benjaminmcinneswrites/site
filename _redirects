@@ -23,6 +23,7 @@
 /cookie-policy.html /cookie-policy 301
 /accessibility.html /accessibility 301
 /blb/demo /blb/demo/ 301
+/mockups /mockups/ 301
 
 /work /work.html 200
 /services /pricing#website-projects 301
@@ -48,5 +49,6 @@
 /cookie-policy /cookie-policy.html 200
 /accessibility /accessibility.html 200
 /blb/demo /blb/demo/index.html 200
+/mockups/ /mockups/index.html 200
 
 /* /404.html 404

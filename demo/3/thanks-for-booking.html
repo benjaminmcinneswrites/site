@@ -1,1 +1,116 @@
-﻿<!DOCTYPE html> <html lang="en-NZ"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width,initial-scale=1"> <title>Thanks for Booking | Bottle Lake Bikes</title> <meta name="description" content="Thanks for booking your bike service with Bottle Lake Bikes."> <meta name="robots" content="noindex, nofollow"> <link rel="stylesheet" href="assets/site.min.css"> <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png"> <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png"> <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"> <link rel="manifest" href="site.webmanifest"> <script>window.top!==window.self&&window.top.location.replace(window.location.href)</script> <link rel="stylesheet" href="assets/concept.css"> </head> <body> <div class="site-announcement" data-banner-state="loading" role="status" aria-live="polite"> <div class="container"> <p> <strong data-banner-title>Your new local workshop is here!</strong> <span data-banner-message>Bottle Lake Bikes opens Thursday, April 16th</span> </p> </div> </div> <header class="site-header"> <div class="container header-inner"> <a class="site-logo" href="index.html"><img class="site-logo-image" src="Logo v3.0.png" alt="Bottle Lake Bikes"></a> <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Toggle navigation menu"> <span class="nav-toggle-icon" aria-hidden="true"></span> <span class="visually-hidden">Menu</span> </button> <nav class="site-nav" id="primary-navigation" aria-label="Primary navigation"> <ul class="nav-list"> <li><a href="services.html">Repairs and Servicing</a></li> <li><a href="buying-selling.html">Buying and Selling</a></li> <li><a href="our-brands.html">Our Brands</a></li> <li><a href="about.html">About</a></li> <li><a href="contact.html">Contact</a></li> <li><a href="booking.html" aria-current="page">Bookings</a></li> </ul> </nav> </div> </header> <main id="booking-confirmation" data-tracking-page="booking-confirmation"> <section class="page-hero"> <div class="container narrow"> <h1>Thanks for booking.</h1> <p class="lead"> Your booking has been received. You should get a confirmation from the booking system shortly. </p> </div> </section> </main> <footer class="site-footer"> <div class="container footer-grid"> <div> <h2 class="footer-title">Bottle Lake Bikes</h2> <p> Local bike servicing, repairs and sales in Parklands, Christchurch. </p> </div> <div> <h3 class="footer-heading">Contact</h3> <ul class="footer-list"> <li><a href="tel:02102901656">021 0290 1656</a></li> <li><a href="mailto:contact@bottlelakebikes.co.nz">contact@bottlelakebikes.co.nz</a></li> <li>43 Broadhaven Ave, Parklands, Christchurch</li> </ul> </div> <div> <h3 class="footer-heading">Hours</h3> <p>Monday - Friday<br>7:30am - 4:00pm<br>After hours appointments available on request</p> </div> </div> </footer> <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js" defer="defer"></script> <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js" defer="defer"></script> <script src="assets/site.min.js" defer="defer"></script> <script src="assets/concept.js" defer="defer"></script> </body> </html>
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Thanks for Booking | Bottle Lake Bikes</title>
+<meta name="description" content="Thanks for booking your bike service with Bottle Lake Bikes.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="assets/site.min.css">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<script>window.top!==window.self&&window.top.location.replace(window.location.href)</script>
+<link rel="stylesheet" href="assets/concept.css">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<div class="site-announcement" data-banner-state="loading" role="region" aria-label="Workshop information">
+<div class="container">
+<p>
+<strong data-banner-title>Parklands bike workshop</strong>
+<span data-banner-message>Servicing, repairs and refurbished bike sales</span>
+</p>
+</div>
+</div>
+<header class="site-header">
+<div class="container header-inner">
+<a class="site-logo" href="index.html" aria-label="Bottle Lake Bikes home">
+<img class="site-logo-image" src="Logo v3.0.png" alt="Bottle Lake Bikes">
+</a>
+<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Toggle navigation menu">
+<span class="nav-toggle-icon" aria-hidden="true">
+</span>
+<span class="visually-hidden">Menu</span>
+</button>
+<nav class="site-nav" id="primary-navigation" aria-label="Primary navigation">
+<ul class="nav-list">
+<li>
+<a href="services.html">Repairs and Servicing</a>
+</li>
+<li>
+<a href="buying-selling.html">Buying and Selling</a>
+</li>
+<li>
+<a href="our-brands.html">Our Brands</a>
+</li>
+<li>
+<a href="about.html">About</a>
+</li>
+<li>
+<a href="contact.html">Contact</a>
+</li>
+<li>
+<a href="booking.html" aria-current="page">Bookings</a>
+</li>
+</ul>
+</nav>
+</div>
+</header>
+<main id="main-content" data-tracking-page="booking-confirmation">
+<section class="page-hero confirmation-hero" aria-labelledby="confirmation-title">
+<div class="container confirmation-layout">
+<div>
+<p class="eyebrow">Booking received</p>
+<h1 id="confirmation-title">Thanks&mdash;your request is in.</h1>
+<p class="lead"> You should receive a confirmation from the booking system shortly. Keep it handy for the service time and details. </p>
+<div class="button-row confirmation-actions">
+<a class="btn btn-primary" href="index.html">Return Home</a>
+<a class="btn btn-secondary" href="services.html">Review Services</a>
+</div>
+</div>
+<aside class="confirmation-card" aria-labelledby="confirmation-next-title">
+<h2 id="confirmation-next-title">Nothing in your inbox?</h2>
+<p>Check your junk folder first. If a confirmation still has not arrived, call <a href="tel:02102901656">021 0290 1656</a> or <a href="mailto:contact@bottlelakebikes.co.nz">email the workshop</a>.</p>
+</aside>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="container footer-grid">
+<div class="footer-intro">
+<h2 class="footer-title">Bottle Lake Bikes</h2>
+<p>Bike servicing, repairs and refurbished bike sales in Parklands, Christchurch.</p>
+<nav class="footer-nav" aria-label="Footer navigation">
+<a href="services.html">Services</a><a href="buying-selling.html">Buy or Sell</a><a href="our-brands.html">Brands</a><a href="booking.html">Book a Service</a>
+</nav>
+</div>
+<div>
+<h3 class="footer-heading">Contact</h3>
+<ul class="footer-list">
+<li>
+<a href="tel:02102901656">021 0290 1656</a>
+</li>
+<li>
+<a href="mailto:contact@bottlelakebikes.co.nz">contact@bottlelakebikes.co.nz</a>
+</li>
+<li><a href="https://www.google.com/maps/search/?api=1&amp;query=43+Broadhaven+Ave+Parklands+Christchurch">43 Broadhaven Ave, Parklands, Christchurch</a></li>
+</ul>
+</div>
+<div>
+<h3 class="footer-heading">Hours</h3>
+<p>Monday&ndash;Friday<br>7:30am&ndash;4:00pm<br>After-hours drop-off or pick-up by arrangement</p>
+</div>
+</div>
+</footer>
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js" defer="defer">
+</script>
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js" defer="defer">
+</script>
+<script src="assets/site.min.js" defer="defer">
+</script>
+<script src="assets/concept.js" defer="defer">
+</script>
+</body>
+</html>
