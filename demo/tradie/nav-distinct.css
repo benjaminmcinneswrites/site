@@ -75,7 +75,7 @@
   }
 }
 
-@media (max-width: 1000px) and (prefers-reduced-motion: no-preference) {
+@media (max-width: 1000px){
   .js [data-reveal="left"],
   .js [data-reveal="right"] {
     transform: translateY(34px);

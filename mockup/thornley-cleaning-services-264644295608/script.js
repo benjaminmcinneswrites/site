@@ -23,7 +23,6 @@ const cleanReveal = document.querySelector('[data-clean-reveal]');
 const cleanHero = document.querySelector('[data-clean-hero]');
 const revealStage = document.querySelector('[data-reveal-stage]');
 const revealControl = document.querySelector('[data-reveal-control]');
-const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const scrollRevealMode = window.matchMedia('(max-width: 820px)');
 let revealFrame = 0;
 
@@ -41,7 +40,7 @@ function setRevealFromPointer(event) {
 }
 
 function usesScrollReveal() {
-  return scrollRevealMode.matches && !reducedMotion.matches;
+  return scrollRevealMode.matches;
 }
 
 function updateScrollReveal() {
@@ -60,11 +59,9 @@ function scheduleScrollReveal() {
 }
 
 function syncRevealMode() {
-  revealControl.disabled = reducedMotion.matches;
+  revealControl.disabled = false;
 
-  if (reducedMotion.matches) {
-    setReveal(100);
-  } else if (scrollRevealMode.matches) {
+  if (scrollRevealMode.matches) {
     updateScrollReveal();
   } else {
     setReveal(50);
@@ -72,25 +69,25 @@ function syncRevealMode() {
 }
 
 revealStage.addEventListener('pointerenter', (event) => {
-  if (event.pointerType === 'mouse' && !usesScrollReveal() && !reducedMotion.matches) {
+  if (event.pointerType === 'mouse' && !usesScrollReveal()) {
     setRevealFromPointer(event);
   }
 });
 
 revealStage.addEventListener('pointermove', (event) => {
-  if (event.pointerType === 'mouse' && !usesScrollReveal() && !reducedMotion.matches) {
+  if (event.pointerType === 'mouse' && !usesScrollReveal()) {
     setRevealFromPointer(event);
   }
 });
 
 revealControl.addEventListener('input', () => {
-  if (!usesScrollReveal() && !reducedMotion.matches) setReveal(revealControl.value);
+  if (!usesScrollReveal()) setReveal(revealControl.value);
 });
 
 window.addEventListener('scroll', scheduleScrollReveal, { passive: true });
 window.addEventListener('resize', scheduleScrollReveal);
 
-for (const mediaQuery of [scrollRevealMode, reducedMotion]) {
+for (const mediaQuery of [scrollRevealMode]) {
   if (typeof mediaQuery.addEventListener === 'function') {
     mediaQuery.addEventListener('change', syncRevealMode);
   } else {

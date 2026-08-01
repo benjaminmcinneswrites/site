@@ -127,25 +127,7 @@ footer {
 
 @keyframes grow-line { to { stroke-dashoffset: 0; } }
 
-@media (prefers-reduced-motion: reduce) {
-  .js .field-hero figure,
-  .js .field-hero figure img,
-  .js .hero-paper h1,
-  .js .hero-paper .lead,
-  .js .hero-paper > a,
-  .js .season-stamp,
-  .js .field-motion,
-  .js .species-photo.field-motion,
-  .js .selection-note.field-motion,
-  .js .project-section aside.field-motion {
-    clip-path: none;
-    transform: none;
-    opacity: 1;
-    transition: none;
-  }
 
-  .hero-leaf path { stroke-dashoffset: 0; animation: none; }
-}
 
 @media (max-width: 900px) {
   .hero-paper > a,
@@ -157,7 +139,7 @@ footer {
   }
 }
 
-@media (max-width: 900px) and (prefers-reduced-motion: no-preference) {
+@media (max-width: 900px){
   .js .selection-note.field-motion {
     transform: translateY(24px);
   }

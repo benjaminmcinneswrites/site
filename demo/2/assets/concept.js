@@ -213,7 +213,7 @@
   function addMeasuredMotion() {
     var sections = Array.prototype.slice.call(document.querySelectorAll("main > section"));
     var images = Array.prototype.slice.call(document.querySelectorAll(".hero-photo-frame, .section-photo-frame, .about-image-card"));
-    var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var reduceMotion = false;
 
     sections.forEach(function (section) {
       section.classList.add("precision-measured");

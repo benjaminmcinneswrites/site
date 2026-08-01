@@ -90,12 +90,3 @@ body { font-family: Candara, "Gill Sans", "Trebuchet MS", sans-serif; }
   }
 
 }
-
-@media (prefers-reduced-motion: reduce) {
-  .js .story-scenes figure[data-reveal="image"] img[data-parallax] {
-    opacity: 1;
-    clip-path: none;
-    transform: none !important;
-    transition: none;
-  }
-}

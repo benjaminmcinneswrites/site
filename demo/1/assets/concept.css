@@ -1411,32 +1411,3 @@ body.concept-one .not-found-card {
     margin-right: auto;
   }
 }
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-
-  body.concept-one *,
-  body.concept-one *::before,
-  body.concept-one *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    scroll-behavior: auto !important;
-    transition-duration: 0.01ms !important;
-  }
-
-  body.concept-one .route-graphic path {
-    stroke-dashoffset: 0;
-  }
-
-  body.concept-one .route-graphic circle {
-    opacity: 1;
-  }
-
-  body.concept-one .trail-media,
-  body.concept-one .trail-media.is-trail-visible {
-    clip-path: polygon(16% 0, 100% 0, 100% 100%, 0 100%);
-    opacity: 1;
-  }
-}

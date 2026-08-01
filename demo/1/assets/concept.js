@@ -143,7 +143,7 @@
       frame.classList.add("trail-media");
     });
 
-    var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var reduceMotion = false;
     if (reduceMotion || !("IntersectionObserver" in window)) {
       frames.forEach(function (frame) {
         frame.classList.add("is-trail-visible");

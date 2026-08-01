@@ -102,7 +102,7 @@
 
   <script>
   (()=>{
-    const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const reduced=false;
     const items=[...document.querySelectorAll('[data-reveal]')];
     const show=el=>el.classList.add('is-visible');
     const revealInView=()=>items.forEach(item=>{if(item.classList.contains('is-visible'))return;const r=item.getBoundingClientRect();if(r.top<innerHeight*.92)show(item)});

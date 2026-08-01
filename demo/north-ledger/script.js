@@ -1,6 +1,6 @@
 document.documentElement.classList.add("js");
 
-const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const reducedMotion = false;
 const graph = document.querySelector(".start-graph");
 const monthBoard = document.querySelector(".month-board");
 const ledgerTargets = [

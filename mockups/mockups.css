@@ -89,7 +89,3 @@ h2 { margin-bottom: 0; font-size: clamp(1.65rem, 3vw, 2.35rem); letter-spacing: 
   .library-heading { align-items: start; flex-direction: column; gap: 8px; }
   .mockup-grid { grid-template-columns: 1fr; }
 }
-
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
-}
