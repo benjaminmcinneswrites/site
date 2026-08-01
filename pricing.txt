@@ -3,7 +3,7 @@
 Website: https://bettersite.co.nz/pricing
 Hosting and care: https://bettersite.co.nz/pricing#care-plans
 Contact: contact@bettersite.co.nz
-Last updated: 2026-07-11
+Last updated: 2026-08-01
 
 Prices are shown as starting prices in NZD. The written quote confirms the final total and GST treatment before acceptance.
 
@@ -11,44 +11,19 @@ These are the visible package prices in the current website copy. Final scope, d
 
 ## Main Website Offers
 
-### Starter One-Page Site - from $99 NZD
-
-Best for mobile-first one-page sites: sole traders, creators, local services, and new businesses that need a simple professional website quickly and affordably.
-
-Included:
-
-- One-page website aimed at mobile visitors
-- Up to 5 main sections
-- Mobile-first design
-- Basic contact section
-- Basic SEO title and description
-- One revision round
-- Simple launch support
-
-Important limits:
-
-- Client provides useful business information and available images
-- Help organising and improving supplied text is included; full copywriting is quoted separately
-- No ecommerce
-- No custom backend or app functionality
-- No booking system unless embedded
-- No email hosting
-- No advanced copywriting
-- No unlimited revisions
-- No complex animations
-
-### Better Business Site - from $249 NZD
+### Better Business Site - from $149 NZD
 
 Popular. Best for small businesses that want more pages, better service detail, and a more established website.
 
 Included:
 
-- Multi-page site, with the final page count confirmed in the quote
+- Up to 7 pages
+- Additional pages from $14 NZD each
 - Mobile-first design
 - Services & offer sections
 - Contact form & enquiry CTA
-- Basic SEO setup
-- Two revision rounds
+- SEO setup
+- Up to three revision rounds
 - Domain or hosting setup guidance/support if included in the accepted quote
 
 Important limits:
@@ -59,7 +34,7 @@ Important limits:
 - No unlimited revisions
 - No guaranteed SEO rankings, traffic, leads, enquiries, or sales
 
-### Redesign / Glow-Up - from $149 NZD
+### Redesign / Glow-Up - from $99 NZD
 
 Best for businesses with an existing website that looks outdated, unfinished, unclear, or harder to trust than it should.
 
@@ -71,8 +46,8 @@ Included:
 - Easier-to-scan layout
 - Mobile-friendly improvements where applicable
 - Better CTA placement
-- Basic SEO/meta cleanup where applicable
-- One revision round
+- SEO/meta cleanup where applicable
+- Up to three revision rounds
 
 Important limits:
 
@@ -89,10 +64,16 @@ If a customer wants to continue after the mockup, the accepted quote should conf
 
 ## Hosting and Care Plans
 
-The Pricing page also lists monthly options for hosting, support, content edits, backups and SEO content updates. These can be added to a new project or discussed for an existing website after a quick review.
+Every monthly plan includes managed hosting, one available .co.nz domain (subject to availability), backups, minor support, recurring content changes, and unlimited price changes.
+
+- Starter Care: $14.99 NZD per month. Up to 3 edits, revisions, or content changes per month.
+- Standard Care: $24.99 NZD per month. Up to 5 edits per month and priority support.
+- Priority Care: $49.99 NZD per month. Up to 10 substantial edits per month, highest-priority support, same-day updates within 24 hours, monthly SEO content optimisation, and an admin dashboard for quick update submissions.
+
+An included edit can be a substantial content replacement, image change, rewritten section, notice, or similar content update. Price changes are unlimited and do not use the monthly edit allowance.
 
 ## Notes
 
-Extra pages, ecommerce, booking embeds, integrations, custom functionality, advanced forms, hosting, domains, email hosting, ongoing care, and larger redesign work can be quoted separately.
+Extra pages start from $14 NZD each. Ecommerce, booking embeds, integrations, custom functionality, advanced forms, email hosting, and larger redesign work can be quoted separately.
 
 The accepted written quote remains the source of truth for GST treatment, exact payment terms, scope, support boundaries, hosting, domains, and third-party costs.

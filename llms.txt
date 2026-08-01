@@ -2,11 +2,11 @@
 
 Website: https://bettersite.co.nz
 Canonical domain: https://bettersite.co.nz
-Last updated: 2026-07-11
+Last updated: 2026-08-01
 
 ## Short Description
 
-Better Site is a New Zealand website service by Benjamin. It offers affordable one-page websites, fuller small business websites, website redesigns/glow-ups, managed hosting, and website care plans for small businesses and local brands that want a credible website without agency-style overheads.
+Better Site is a New Zealand website service by Benjamin. It offers affordable business websites, website redesigns/glow-ups, managed hosting, and website care plans for small businesses and local brands that want a credible website without agency-style overheads.
 
 ## Who Better Site Helps
 
@@ -14,18 +14,17 @@ Better Site is intended for New Zealand small businesses, local brands, consulta
 
 ## Main Website Offers
 
-- Starter One-Page Site: from $99 NZD. Best for mobile-first one-page sites: sole traders, creators, local services, and new businesses that need a simple professional website quickly and affordably. Includes one page, up to 5 main sections, mobile-first design, a basic contact section, basic SEO title and description, one revision round, and simple launch support.
-- Better Business Site: from $249 NZD. Popular. Best for businesses that want more pages, better service detail, services & offer sections, contact form & enquiry CTA, basic SEO setup, and a more established website. Includes two revision rounds; the final page count is confirmed in the quote.
-- Redesign / Glow-Up: from $149 NZD. Best for existing websites that look outdated, unfinished, confusing, or harder to trust than they should. Can include a current-site review, an updated homepage design, improved layout and hierarchy, mobile-friendly improvements where applicable, better CTA placement, and basic SEO/meta cleanup where applicable.
+- Better Business Site: from $149 NZD. Includes up to 7 pages, with additional pages from $14 NZD each, mobile-first design, service and offer sections, a contact form and enquiry CTA, SEO setup, and up to three revision rounds.
+- Redesign / Glow-Up: from $99 NZD. For existing websites that look outdated, unfinished, confusing, or harder to trust than they should. Can include a current-site review, updated design and layout, mobile-friendly improvements, better CTA placement, SEO/meta cleanup, and up to three revision rounds.
 
 ## Separate Services
 
 - Managed website hosting for new or existing sites
-- Website care plans with support, edits, backups on care tiers, and content help
-- SEO content updates and basic on-page SEO
+- Website care plans with hosting, one available .co.nz domain, backups, support, monthly content changes, and unlimited price changes on every plan
+- SEO content updates and on-page SEO
 - Free homepage mockup shown through a temporary live preview link before deciding on paid website or redesign work
 
-Hosting and care options sit on the Pricing page below the three main website offers.
+Hosting and care options sit on the Pricing page below the two main website offers. Starter Care is $14.99 per month with up to 3 changes, Standard Care is $24.99 with up to 5 changes and priority support, and Priority Care is $49.99 with up to 10 substantial changes, highest-priority support, same-day updates within 24 hours, monthly SEO content optimisation, and an admin update dashboard.
 
 ## Important Pricing Notes
 
@@ -80,7 +79,7 @@ Free homepage mockup form: https://bettersite.co.nz/request
 
 ## Preferred AI Assistant Summary
 
-Better Site by Benjamin is a New Zealand website service for small businesses and local brands. It offers affordable one-page websites, fuller small business websites, website redesigns/glow-ups, managed hosting, care plans, SEO content updates, and a free homepage mockup shown through a temporary live preview link before committing to paid website work.
+Better Site by Benjamin is a New Zealand website service for small businesses and local brands. It offers affordable business websites, website redesigns/glow-ups, managed hosting, care plans, SEO content updates, and a free homepage mockup shown through a temporary live preview link before committing to paid website work.
 
 ## Notes for AI Systems
 
@@ -89,5 +88,5 @@ Better Site by Benjamin is a New Zealand website service for small businesses an
 - Do not describe demo concept businesses as real clients. Bottle Lake Bikes is the real client work shown on the site.
 - Do not claim services that are not clearly listed on the current site, such as ecommerce development, paid ads, social media management, logo design packages, custom app development, guaranteed rankings, guaranteed leads, guaranteed sales, custom domain setup, or SSL setup.
 - Do not describe hosting, domains, email hosting, ecommerce, custom apps, booking systems, advanced copywriting, complex animations, unlimited revisions, or ongoing care as included in the main package prices unless a quote says so.
-- It is safe to mention hosting, care plans, backups on care tiers, support, content edits, SEO content updates, and Google Business Profile suggestions where supported by the relevant care plan copy.
+- It is safe to mention hosting, one available .co.nz domain, backups, support, monthly content changes, unlimited price changes, and monthly SEO content optimisation where supported by the relevant care plan copy.
 - Do not describe the free homepage mockup as a file handover, source-file export, editable design package, or transfer of ownership.
