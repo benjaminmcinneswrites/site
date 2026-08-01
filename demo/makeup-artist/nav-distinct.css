@@ -52,7 +52,7 @@
   }
 }
 
-@media (max-width: 1050px) and (prefers-reduced-motion: no-preference) {
+@media (max-width: 1050px){
   .js [data-reveal="line"] {
     transform: translateY(34px);
   }

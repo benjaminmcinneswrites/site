@@ -295,9 +295,3 @@ body.bs-demo-placeholder main {
     padding-block: 8px;
   }
 }
-
-@media (prefers-reduced-motion: reduce) {
-  .bs-demo-bar__link {
-    transition: none;
-  }
-}

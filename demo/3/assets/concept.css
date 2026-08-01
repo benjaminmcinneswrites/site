@@ -2304,28 +2304,3 @@ main > .section:first-child h1 {
     padding-top: 1rem;
   }
 }
-
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-
-  *,
-  *::before,
-  *::after {
-    scroll-behavior: auto !important;
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
-
-  .concept-loop path,
-  .concept-ready .concept-loop path {
-    animation: none !important;
-    stroke-dashoffset: 0;
-  }
-
-  .hero-photo-frame,
-  .concept-ready .hero-photo-frame {
-    animation: none !important;
-    clip-path: none !important;
-  }
-}

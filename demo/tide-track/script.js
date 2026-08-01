@@ -1,6 +1,6 @@
 document.documentElement.classList.add("js");
 
-const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const reducedMotion = false;
 const route = document.querySelector(".route-map");
 const motionGroups = [
   ...document.querySelectorAll(".trip-grid > *, .safety-grid > *, .sea-cta > *"),

@@ -118,21 +118,7 @@ body {
   clip-path: inset(0 0 0 18%);
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .js .hero-copy h1 span,
-  .js .hero-ledger b,
-  .js .ledger-motion,
-  .month-cards article.ledger-motion,
-  .scope-grid.ledger-motion,
-  .month-line::before,
-  .month-line i {
-    clip-path: none;
-    transform: none;
-    transition: none;
-  }
 
-  .service-table article.ledger-motion::after { transform: scaleX(1); transition: none; }
-}
 
 @media (max-width: 900px) {
   .js .ledger-motion { transform: translateY(24px); clip-path: inset(8% 0 0); }
@@ -143,13 +129,5 @@ body {
     display: inline-flex;
     align-items: center;
     min-height: 44px;
-  }
-}
-
-@media (max-width: 900px) and (prefers-reduced-motion: reduce) {
-  .js .ledger-motion,
-  .js .ledger-motion.is-in {
-    clip-path: none;
-    transform: none;
   }
 }

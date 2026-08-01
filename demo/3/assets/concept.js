@@ -197,7 +197,7 @@
         nextButton.disabled = reviewRail.scrollLeft >= maxScroll - 4 || maxScroll <= 4;
       };
       var moveReviewRail = function (direction) {
-        var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        var reduceMotion = false;
         reviewRail.scrollBy({
           left: direction * Math.max(280, reviewRail.clientWidth * 0.72),
           behavior: reduceMotion ? "auto" : "smooth"

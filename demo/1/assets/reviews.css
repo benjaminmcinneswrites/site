@@ -145,7 +145,7 @@
   transform: rotate(225deg) translate(-2px, -2px);
 }
 
-@media (prefers-reduced-motion: no-preference) {
+
   .review-card {
     transition:
       transform var(--duration-base) var(--ease-standard),
@@ -156,7 +156,7 @@
   .reviews-section.is-expanded .review-card[data-review-extra] {
     animation: reviewReveal 240ms var(--ease-standard) both;
   }
-}
+
 
 @keyframes reviewReveal {
   from {

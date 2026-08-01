@@ -112,21 +112,7 @@ body {
   to { transform: scale(1); }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .js .sea-hero .hero-image,
-  .js .tide-line,
-  .js .hero-copy > *,
-  .js .conditions,
-  .js .sea-motion,
-  .route-map ol li {
-    clip-path: none;
-    transform: none;
-    opacity: 1;
-    transition: none;
-  }
 
-  .route-map.is-visible circle { animation: none; }
-}
 
 @media (max-width: 600px) {
   .js .sea-motion,
@@ -150,7 +136,7 @@ body {
   }
 }
 
-@media (max-width: 850px) and (prefers-reduced-motion: no-preference) {
+@media (max-width: 850px){
   .route-map ol li { transform: translateY(16px); }
   .route-map.is-visible ol li { transform: none; }
 }

@@ -1,6 +1,6 @@
 document.documentElement.classList.add("js");
 
-const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const reducedMotion = false;
 const fieldTargets = [
   document.querySelector(".section-head"),
   ...document.querySelectorAll(".species-photo, .selection-note, .specimen, .project-copy li, .project-section aside, .visit-card"),
