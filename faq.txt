@@ -2,7 +2,7 @@
 
 Website: https://bettersite.co.nz/faq
 Contact: contact@bettersite.co.nz
-Last updated: 2026-06-07
+Last updated: 2026-08-01
 
 ## Is the homepage mockup really free?
 
@@ -16,37 +16,29 @@ No. It is a temporary live homepage preview, not a complete free website, finish
 
 No. The free mockup is shown through a temporary live preview link only. Website files, source files, editable design files, hosting access, and ownership are not transferred unless agreed as part of a paid project.
 
-## What is included in the Starter One-Page Site?
-
-The Starter One-Page Site includes one mobile-first page, up to 5 main sections, a basic contact section, a basic SEO title and description, one revision round, and simple launch support. The client provides text and images.
-
-## Why is the Starter site so affordable?
-
-The limits are straightforward: one page, client-provided content, and no agency-style overheads. Extra pages, ecommerce, advanced copywriting, complex animations, and custom features are quoted separately.
-
 ## Is the Better Business Site custom?
 
 Yes. It is based on the business, content, and offer, but it is still a small-business website package rather than a custom app, ecommerce build, or unlimited-scope project.
 
-## What is the difference between the Starter and Better Business options?
+## What website options are available?
 
-The Starter option begins from $99 NZD and is a one-page website. The Better Business Site begins from $249 NZD and is for businesses that need more pages, better service and offer detail, a contact form and enquiry CTA, and two revision rounds.
+The Better Business Site begins from $149 NZD and includes up to 7 pages, with additional pages from $14 each. The Redesign / Glow-Up begins from $99 NZD for improving an existing website. Both include up to three revision rounds.
 
 ## Can Better Site redesign my existing website?
 
-Yes. The Redesign / Glow-Up offer begins from $149 NZD and is for improving an existing website's look, page layout, mobile use, CTA placement, and basic SEO/meta setup where applicable.
+Yes. The Redesign / Glow-Up offer begins from $99 NZD and is for improving an existing website's look, page layout, mobile use, CTA placement, and SEO/meta setup where applicable.
 
 ## Do these prices include hosting?
 
-Hosting is separate unless the accepted quote says it is included. Better Site can quote hosting or care separately if a customer wants help after launch.
+Hosting is included in every monthly care plan. It is separate from the one-off website build price unless the accepted quote says otherwise.
 
 ## Do these prices include a domain name?
 
-No. Domain names are usually purchased and owned by the client. Better Site can provide guidance or support if it is included in the quote.
+Every monthly care plan includes one available .co.nz domain, subject to availability and eligibility. The one-off website build price does not include a domain unless the accepted quote says otherwise.
 
 ## Do these prices include SEO?
 
-They include basic SEO setup such as page titles, descriptions, headings, and logically arranged pages where applicable. They do not guarantee rankings, traffic, leads, enquiries, or sales.
+They include SEO setup such as page titles, descriptions, headings, and logically arranged pages where applicable. They do not guarantee rankings, traffic, leads, enquiries, or sales.
 
 ## Can a customer request extra pages or features?
 
@@ -54,7 +46,7 @@ Yes. Extra pages, booking embeds, integrations, ecommerce, custom functionality,
 
 ## Are there any ongoing costs?
 
-There may be ongoing costs for hosting, domain renewal, email hosting, third-party tools, care plans, edits, or support. These are separate unless the accepted quote says otherwise.
+Optional monthly care starts at $14.99 NZD and includes hosting, one available .co.nz domain, backups, minor support, recurring content changes, and unlimited price changes. Email hosting and third-party tools remain separate unless the accepted quote says otherwise.
 
 ## How long does it take?
 

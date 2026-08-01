@@ -2,27 +2,21 @@
 
 Website: https://bettersite.co.nz
 Contact: contact@bettersite.co.nz
-Last updated: 2026-06-07
+Last updated: 2026-08-01
 
-Better Site provides affordable website design, one-page websites, fuller small business websites, website redesigns/glow-ups, managed hosting, website care, and SEO content updates for New Zealand small businesses and local brands.
+Better Site provides affordable business websites, website redesigns/glow-ups, managed hosting, website care, and SEO content updates for New Zealand small businesses and local brands.
 
 ## Main Website Offers
 
-### Starter One-Page Site
-
-Better Site offers mobile-first one-page websites for sole traders, creators, local services, and new businesses that need a proper website without a big budget. The starting price is from $99 NZD.
-
-Typical inclusions include one page, up to 5 main sections, mobile-first design, a basic contact section, a basic SEO title and description, one revision round, and simple launch support. The client provides text and images.
-
 ### Better Business Site
 
-The Better Business Site is the main popular package. It is for businesses that want more pages, better service detail, services & offer sections, contact options, and a more established website. The starting price is from $249 NZD, with the final page count confirmed in the quote.
+The Better Business Site is the main website package. It is for businesses that want clear service detail, strong contact options, and a more established website. The starting price is from $149 NZD and includes up to 7 pages. Additional pages start from $14 NZD each.
 
-Typical inclusions include a multi-page site, mobile-first design, services & offer sections, contact form & enquiry CTA, basic SEO setup, and two revision rounds.
+Typical inclusions include mobile-first design, services and offer sections, a contact form and enquiry CTA, SEO setup, and up to three revision rounds.
 
 ### Redesign / Glow-Up
 
-Better Site helps businesses with outdated, confusing, or hard-to-trust websites. The Redesign / Glow-Up offer starts from $149 NZD and can include an updated homepage design, improved layout, easier scanning, mobile-friendly improvements where applicable, better CTA placement, and basic SEO/meta cleanup where applicable.
+Better Site helps businesses with outdated, confusing, or hard-to-trust websites. The Redesign / Glow-Up offer starts from $99 NZD and can include an updated homepage design, improved layout, easier scanning, mobile-friendly improvements where applicable, better CTA placement, SEO/meta cleanup where applicable, and up to three revision rounds.
 
 Useful page:
 
@@ -45,7 +39,7 @@ Useful pages:
 
 ## Website Care Plans
 
-Care plans sit alongside website project pricing and are for businesses that want the technical side handled after launch or for an existing website. Depending on the plan, care can include hosting, minor support, regular edits, backups, content tidy-ups, SEO content updates, and Google Business Profile suggestions.
+Care plans sit alongside website project pricing and are for businesses that want the technical side handled after launch or for an existing website. Every plan includes hosting, one available .co.nz domain, backups, minor support, recurring content changes, and unlimited price changes. Monthly allowances are 3 changes on Starter Care ($14.99), 5 on Standard Care ($24.99), and 10 substantial changes on Priority Care ($49.99), with progressively faster support and additional Priority Care tools.
 
 Useful page:
 
@@ -53,7 +47,7 @@ Useful page:
 
 ## SEO Content Updates
 
-Better Site can help refresh service pages, local search copy, headings, on-page content, FAQ content, and calls to action. The site describes basic SEO work and SEO content updates, not guaranteed rankings.
+Better Site can help refresh service pages, local search copy, headings, on-page content, FAQ content, and calls to action. The site describes SEO setup and SEO content updates, not guaranteed rankings.
 
 Useful pages:
 

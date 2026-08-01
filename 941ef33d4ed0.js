@@ -484,7 +484,7 @@ body > .page-loader:not([data-route-loader]){display:none!important}
     if (path === "/work") return { template: "work", label: "Loading work" };
     if (path === "/services") return { template: "services", label: "Loading services" };
     if (path === "/pricing" || path === "/website-design-pricing-nz" || path === "/affordable-web-design-nz") return { template: "pricing", label: "Loading pricing" };
-    if (path === "/care-plans") return { template: "pricing", label: "Loading pricing", cards: 4 };
+    if (path === "/care-plans") return { template: "pricing", label: "Loading pricing", cards: 3 };
     if (path === "/request" || path === "/free-website-mockup") return { template: "form", label: "Loading mockup request" };
     if (path === "/contact") return { template: "form", label: "Loading contact" };
     if (path === "/faq") return { template: "faq", label: "Loading FAQs" };
