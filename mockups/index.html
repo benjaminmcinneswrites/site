@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en-NZ">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+  <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet">
+  <meta name="referrer" content="no-referrer">
+  <meta name="theme-color" content="#f6f9f7">
+  <title>Private mockup workspace | Better Site</title>
+  <link rel="icon" type="image/png" href="/assets/r/8e3e33581240.png">
+  <link rel="stylesheet" href="/mockups/mockups.css">
+  <script src="/mockups/mockups.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to mockups</a>
+  <header class="workspace-header">
+    <a class="brand" href="/" aria-label="Better Site home">
+      <img src="/assets/r/8e3e33581240.png" alt="" width="48" height="48">
+      <span><strong>Better Site</strong><small>Private workspace</small></span>
+    </a>
+    <span class="privacy-badge">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10V7a5 5 0 0 1 10 0v3m-11 0h12a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1Z"/></svg>
+      No-index workspace
+    </span>
+  </header>
+
+  <main id="main">
+    <section class="intro-panel" aria-labelledby="workspace-title">
+      <p class="eyebrow">Client previews</p>
+      <div class="intro-grid">
+        <div>
+          <h1 id="workspace-title">Mockups, ready to share.</h1>
+          <p>Your client previews use unlisted, randomly generated URLs and stay out of public navigation and search results.</p>
+        </div>
+        <div class="command-card">
+          <span>Create a new link</span>
+          <code>npm run mockup:new -- "Client name"</code>
+          <button type="button" class="copy-command" data-copy-command>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 8h10a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Zm-5 7H3a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h11a1 1 0 0 1 1 1v1"/></svg>
+            <span>Copy command</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="library" aria-labelledby="library-title">
+      <div class="library-heading">
+        <div>
+          <p class="eyebrow">Your library</p>
+          <h2 id="library-title">Client mockups</h2>
+        </div>
+        <p class="local-status" data-local-status>Checking local workspace…</p>
+      </div>
+      <div class="mockup-grid" data-mockup-grid aria-live="polite">
+        <div class="loading-card"><span></span><span></span><span></span></div>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" role="status" aria-live="polite" data-toast></div>
+</body>
+</html>

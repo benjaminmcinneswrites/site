@@ -1,5 +1,15 @@
 /*
-  Content-Security-Policy: default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self' https://api.web3forms.com; img-src 'self' data: https: https://www.facebook.com https://www.facebook.com.au; script-src 'self' 'unsafe-inline' https://connect.facebook.net; style-src 'self' 'unsafe-inline'; connect-src 'self' https://api.web3forms.com https://www.facebook.com https://connect.facebook.net; upgrade-insecure-requests
+  Content-Security-Policy: default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self' https://api.web3forms.com; img-src 'self' data: https: https://www.facebook.com https://www.facebook.com.au; script-src 'self' 'unsafe-inline' https://connect.facebook.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://api.web3forms.com https://www.facebook.com https://connect.facebook.net; upgrade-insecure-requests
   X-Frame-Options: DENY
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
+
+/mockup/*
+  X-Robots-Tag: noindex, nofollow, noarchive, nosnippet
+  Referrer-Policy: no-referrer
+  Cache-Control: private, no-cache, no-store, must-revalidate
+
+/mockups/*
+  X-Robots-Tag: noindex, nofollow, noarchive, nosnippet
+  Referrer-Policy: no-referrer
+  Cache-Control: private, no-cache, no-store, must-revalidate
