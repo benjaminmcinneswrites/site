@@ -562,7 +562,6 @@ body > .page-loader:not([data-route-loader]){display:none!important}
     ensureLoaderGuard();
     document.querySelectorAll(".page-loader").forEach((loader) => loader.remove());
     if (document.body) document.body.removeAttribute("aria-busy");
-    document.documentElement.classList.add("page-leaving");
     return null;
   };
 
