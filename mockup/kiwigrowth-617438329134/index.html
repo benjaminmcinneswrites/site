@@ -47,30 +47,32 @@
         </nav>
 
         <div class="header-actions">
-          <a class="button button--gold header-cta" href="#request-review">Request my free review</a>
-          <button class="menu-trigger route-sheet-trigger" type="button" aria-haspopup="dialog" aria-controls="mobile-menu" data-menu-open disabled>Review Route</button>
+          <a class="button button--gold header-cta" href="#request-review" aria-label="Request my free review">
+            <span class="header-cta__desktop">Request my free review</span>
+            <span class="header-cta__mobile" aria-hidden="true">Free review</span>
+          </a>
+          <button class="menu-trigger" type="button" aria-label="Open navigation" aria-haspopup="dialog" aria-controls="mobile-menu" aria-expanded="false" data-menu-open disabled>
+            <span class="menu-trigger__icon" aria-hidden="true"><span></span><span></span><span></span></span>
+          </button>
         </div>
       </div>
     </header>
 
     <dialog class="mobile-menu" id="mobile-menu" aria-labelledby="mobile-menu-title" data-mobile-menu>
       <div class="mobile-menu__head">
-        <div><span class="route-sheet__kicker">KiwiGrowth</span><p id="mobile-menu-title">Review Route</p></div>
-        <button type="button" aria-label="Close menu" data-menu-close><span aria-hidden="true">×</span></button>
+        <div><span class="route-sheet__kicker">KiwiGrowth</span><p id="mobile-menu-title">Menu</p></div>
+        <button type="button" aria-label="Close navigation" data-menu-close>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"></path></svg>
+        </button>
       </div>
-      <p class="route-sheet__intro">Follow the review from your current setup to a clear next step.</p>
       <nav aria-label="Mobile navigation">
-        <a href="#why-review" data-menu-link><span>Why Review</span><small>Time to check</small></a>
-        <a href="#how-it-works" data-menu-link><span>How It Works</span><small>Four clear steps</small></a>
-        <a href="#meet-ryan" data-menu-link><span>Meet Ryan</span><small>Your adviser</small></a>
-        <a href="#faqs" data-menu-link><span>FAQs</span><small>Quick answers</small></a>
-      </nav>
-      <div class="route-sheet__secondary">
+        <a href="#why-review" data-menu-link>Why Review</a>
+        <a href="#how-it-works" data-menu-link>How It Works</a>
+        <a href="#meet-ryan" data-menu-link>Meet Ryan</a>
+        <a href="#faqs" data-menu-link>FAQs</a>
         <a href="about.html">About</a>
-        <a href="https://www.kiwigrowth.co.nz/blog" rel="noopener noreferrer">Insights</a>
-        <a href="#request-review" data-menu-link>Contact</a>
-        <a href="tel:+64276400325">027 640 0325</a>
-      </div>
+        <a href="privacy-and-disclosure.html">Public Disclosure</a>
+      </nav>
       <a class="button button--gold" href="#request-review" data-menu-link>Request my free review</a>
     </dialog>
 
@@ -81,6 +83,17 @@
           <p class="hero-lede">A quick review could help your savings grow faster.</p>
           <a class="button button--gold hero-cta" href="#request-review">Request my free review</a>
           <p class="hero-trust"><span aria-hidden="true">✓</span> <strong>Free review.</strong> Personalised KiwiSaver advice.</p>
+        </div>
+      </section>
+
+      <section class="partners" aria-labelledby="partners-title">
+        <div class="page-shell partners-inner">
+          <h2 id="partners-title">Working With New Zealands Best</h2>
+          <div class="partner-grid" aria-label="KiwiGrowth provider partners">
+            <div class="partner-logo partner-logo--booster"><img src="assets/provider-logos/booster.png" alt="Booster" width="10642" height="1947" loading="lazy"></div>
+            <div class="partner-logo partner-logo--milford"><img src="assets/provider-logos/milford.png" alt="Milford" width="1243" height="1055" loading="lazy"></div>
+            <div class="partner-logo partner-logo--generate"><img src="assets/provider-logos/generate.png" alt="Generate" width="995" height="149" loading="lazy"></div>
+          </div>
         </div>
       </section>
 

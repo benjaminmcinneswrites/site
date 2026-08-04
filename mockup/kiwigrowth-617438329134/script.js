@@ -13,12 +13,14 @@
     if (!mobileMenu || typeof mobileMenu.showModal !== "function") return;
     menuOpener = document.activeElement;
     mobileMenu.showModal();
+    menuOpen.setAttribute("aria-expanded", "true");
     menuClose?.focus();
   });
 
   function closeMenu(restoreFocus = true) {
     if (!mobileMenu?.open) return;
     mobileMenu.close();
+    menuOpen?.setAttribute("aria-expanded", "false");
     if (restoreFocus && menuOpener instanceof HTMLElement) menuOpener.focus({ preventScroll: true });
   }
 

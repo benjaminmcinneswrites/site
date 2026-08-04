@@ -328,19 +328,44 @@ h2 {
   font-size: 0.88rem;
 }
 
+.header-cta__mobile {
+  display: none;
+}
+
 .menu-trigger {
   display: none;
-  min-width: 48px;
-  min-height: 48px;
+  width: 48px;
+  height: 48px;
   align-items: center;
   justify-content: center;
-  padding: 0 14px;
+  padding: 0;
   color: #fff;
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.34);
   border-radius: 8px;
-  font-size: 0.76rem;
-  font-weight: 700;
+}
+
+.menu-trigger__icon {
+  width: 22px;
+  display: grid;
+  gap: 5px;
+}
+
+.menu-trigger__icon span {
+  width: 100%;
+  height: 2px;
+  background: currentColor;
+  border-radius: 2px;
+  transition: width 180ms var(--ease), transform 180ms var(--ease);
+}
+
+.menu-trigger__icon span:nth-child(2) {
+  width: 72%;
+  justify-self: end;
+}
+
+.menu-trigger:hover .menu-trigger__icon span:nth-child(2) {
+  width: 100%;
 }
 
 .mobile-menu {
@@ -401,11 +426,20 @@ h2 {
 .mobile-menu__head button {
   width: 48px;
   height: 48px;
+  display: grid;
+  place-items: center;
   color: #fff;
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 50%;
-  font-size: 1.6rem;
+}
+
+.mobile-menu__head button svg {
+  width: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-width: 1.8;
 }
 
 .mobile-menu nav {
@@ -414,32 +448,13 @@ h2 {
 }
 
 .mobile-menu nav a {
-  display: grid;
-  grid-template-columns: 1fr auto;
+  display: flex;
   align-items: center;
-  gap: 14px;
   padding: 15px 2px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.16);
-  font-size: 1.28rem;
+  font-size: 1.16rem;
+  font-weight: 620;
   text-decoration: none;
-}
-
-.mobile-menu nav small {
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 0.72rem;
-}
-
-.route-sheet__secondary {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 8px 16px;
-  margin: 0 0 24px;
-}
-
-.route-sheet__secondary a {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 0.78rem;
-  text-underline-offset: 4px;
 }
 
 .mobile-menu .button {
@@ -514,6 +529,58 @@ h2 {
 @keyframes hero-arrive {
   from { opacity: 0; transform: translateY(24px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* Provider partners */
+.partners {
+  padding-block: clamp(54px, 6vw, 82px);
+  background: var(--paper);
+  border-bottom: 1px solid rgba(0, 70, 67, 0.12);
+}
+
+.partners-inner {
+  max-width: 980px;
+}
+
+.partners h2 {
+  margin-bottom: 34px;
+  color: var(--green);
+  font-size: clamp(2.3rem, 4.8vw, 4.4rem);
+  text-align: center;
+}
+
+.partner-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.partner-logo {
+  min-height: 132px;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: #fff;
+  border: 1px solid rgba(0, 70, 67, 0.14);
+  border-radius: 14px;
+}
+
+.partner-logo img {
+  width: auto;
+  max-height: 72px;
+  object-fit: contain;
+}
+
+.partner-logo--booster img {
+  width: min(100%, 210px);
+}
+
+.partner-logo--generate img {
+  width: min(100%, 190px);
+}
+
+.partner-logo--milford img {
+  max-height: 84px;
 }
 
 /* Review situations */
@@ -1833,12 +1900,12 @@ html:not(.js) .testimonial-controls {
   }
 
   .section {
-    padding-block: 84px;
+    padding-block: 72px;
   }
 
   h2 {
-    margin-bottom: 36px;
-    font-size: clamp(2.65rem, 13vw, 4.4rem);
+    margin-bottom: 32px;
+    font-size: clamp(2.35rem, 11vw, 3.75rem);
   }
 
   .header-inner,
@@ -1846,26 +1913,90 @@ html:not(.js) .testimonial-controls {
     min-height: var(--header-height);
   }
 
+  .header-inner {
+    gap: 10px;
+  }
+
   .brand {
-    width: 116px;
+    width: 106px;
+  }
+
+  .header-actions {
+    gap: 8px;
   }
 
   .header-cta {
+    min-height: 44px;
+    display: inline-flex;
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 0.76rem;
+  }
+
+  .header-cta__desktop {
     display: none;
   }
 
+  .header-cta__mobile {
+    display: inline;
+  }
+
+  .menu-trigger {
+    width: 44px;
+    height: 44px;
+  }
+
   .hero-inner {
-    padding-block: 54px 72px;
+    padding-block: 48px 62px;
   }
 
   .hero h1 {
-    font-size: clamp(3.3rem, 16.5vw, 5.5rem);
-    line-height: 0.91;
+    font-size: clamp(2.95rem, 13.4vw, 4.4rem);
+    line-height: 0.94;
   }
 
   .hero-lede {
     max-width: 430px;
-    font-size: 1.18rem;
+    margin-bottom: 28px;
+    font-size: 1.12rem;
+  }
+
+  .hero-cta {
+    width: min(100%, 320px);
+  }
+
+  .partners {
+    padding-block: 52px;
+  }
+
+  .partners h2 {
+    max-width: 330px;
+    margin: 0 auto 28px;
+    font-size: clamp(2.15rem, 10vw, 3rem);
+    line-height: 0.98;
+  }
+
+  .partner-grid {
+    gap: 8px;
+  }
+
+  .partner-logo {
+    min-height: 92px;
+    padding: 12px 10px;
+    border-radius: 10px;
+  }
+
+  .partner-logo img {
+    max-height: 46px;
+  }
+
+  .partner-logo--booster img,
+  .partner-logo--generate img {
+    width: min(100%, 92px);
+  }
+
+  .partner-logo--milford img {
+    max-height: 58px;
   }
 
   .hero-trust {
@@ -1881,16 +2012,16 @@ html:not(.js) .testimonial-controls {
   }
 
   .situation {
-    min-height: 138px;
-    grid-template-columns: 46px 1fr;
-    gap: 17px;
-    padding: 24px 20px;
+    min-height: 116px;
+    grid-template-columns: 44px 1fr;
+    gap: 16px;
+    padding: 20px;
   }
 
   .situation svg {
-    width: 46px;
-    height: 46px;
-    padding: 11px;
+    width: 44px;
+    height: 44px;
+    padding: 10px;
   }
 
   .process-section {
@@ -1931,8 +2062,8 @@ html:not(.js) .testimonial-controls {
   }
 
   .proof-card {
-    min-height: 480px;
-    padding: 34px 28px;
+    min-height: 460px;
+    padding: 32px 24px;
   }
 
   .proof-card p {
@@ -1949,6 +2080,16 @@ html:not(.js) .testimonial-controls {
 
   .form-grid {
     grid-template-columns: 1fr;
+  }
+
+  .review-form {
+    padding: 24px 20px;
+    border-radius: 16px;
+    box-shadow: 8px 10px 0 rgba(50, 105, 99, 0.45);
+  }
+
+  .form-submit {
+    width: 100%;
   }
 
   .field--wide {
@@ -2006,7 +2147,7 @@ html:not(.js) .testimonial-controls {
   }
 
   .mobile-sticky-cta {
-    display: flex;
+    display: none;
   }
 
   .legal-header__inner {
@@ -2028,6 +2169,29 @@ html:not(.js) .testimonial-controls {
   .legal-copy {
     padding: 24px 20px;
     font-size: 0.92rem;
+  }
+}
+
+@media (max-width: 760px) {
+  .mobile-menu {
+    width: min(360px, calc(100vw - 16px));
+    max-height: calc(100svh - 16px);
+    margin: 8px 8px 8px auto;
+    padding: 24px 22px;
+    border-radius: 16px;
+  }
+
+  .mobile-menu__head {
+    margin-bottom: 18px;
+  }
+
+  .mobile-menu nav {
+    margin-bottom: 24px;
+  }
+
+  .mobile-menu nav a {
+    min-height: 50px;
+    padding-block: 12px;
   }
 }
 
@@ -2061,7 +2225,16 @@ html:not(.js) .testimonial-controls {
   }
 
   .hero h1 {
-    font-size: clamp(3.05rem, 16.2vw, 4.3rem);
+    font-size: clamp(2.75rem, 13.2vw, 3.6rem);
+  }
+
+  .brand {
+    width: 98px;
+  }
+
+  .header-cta {
+    padding-inline: 10px;
+    font-size: 0.72rem;
   }
 
   .contact-choice > div {
