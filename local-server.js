@@ -173,6 +173,12 @@ const server = http.createServer((request, response) => {
   const file = resolveFile(pathname);
   if (file) return sendFile(request, response, file);
 
+  const mockupNotFoundMatch = pathname.match(/^\/mockup\/((?:[a-z0-9]+(?:-[a-z0-9]+)*-)?\d{12})(?:\/.*)?$/);
+  if (mockupNotFoundMatch) {
+    const mockupNotFound = path.join(root, 'mockup', mockupNotFoundMatch[1], '404.html');
+    if (fs.existsSync(mockupNotFound)) return sendFile(request, response, mockupNotFound, 404);
+  }
+
   const notFound = path.join(root, '404.html');
   if (fs.existsSync(notFound)) return sendFile(request, response, notFound, 404);
   response.writeHead(404);

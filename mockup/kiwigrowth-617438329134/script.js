@@ -201,9 +201,9 @@
   if (testimonialNext) testimonialNext.disabled = false;
 
   /* FAQ accordion. */
-  document.querySelectorAll(".faq-item button[aria-controls]").forEach((button, index) => {
+  document.querySelectorAll(".faq-item button[aria-controls]").forEach((button) => {
     const answer = document.getElementById(button.getAttribute("aria-controls"));
-    const initiallyOpen = index === 0;
+    const initiallyOpen = false;
     button.setAttribute("aria-expanded", String(initiallyOpen));
     button.disabled = false;
     if (answer) {
