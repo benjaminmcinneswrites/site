@@ -3,6 +3,17 @@
 
   const root = document.documentElement;
 
+  const heroImage = document.querySelector("[data-hero-image]");
+  const revealHeroImage = () => {
+    window.requestAnimationFrame(() => heroImage?.classList.add("is-loaded"));
+  };
+
+  if (heroImage?.complete) {
+    revealHeroImage();
+  } else {
+    heroImage?.addEventListener("load", revealHeroImage, { once: true });
+  }
+
   /* Mobile navigation uses the native dialog for focus containment and Escape support. */
   const mobileMenu = document.querySelector("[data-mobile-menu]");
   const menuOpen = document.querySelector("[data-menu-open]");
