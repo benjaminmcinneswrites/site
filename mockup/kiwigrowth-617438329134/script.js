@@ -235,8 +235,6 @@
   /* Non-transmitting preview form. */
   const reviewForm = document.querySelector("[data-review-form]");
   const reviewGoal = document.querySelector("[data-review-goal]");
-  const phoneInput = document.getElementById("phone");
-  const phoneRequirement = document.querySelector("[data-phone-requirement]");
   const ticketGoal = document.querySelector("[data-ticket-goal]");
   const ticketContact = document.querySelector("[data-ticket-contact]");
   const errorSummary = document.querySelector("[data-error-summary]");
@@ -258,20 +256,8 @@
 
   function updateReviewSummary() {
     const contact = selectedContactMethod();
-    const phoneIsRequired = contact === "Phone";
     if (ticketGoal) ticketGoal.textContent = reviewGoal?.value || "Not selected";
     if (ticketContact) ticketContact.textContent = contact;
-    if (phoneInput) phoneInput.required = phoneIsRequired;
-    if (phoneRequirement) {
-      phoneRequirement.textContent = phoneIsRequired ? "*" : "optional";
-      phoneRequirement.classList.toggle("is-required", phoneIsRequired);
-    }
-
-    if (!phoneIsRequired && phoneInput && !phoneInput.value) {
-      phoneInput.setAttribute("aria-invalid", "false");
-      const phoneError = document.getElementById("phone-error");
-      if (phoneError) phoneError.textContent = "";
-    }
   }
 
   function errorElementFor(field) {
