@@ -10,7 +10,9 @@
     <meta name="description" content="Book a KiwiSaver review with Ryan Verwey at KiwiGrowth.">
     <title>KiwiSaver Review | KiwiGrowth</title>
     <link rel="icon" href="assets/brand/kiwigrowth-favicon.png" type="image/png">
+    <link rel="preload" href="assets/fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="index2.css">
     <script>
       (function () {
         document.documentElement.classList.add("js");
@@ -25,7 +27,7 @@
       })();
     </script>
   </head>
-  <body class="home-page home-page--original">
+  <body class="home-page home-page--alternate">
     <a class="skip-link" href="#main-content">Skip to main content</a>
 
     <header class="site-header" data-site-header>
@@ -47,9 +49,9 @@
         </nav>
 
         <div class="header-actions">
-          <a class="button button--gold header-cta" href="#request-review" aria-label="Review my KiwiSaver">
-            <span class="header-cta__desktop">Review my KiwiSaver</span>
-            <span class="header-cta__mobile" aria-hidden="true">Review</span>
+          <a class="button button--gold header-cta" href="#request-review" aria-label="Start Your Review">
+            <span class="header-cta__desktop">Start Your Review</span>
+            <span class="header-cta__mobile" aria-hidden="true">Start</span>
           </a>
           <button class="menu-trigger" type="button" aria-label="Open navigation" aria-haspopup="dialog" aria-controls="mobile-menu" aria-expanded="false" data-menu-open disabled>
             <span class="menu-trigger__icon" aria-hidden="true"><span></span><span></span><span></span></span>
@@ -74,18 +76,21 @@
         <a href="insights.html">Insights</a>
         <a href="privacy-and-disclosure.html">Public Disclosure</a>
       </nav>
-      <a class="button button--gold" href="#request-review" data-menu-link>Review my KiwiSaver</a>
+      <a class="button button--gold" href="#request-review" data-menu-link>Start Your Review</a>
     </dialog>
 
     <main id="main-content">
       <section class="hero" id="top" aria-labelledby="hero-title">
         <div class="hero-inner page-shell">
-          <h1 id="hero-title"><span class="hero-title-line">Is Your KiwiSaver Working</span> <span class="hero-title-line">As Hard As It Could Be?</span></h1>
+          <h1 id="hero-title"><span class="hero-title-line">Is Your KiwiSaver Fund Working</span> <span class="hero-title-line">As Hard As It Could Be?</span></h1>
           <p class="hero-lede">A quick review could help your savings grow faster.</p>
-          <a class="button button--gold hero-cta" href="#request-review">Review my KiwiSaver</a>
+          <a class="button button--gold hero-cta" href="#request-review">Start Your Review</a>
           <p class="hero-trust"><span aria-hidden="true">✓</span> <strong>Independent</strong> and personalised advice.</p>
           <figure class="hero-visual">
-            <img src="assets/illustrations/kiwisaver-review-journey.webp" alt="Layered paper illustration of a path connecting a home, growing savings and a future horizon" width="1536" height="1024">
+            <picture>
+              <source media="(max-width: 760px)" srcset="assets/illustrations/kiwisaver-review-journey-mobile-v2.webp" width="1122" height="1402">
+              <img class="hero-visual__image" data-hero-image src="assets/illustrations/kiwisaver-review-journey-wide-v2.webp" alt="Layered paper illustration of a path connecting a home, growing savings and a future horizon" width="1873" height="840" decoding="async" fetchpriority="high">
+            </picture>
           </figure>
         </div>
       </section>
@@ -107,7 +112,7 @@
           <div class="situation-grid" aria-label="Situations KiwiGrowth can help with">
             <a class="situation" href="review-after-a-few-years.html" data-situation>
               <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"></circle><path d="M12 7v5l3 2"></path></svg>
-              <p>You have not checked your KiwiSaver in a few years.</p>
+              <p>You haven't checked your fund in a few years.</p>
               <span class="situation-action">Why this matters <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6"></path></svg></span>
             </a>
             <a class="situation" href="unsure-which-kiwisaver-fund.html" data-situation>
@@ -130,32 +135,46 @@
         </div>
       </section>
 
+      <section class="why-it-matters section" aria-labelledby="why-it-matters-title">
+        <div class="page-shell why-it-matters__layout">
+          <div class="why-it-matters__copy">
+            <h2 id="why-it-matters-title">Why it matters</h2>
+            <p>Choosing the right KiwiSaver fund is more important than you think. Not all providers, funds and fees are equal, and being in the wrong one could mean having tens or hundreds of thousands of dollars less when you need it.</p>
+          </div>
+          <aside class="why-it-matters__evidence" aria-label="Financial Services Council research finding">
+            <p class="why-it-matters__stat">Up to <strong>52%</strong> more</p>
+            <p>The Financial Services Council's 2020 research reported that advised New Zealanders had approximately 52% more in KiwiSaver account balances than unadvised respondents.</p>
+            <a href="https://f.hubspotusercontent10.net/hubfs/7422267/FSC%20Corporate/Research%20Reports/FSC%20-%20Money%20%26%20You%20-%20Literacy%2c%20Insight%2c%20Advice%20-%20August%202020.pdf" target="_blank" rel="noopener noreferrer">Read the FSC Money &amp; You study<span aria-hidden="true"> ↗</span></a>
+          </aside>
+        </div>
+      </section>
+
       <section class="process-section section" id="how-it-works" aria-labelledby="process-title" data-route-section>
         <div class="page-shell process-shell">
-          <h2 id="process-title">Four clear steps.</h2>
+          <h2 id="process-title">Here's how we help in four steps:</h2>
           <div class="process-steps" data-process-steps>
             <article class="process-step is-active" id="review-step-1" data-process-step>
               <span class="process-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 7h14M5 12h9M5 17h11"></path></svg></span>
-              <h3>Understand your current KiwiSaver</h3>
-              <p>Review your current provider, fund type and how your KiwiSaver is set up today.</p>
-              <a class="step-next" href="#review-step-2" aria-label="Continue to talk through what matters next"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></a>
+              <h3>Review</h3>
+              <p>Review your current provider, fund and KiwiSaver setup.</p>
+              <a class="step-next" href="#review-step-2" aria-label="Continue to discuss what matters"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></a>
             </article>
             <article class="process-step" id="review-step-2" data-process-step>
               <span class="process-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"></circle><path d="m12 8 1.3 2.7 3 .4-2.2 2.1.6 3-2.7-1.5-2.7 1.5.6-3-2.2-2.1 3-.4L12 8Z"></path></svg></span>
-              <h3>Talk through what matters next</h3>
-              <p>Discuss first-home plans, retirement, long-term saving or the goal that matters to you.</p>
-              <a class="step-next" href="#review-step-3" aria-label="Continue to review the investment approach"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></a>
+              <h3>Discuss</h3>
+              <p>Your goals, timeframe and future plans shape the conversation.</p>
+              <a class="step-next" href="#review-step-3" aria-label="Continue to assess your options"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></a>
             </article>
             <article class="process-step" id="review-step-3" data-process-step>
               <span class="process-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 6h14M8 12h11M5 18h14"></path><circle cx="8" cy="6" r="2"></circle><circle cx="15" cy="12" r="2"></circle><circle cx="10" cy="18" r="2"></circle></svg></span>
-              <h3>Review the investment approach</h3>
-              <p>Consider whether your setup aligns with your age, timeframe and comfort with risk.</p>
-              <a class="step-next" href="#review-step-4" aria-label="Continue to explore a clear next step"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></a>
+              <h3>Assess</h3>
+              <p>We'll help determine whether your current fund is still the best fit.</p>
+              <a class="step-next" href="#review-step-4" aria-label="Continue to clarify the way forward"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></a>
             </article>
             <article class="process-step" id="review-step-4" data-process-step>
               <span class="process-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"></path></svg></span>
-              <h3>Explore a clear next step</h3>
-              <p>If there are opportunities to improve your setup, Ryan will explain them clearly so you can make an informed decision.</p>
+              <h3>Clarify</h3>
+              <p>If there are ways to improve your setup, we'll explain them with no pressure to make changes.</p>
               <a class="step-next" href="#meet-ryan" aria-label="Continue to meet Ryan Verwey"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></a>
             </article>
           </div>
@@ -175,7 +194,10 @@
             <h2 id="ryan-title">Meet Ryan Verwey</h2>
             <p class="ryan-lede">Ryan is a qualified Financial Adviser with a Bachelor’s degree in Business and Financial Planning.</p>
             <p>He created KiwiGrowth to make KiwiSaver conversations clearer, more personal and easier to act on.</p>
-            <a class="button button--green" href="#request-review">Review my KiwiSaver</a>
+            <div class="ryan-actions">
+              <a class="button button--outline-dark" href="about.html">Read more about Ryan &amp; KiwiGrowth</a>
+              <a class="button button--green" href="#request-review">Start Your Review</a>
+            </div>
           </div>
         </div>
       </section>
@@ -230,6 +252,21 @@
             </button>
           </div>
           <a class="google-reviews-link" href="https://share.google/8tg1vkf49PDxyv7ZI" target="_blank" rel="noopener noreferrer">Five stars on Google <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+
+      <section class="recognition section" aria-labelledby="recognition-title">
+        <div class="page-shell recognition-layout">
+          <div class="recognition-copy">
+            <h2 id="recognition-title">Industry recognition</h2>
+            <p>Recognised by the Kiwi Adviser Network in 2026.</p>
+          </div>
+          <div class="recognition-badges" aria-label="Kiwi Adviser Network recognition">
+            <img class="recognition-badge recognition-badge--platinum" src="assets/recognition/kiwi-adviser-network-platinum-top-performer-2026.webp" alt="Kiwi Adviser Network Platinum Tier Top Performer 2026 for KiwiSaver" width="600" height="600" loading="lazy">
+            <div class="recognition-badge-crop" role="img" aria-label="Kiwi Adviser Network Outstanding KiwiSaver Adviser National Finalist 2026">
+              <img src="assets/recognition/kiwi-adviser-network-kiwisaver-finalists-2026.jpg" alt="" width="1080" height="1350" loading="lazy">
+            </div>
+          </div>
         </div>
       </section>
 
@@ -380,7 +417,7 @@
       </div>
     </footer>
 
-    <a class="mobile-sticky-cta" href="#request-review" data-mobile-cta>Review my KiwiSaver</a>
+    <a class="mobile-sticky-cta" href="#request-review" data-mobile-cta>Start Your Review</a>
     <script src="script.js" defer></script>
   </body>
 </html>

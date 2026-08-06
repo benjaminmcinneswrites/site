@@ -42,7 +42,7 @@ body {
   overflow-x: hidden;
   color: var(--ink);
   background: var(--cream);
-  font-family: "Instrument Sans", system-ui, sans-serif;
+  font-family: "Instrument Sans", Arial, sans-serif;
   font-size: 17px;
   line-height: 1.55;
   text-rendering: optimizeLegibility;
@@ -104,7 +104,8 @@ blockquote {
 h1,
 h2,
 h3 {
-  font-family: "Instrument Sans", system-ui, sans-serif;
+  font-family: "Instrument Sans", Arial, sans-serif;
+  font-size-adjust: 0.5;
   font-weight: 650;
   font-stretch: 82%;
   letter-spacing: -0.055em;
@@ -402,7 +403,8 @@ h2 {
 
 .mobile-menu__head p {
   margin: 0;
-  font-family: "Instrument Sans", system-ui, sans-serif;
+  font-family: "Instrument Sans", Arial, sans-serif;
+  font-size-adjust: 0.5;
   font-size: 1.65rem;
   font-stretch: 84%;
   font-weight: 700;
@@ -698,6 +700,77 @@ h2 {
   transition: opacity 420ms ease, transform 520ms var(--ease), background-color 220ms ease, border-color 220ms ease;
 }
 
+/* Why it matters */
+.why-it-matters {
+  color: var(--ink);
+  background: #f2ecdf;
+}
+
+.why-it-matters__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
+  align-items: end;
+  gap: clamp(64px, 9vw, 130px);
+}
+
+.why-it-matters h2 {
+  max-width: 620px;
+  margin-bottom: 30px;
+  color: var(--green);
+}
+
+.why-it-matters__copy > p {
+  max-width: 610px;
+  margin-bottom: 0;
+  color: #304743;
+  font-size: clamp(1.08rem, 1.6vw, 1.28rem);
+  line-height: 1.7;
+}
+
+.why-it-matters__evidence {
+  max-width: 470px;
+  justify-self: end;
+  padding-bottom: 6px;
+}
+
+.why-it-matters__stat {
+  margin-bottom: 22px;
+  color: #9b6100;
+  font-size: clamp(3.4rem, 7.6vw, 7rem);
+  font-weight: 650;
+  font-stretch: 82%;
+  letter-spacing: -0.065em;
+  line-height: 0.82;
+}
+
+.why-it-matters__stat strong {
+  display: block;
+  font-size: 1.38em;
+  font-weight: 700;
+}
+
+.why-it-matters__evidence > p:not(.why-it-matters__stat) {
+  max-width: 460px;
+  margin-bottom: 18px;
+  color: #304743;
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
+
+.why-it-matters__evidence a {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  color: var(--green);
+  font-weight: 720;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 5px;
+}
+
+.why-it-matters__evidence a:hover {
+  color: #9b6100;
+}
+
 /* Four steps */
 .process-section {
   color: #fff;
@@ -875,8 +948,15 @@ h2 {
   font-weight: 600;
 }
 
-.ryan-copy .button {
-  margin-top: 16px;
+.ryan-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.ryan-copy .ryan-actions .button {
+  margin-top: 0;
 }
 
 /* Reviews */
@@ -968,7 +1048,8 @@ h2 {
 
 .proof-card p {
   margin-bottom: 32px;
-  font-family: "Instrument Sans", system-ui, sans-serif;
+  font-family: "Instrument Sans", Arial, sans-serif;
+  font-size-adjust: 0.5;
   font-size: clamp(1.3rem, 2.5vw, 2rem);
   font-stretch: 90%;
   font-weight: 520;
@@ -1025,6 +1106,69 @@ h2 {
   color: rgba(255, 255, 255, 0.7);
   font-size: 0.78rem;
   text-align: center;
+}
+
+/* Industry recognition */
+.recognition {
+  padding-block: clamp(68px, 8vw, 112px);
+  background: var(--paper);
+}
+
+.recognition-layout {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.82fr) minmax(420px, 1.18fr);
+  align-items: center;
+  gap: clamp(56px, 9vw, 132px);
+}
+
+.recognition-copy {
+  max-width: 430px;
+}
+
+.recognition-copy h2 {
+  margin-bottom: 18px;
+}
+
+.recognition-copy p {
+  max-width: 31ch;
+  margin: 0;
+  color: var(--muted);
+  font-size: clamp(1.05rem, 1.6vw, 1.2rem);
+}
+
+.recognition-badges {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(28px, 5vw, 64px);
+}
+
+.recognition-badge,
+.recognition-badge-crop {
+  width: clamp(170px, 17vw, 220px);
+  aspect-ratio: 1;
+  flex: 0 0 auto;
+}
+
+.recognition-badge {
+  height: auto;
+  object-fit: contain;
+}
+
+.recognition-badge-crop {
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.recognition-badge-crop img {
+  position: absolute;
+  top: -21.9%;
+  left: 50%;
+  width: 415.24%;
+  max-width: none;
+  height: auto;
+  transform: translateX(-49.44%);
 }
 
 /* FAQ */
@@ -1754,25 +1898,63 @@ h2 {
 }
 
 .legal-main {
-  padding-block: clamp(58px, 8vw, 110px);
+  padding-block: clamp(54px, 7vw, 96px);
 }
 
 .legal-intro {
-  max-width: 780px;
-  margin: 0 auto 34px;
+  max-width: 920px;
+  margin: 0 auto clamp(34px, 5vw, 56px);
 }
 
 .legal-intro h1 {
-  margin-bottom: 18px;
-  font-size: clamp(3.1rem, 7vw, 6.2rem);
+  max-width: 800px;
+  margin-bottom: 20px;
+  font-size: clamp(3rem, 6vw, 5.7rem);
+  line-height: 0.96;
 }
 
 .legal-intro p {
+  max-width: 680px;
   color: var(--muted);
+  font-size: clamp(1rem, 1.6vw, 1.14rem);
+  line-height: 1.65;
+}
+
+.legal-intro .content-kicker {
+  margin-bottom: 14px;
+  color: var(--green-soft);
+  font-size: 0.75rem;
+  line-height: 1.2;
+}
+
+.legal-jump-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 26px;
+}
+
+.legal-jump-links a {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 16px;
+  color: var(--green);
+  background: var(--paper);
+  border: 1px solid rgba(0, 70, 67, 0.22);
+  border-radius: 9px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.legal-jump-links a:hover,
+.legal-jump-links a:focus-visible {
+  background: var(--sage);
 }
 
 .legal-copy {
-  max-width: 880px;
+  max-width: 920px;
   margin: 0 auto;
   padding: clamp(24px, 6vw, 64px);
   overflow: visible;
@@ -1780,12 +1962,91 @@ h2 {
   background: var(--paper);
   border: 1px solid rgba(0, 70, 67, 0.16);
   border-radius: 20px;
-  font-family: "Instrument Sans", system-ui, sans-serif;
+  font-family: "Instrument Sans", Arial, sans-serif;
   font-size: 0.98rem;
   line-height: 1.72;
   white-space: pre-wrap;
   overflow-wrap: anywhere;
   box-shadow: 0 18px 50px rgba(0, 49, 46, 0.08);
+}
+
+.legal-copy[hidden] {
+  display: none;
+}
+
+.legal-document {
+  width: min(920px, calc(100% - 40px));
+  margin-inline: auto;
+}
+
+.legal-document__chapter {
+  padding: clamp(28px, 5vw, 58px);
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid rgba(0, 70, 67, 0.13);
+  border-radius: 18px;
+  box-shadow: 0 18px 50px rgba(0, 49, 46, 0.065);
+  scroll-margin-top: 28px;
+}
+
+.legal-document__chapter + .legal-document__chapter {
+  margin-top: 28px;
+}
+
+.legal-document h2,
+.legal-document h3,
+.legal-document h4 {
+  max-width: 720px;
+  color: var(--green);
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+.legal-document h2 {
+  margin-bottom: 38px;
+  font-size: clamp(2.25rem, 4.6vw, 3.8rem);
+  line-height: 1;
+}
+
+.legal-document h3 {
+  margin: 46px 0 15px;
+  font-size: clamp(1.35rem, 2.3vw, 1.75rem);
+  line-height: 1.12;
+}
+
+.legal-document h2 + h3 {
+  margin-top: 0;
+}
+
+.legal-document h4 {
+  margin: 30px 0 10px;
+  color: var(--green-soft);
+  font-size: 1.04rem;
+  font-stretch: 92%;
+  letter-spacing: -0.015em;
+  line-height: 1.3;
+}
+
+.legal-document p,
+.legal-document li {
+  max-width: 74ch;
+  font-size: clamp(0.98rem, 1.25vw, 1.06rem);
+  line-height: 1.78;
+}
+
+.legal-document p {
+  margin-bottom: 16px;
+}
+
+.legal-document ul {
+  display: grid;
+  gap: 10px;
+  margin: 12px 0 22px;
+  padding-left: 1.3em;
+}
+
+.legal-document li::marker {
+  color: var(--gold-deep);
 }
 
 .legal-footer {
@@ -2029,6 +2290,28 @@ html:not(.js) .testimonial-controls {
     padding: 10px;
   }
 
+  .why-it-matters__layout {
+    grid-template-columns: 1fr;
+    gap: 54px;
+  }
+
+  .why-it-matters h2 {
+    margin-bottom: 24px;
+  }
+
+  .why-it-matters__copy > p {
+    line-height: 1.62;
+  }
+
+  .why-it-matters__evidence {
+    max-width: 560px;
+    justify-self: start;
+  }
+
+  .why-it-matters__stat {
+    font-size: clamp(3.55rem, 18vw, 5.8rem);
+  }
+
   .process-section {
     padding-bottom: 50px;
   }
@@ -2051,6 +2334,34 @@ html:not(.js) .testimonial-controls {
   .ryan-copy {
     text-align: center;
     justify-self: center;
+  }
+
+  .ryan-actions {
+    justify-content: center;
+  }
+
+  .recognition-layout {
+    grid-template-columns: 1fr;
+    gap: 42px;
+    text-align: center;
+  }
+
+  .recognition-copy {
+    max-width: 560px;
+    justify-self: center;
+  }
+
+  .recognition-copy p {
+    max-width: none;
+  }
+
+  .recognition-badges {
+    gap: clamp(14px, 5vw, 32px);
+  }
+
+  .recognition-badge,
+  .recognition-badge-crop {
+    width: min(42vw, 190px);
   }
 
   .proof-stage {
@@ -2170,6 +2481,23 @@ html:not(.js) .testimonial-controls {
   .legal-copy {
     padding: 24px 20px;
     font-size: 0.92rem;
+  }
+
+  .legal-document {
+    width: min(100% - 28px, 920px);
+  }
+
+  .legal-document__chapter {
+    padding: 28px 22px;
+    border-radius: 14px;
+  }
+
+  .legal-document h2 {
+    margin-bottom: 30px;
+  }
+
+  .legal-document h3 {
+    margin-top: 38px;
   }
 }
 
@@ -2791,7 +3119,7 @@ html:not(.js) .testimonial-controls {
   margin: 0 auto;
   padding-block: clamp(62px, 8vw, 104px);
   color: var(--ink);
-  font-family: "Instrument Sans", system-ui, sans-serif;
+  font-family: "Instrument Sans", Arial, sans-serif;
   font-size: clamp(1.03rem, 1.45vw, 1.13rem);
   line-height: 1.78;
 }
@@ -2802,7 +3130,7 @@ html:not(.js) .testimonial-controls {
 
 .article-body h2,
 .article-body h3 {
-  font-family: "Instrument Sans", system-ui, sans-serif;
+  font-family: "Instrument Sans", Arial, sans-serif;
   font-stretch: 92%;
   letter-spacing: -0.04em;
 }
