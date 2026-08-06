@@ -1143,32 +1143,24 @@ h2 {
   gap: clamp(28px, 5vw, 64px);
 }
 
-.recognition-badge,
-.recognition-badge-crop {
+.recognition-badge-frame {
   width: clamp(170px, 17vw, 220px);
   aspect-ratio: 1;
+  display: grid;
+  place-items: center;
   flex: 0 0 auto;
+  overflow: hidden;
 }
 
 .recognition-badge {
+  width: 100%;
   height: auto;
+  max-width: none;
   object-fit: contain;
 }
 
-.recognition-badge-crop {
-  position: relative;
-  overflow: hidden;
-  border-radius: 50%;
-}
-
-.recognition-badge-crop img {
-  position: absolute;
-  top: -21.9%;
-  left: 50%;
-  width: 415.24%;
-  max-width: none;
-  height: auto;
-  transform: translateX(-49.44%);
+.recognition-badge--finalist {
+  width: 130.5%;
 }
 
 /* FAQ */
@@ -2359,8 +2351,7 @@ html:not(.js) .testimonial-controls {
     gap: clamp(14px, 5vw, 32px);
   }
 
-  .recognition-badge,
-  .recognition-badge-crop {
+  .recognition-badge-frame {
     width: min(42vw, 190px);
   }
 
